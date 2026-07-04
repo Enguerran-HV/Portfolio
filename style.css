@@ -1,0 +1,253 @@
+/*COULEUR PRE DEF*/
+:root{
+    --color-bouton:rgb(150,215,255);
+}
+
+/*Titre de page*/
+header {
+font-size:50px;
+font-family: verdana,sans-serif;
+text-align:center;
+margin-bottom:35px;
+font-weight:bold;
+text-decoration:underline;
+}
+
+/*Fond*/
+body{
+background-color:rgb(215,235,255);
+}
+
+/*Principale, zone blanche de fond*/
+main{
+background-color:rgb(255,255,255);
+border-radius:10px;
+margin:20px;
+padding:20px;
+}
+
+/*JSP mais obligé pour aligner texte et images*/
+main div{
+display:flex;
+align-items:center;
+}
+
+/*SECTION*/
+section p{
+font-family:verdana,sans-serif;
+
+}
+
+/*Bouton dans section*/
+section a{
+background-color:var(--color-bouton);
+width:255px;
+height:auto;
+display:inline-flex;
+padding:10px;
+margin:20px;
+font-size:18px;
+font-family:verdana,sans-serif;
+border-radius:15px;
+text-decoration:none;
+text-align:center;
+border:1px solid black;
+
+}
+/*Quand bouton survolé*/
+section a:hover{
+background-color:rgb(190,230,255);
+font-weight:bold;
+text-shadow: 1px 0px;
+}
+
+
+article p {
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+
+/* TITRE */
+h1 {
+font-size:30px;
+font-family:verdana,sans-serif;
+text-align:center;
+
+}
+h2 {
+font-size:30px;
+font-family:Arial Black;
+text-align:center;
+
+}
+h3 {
+font-size:30px;
+font-family:Arial Black;
+text-align:center;
+}
+
+/* NAVIGATION NAV*/
+nav {
+display:flex;
+background-color:rgb(0,0,120);
+border-radius:20px;
+justify-content:center;
+margin:30px;
+position:sticky;
+top:5;
+}
+
+nav a{
+border-radius:15px;
+background-color:var(--color-bouton);
+font-size:15px;
+font-family:verdana,sans-serif;
+padding:15px;
+margin:15px;
+width:120px;
+height:auto;
+text-align:center;
+text-decoration:none;
+border:1px solid black;
+}
+
+nav a:hover 
+{
+background-color:rgb(190,230,255);
+font-weight:bold;
+}
+
+/*Conteneur du sous-menu (même comportement que les autres liens du nav)*/
+.nav-sousmenu{
+position:relative;
+display:flex;
+align-items:center;
+}
+
+/*Sous-menu caché par défaut*/
+.nav-sousmenu-content{
+display:none;
+flex-direction:column;
+position:absolute;
+top:100%;
+left:50%;
+transform:translateX(-50%);
+background-color:rgb(0,0,120);
+border-radius:15px;
+padding:10px;
+z-index:10;
+min-width:160px;
+}
+
+/*Apparait au survol du parent OU du sous-menu*/
+.nav-sousmenu:hover .nav-sousmenu-content{
+display:flex;
+}
+
+/*Boutons du sous-menu dans le même style que les boutons du nav*/
+.nav-sousmenu-content a{
+border-radius:15px;
+background-color:var(--color-bouton);
+font-size:15px;
+font-family:verdana,sans-serif;
+padding:15px;
+margin:8px;
+width:120px;
+height:auto;
+text-align:center;
+text-decoration:none;
+border:1px solid black;
+}
+
+.nav-sousmenu-content a:hover{
+background-color:rgb(190,230,255);
+font-weight:bold;
+}
+
+/*Conteneur du sous-sous-menu (bouton du sous-menu)*/
+.nav-sousmenu2{
+position:relative;
+display:flex;
+}
+
+/*Sous-sous-menu caché par défaut, ouvert vers la DROITE du bouton parent*/
+.nav-sousmenu2-content{
+display:none;
+flex-direction:column;
+position:absolute;
+top:0;
+left:100%;
+right:auto;
+background-color:rgb(0,0,120);
+border-radius:15px;
+padding:10px;
+z-index:20;
+min-width:160px;
+}
+
+/*Apparait au survol du bouton du sous-menu*/
+.nav-sousmenu2:hover .nav-sousmenu2-content{
+display:flex;
+}
+
+/*Boutons du sous-sous-menu, même style que les autres*/
+.nav-sousmenu2-content a{
+border-radius:15px;
+background-color:var(--color-bouton);
+font-size:15px;
+font-family:verdana,sans-serif;
+padding:15px;
+margin:8px;
+width:120px;
+height:auto;
+text-align:center;
+text-decoration:none;
+border:1px solid black;
+}
+
+.nav-sousmenu2-content a:hover{
+background-color:rgb(190,230,255);
+font-weight:bold;
+}
+
+
+/*BAS DE PAGE / FOOTER*/
+footer{
+background-color:rgb(85,120,160);
+display:flex;
+justify-content:center;
+margin:-8px;
+margin-top:100px;
+
+}
+footer div{
+padding:10px;
+margin-left:150px;
+font-family:verdana,sans-serif;
+}
+
+footer h1{
+font-size:12px;
+text-decoration:underline;
+font-family:verdana,sans-serif;
+justify-content:center;
+}
+
+footer h2{
+font-size:12px;
+font-family:verdana,sans-serif;
+color:rgb(200,0,0);
+
+
+}
+
+/*Liste sans poinçons avec - */
+.tirets{
+list-style:none;
+padding-left:10px;
+}
+.tirets li::before{
+content:"- ";
+}
