@@ -1,34 +1,30 @@
-<!DOCKTYPE html>
+<!DOCTYPE html>
+<html lang="fr">
 <head>
-    <title> TEST </title>
-    <link 
-        rel="stylesheet" href="style.css">
-     <link>
+    <title>Titre de la page</title>
+    <link rel="stylesheet" href="/Portfolio/style.css">
     <meta charset="UTF-8">
-    <meta name="keywords" content="Portfolio, Enguerran, CHAD">
-    <meta name="author" content="Enguerran Hollender Voegeli">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="refresh" content="15">
-
 </head>
-
 <body>
-    <nav>
-        <a href="index.html">Accueil</a>
-        <a href="PAGES/competences.html">Compétences</a>
-        <a href="PAGES/etudes.html">Études</a>
-        <a href="PAGES/experience_pro.html">Expériences</a>
-        <a href="PAGES/cv_et_contact.html">CV et Contact</a>
-    </nav>
-    <header>
-        HEAD
-    </header>
 
-    <article>
-        ARTICLE
-    </article>    
+<div id="header-placeholder"></div>
 
-    <section>
-        SECTION
-    </section>
+<main>
+    <!-- contenu spécifique à cette page -->
+</main>
+
+<div id="footer-placeholder"></div>
+
+<script>
+    fetch('/Portfolio/header.html')
+        .then(res => res.text())
+        .then(data => document.getElementById('header-placeholder').innerHTML = data);
+
+    fetch('/Portfolio/footer.html')
+        .then(res => res.text())
+        .then(data => document.getElementById('footer-placeholder').innerHTML = data);
+</script>
+
 </body>
+</html>

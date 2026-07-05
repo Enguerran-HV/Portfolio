@@ -1,30 +1,41 @@
-<!DOCKTYPE html>
+<!DOCTYPE html>
+<html lang="fr">
 <head>
-    <title> TEST </title>
-    <link 
-        rel="stylesheet" href="style.css">
-     <link>
+    <title>Titre de la page</title>
+    <link rel="stylesheet" href="/Portfolio/style.css">
     <meta charset="UTF-8">
-    <meta name="keywords" content="Portfolio, Enguerran, CHAD">
-    <meta name="author" content="Enguerran Hollender Voegeli">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="refresh" content="60">
-
 </head>
-
 <body>
-    <nav>
-        <div>Accueil</div>
-        <div>Études</div>
-        <div>Compétences</div>
-        <div>Éxpériences Professionnelles</div>
-        <div>CV et Contact</div>
-    </nav>
-    <header>
-        Bienvenue sur mon Portfolio
-    </header>
-    
-    <section>
 
-    </section>
+<div id="header-placeholder"></div>
+
+<!-- TITRE DE PAGE -->
+    <header>
+        Mes Compétences
+    </header>
+<!-- PRÉSENTATION DE LA PAGE -->
+    <article>
+        <h1>
+            <p>Les compétences que j'ai développés</p>
+            <p>et construite au fil de mes expériences</p>
+        </h1>
+    </article>    
+<main>
+    <!-- contenu spécifique à cette page -->
+</main>
+
+<div id="footer-placeholder"></div>
+
+<script>
+    fetch('/Portfolio/header.html')
+        .then(res => res.text())
+        .then(data => document.getElementById('header-placeholder').innerHTML = data);
+
+    fetch('/Portfolio/footer.html')
+        .then(res => res.text())
+        .then(data => document.getElementById('footer-placeholder').innerHTML = data);
+</script>
+
 </body>
+</html>
