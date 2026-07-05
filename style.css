@@ -88,6 +88,10 @@ font-family:Arial Black;
 text-align:center;
 }
 
+a:visited{
+    color:inherit;
+}
+
 /* NAVIGATION NAV*/
 nav {
 display:flex;
