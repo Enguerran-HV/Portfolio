@@ -1,89 +1,19 @@
-<!DOCKTYPE html>
+<!DOCTYPE html>
+<html lang="fr">
 <head>
-    <title> Accueil </title>
-    <link 
-        rel="stylesheet" href="style2.css">
-     <link>
+    <title>Accueil</title>
+    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="keywords" content="Portfolio, Enguerran, CHAD">
     <meta name="author" content="Enguerran Hollender Voegeli">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="refresh" content="15">
 </head>
 
 <body>
-<!-- NAVIGATION -->
-    <nav>   
-        <a href="index.html">Accueil</a>
-        
-        <div class="nav-sousmenu">
-        <a href="PAGES/competences.html">Compétences</a>
-            <div class="nav-sousmenu-content">
-                <a href="">Concevoir &#8680;</a>
-                <a href="">Vérifier &#8680;</a>
-                <a href="">Maintenir &#8680;</a>
-                <a href="">Intégrer &#8680;</a>
-            </div>
-        </div>
 
-        <div class="nav-sousmenu">
-            <a href="PAGES/etudes.html">Études</a>
-            <div class="nav-sousmenu-content">
-                <div class="nav-sousmenu2">
-                <a href="">BUT GEII 1 &#8680;</a>
-                    <div class="nav-sousmenu2-content">
-                        <a href="">Variateur de lumière</a>
-                        <a href="">Console rétro gaming</a>
-                        <a href="">Carrefour automobile</a>
-                    </div>
-                </div>
-            <div class="nav-sousmenu2">
-                <a href="">BUT GEII 2 &#8680;</a>
-                    <div class="nav-sousmenu2-content">
-                        <a href="">Forge d'une barre métallique</a>
-                        <a href="">Conditionnement de jeton</a>
-                        <a href="">Régulation d'une serre' </a>
-                        <a href="">Robotique</a>
-                    </div>
-                </div>
-            <div class="nav-sousmenu2">
-                <a href="">BUT GEII 3 &#8680;</a>
-                    <div class="nav-sousmenu2-content">
-                        <a href="">Jeu VR</a>
-                        <a href="">Usine école+</a>
-                        <a href="">Robotique+</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="nav-sousmenu">
-        <a href="PAGES/experience_pro.html">Expériences</a>
-            <div class="nav-sousmenu-content">
-                <div class="nav-sousmenu2">
-                <a href="">Stages et alternances &#8680;</a>
-                    <div class="nav-sousmenu2-content">
-                        <a href="">HTTProject</a>
-                    </div>
-                </div>
-            <div class="nav-sousmenu2">
-                <a href="">Expériences professionnelles &#8680;</a>
-                    <div class="nav-sousmenu2-content">
-                    </div>
-                </div>
-            </div>
-        </div>
+<div id="header-placeholder"></div>
 
-        <div class="nav-sousmenu">
-        <a href="PAGES/cv_et_contact.html">CV et Contact</a>
-            <div class="nav-sousmenu-content">
-                <a href="">CV &#8680;</a>
-                <a href="">Contact &#8680;</a>       
-
-            </div>
-        </div>
-
-    </nav>
-<!-- TITTRE DE PAGE -->
+<!-- TITRE DE PAGE -->
     <header>
         Bienvenue sur mon Portfolio
     </header>
@@ -95,12 +25,11 @@
             <p>Ainsi que toutes les compétences que j'ai acquis</p>
             <p style="text-decoration:underline">Par Enguerran Hollender Voegeli</p>
             <p>
-                <img src="MEDIA/IMAGES/logoiut.png"style="width:80;height:80;dispaly:flex;align-items:center;">
+                <img src="MEDIA/IMAGES/logoiut.png" style="width:80px;height:80px;display:flex;align-items:center;">
                 Étudiant en BUT GEII à l'IUT de Rennes</p>
         </h1>
     </article>    
 <!-- ZONE PRINCIPALE -->
-<!-- 1 SECTIION DIV = 1 LIGNE -->
     <main>
         <section>
                 <div>
@@ -108,7 +37,6 @@
                     <p>Les compétences que j'ai acquis et développés</p>
                     <img src="MEDIA/IMAGES/logocompetences.png" alt="logo compétences" style="width:70px;height:60px;">
                 </div>
-
         </section>
         <section>
                 <div>
@@ -130,38 +58,20 @@
                     <p>Si mon profil vous interresse, voici mes coordonées</p>
                     <img src="MEDIA/IMAGES/logocontact.png" alt="logo contacts" style="width:60px;height:60px;">
                 </div>
-
         </section>
     </main>
-<!-- PIEDS DE PAGES -->
-<!--1 DIV = 1 COLLONE"-->
-    <footer>
-        <div>
-            <h1>
-                Mes contacts
-            </h1>
-            <ul class="tirets">
-            <li><a href="tel:+33602031423">Téléphone : 06 02 03 14 23</a></li>
-            <li><a href="mailto:hollender.enguerran@orange.fr">Email : hollender.enguerran@orange.fr</a></li>
 
-            </ul>    
-        </div>
-        <div>
-            <h1>
-                Liens utiles
-            </h1>
-            <ul class="tirets">
-            <li><a href="https://www.linkedin.com/in/enguerran-hollender-voegeli/">LinkedIN</a></li>
-            <li><a href="https://www.google.fr">test</a></li>
-        </div>
+<div id="footer-placeholder"></div>
 
-        <div>
-            <h2>
-                © 2026 Enguerran Hollender Voegeli. Tous droits réservés
-            </h2>
-        </div>
+<script>
+    fetch('header.html')
+        .then(res => res.text())
+        .then(data => document.getElementById('header-placeholder').innerHTML = data);
 
-    </footer>
-
+    fetch('footer.html')
+        .then(res => res.text())
+        .then(data => document.getElementById('footer-placeholder').innerHTML = data);
+</script>
 
 </body>
+</html>
