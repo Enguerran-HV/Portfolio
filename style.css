@@ -258,7 +258,8 @@ content:"- ";
 
 
 table{
-    border:none;
+    border:1px solid black;
+    justify-content:center;
 }
 table th {
 justify-content:center;
