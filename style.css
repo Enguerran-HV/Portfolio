@@ -259,9 +259,8 @@ content:"- ";
 
 table{
     border:1px solid black;
-    justify-content:center;
-    align-items:center;
     text-align:center;
+    margin:0,auto;
 }
 table th {
 justify-content:center;
