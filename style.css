@@ -23,7 +23,7 @@ main{
 background-color:rgb(255,255,255);
 border-radius:10px;
 margin:20px;
-padding:20px;
+padding:40px;
 }
 
 /*JSP mais obligé pour aligner texte et images*/
@@ -258,7 +258,6 @@ content:"- ";
 
 
 table{
-    border:1px solid black;
     text-align:center;
     margin:0 auto;
     width:95%;
@@ -268,8 +267,9 @@ justify-content:center;
 font-family:verdana,sans-serif;
 text-decoration:underline;
 }
-table th {
+table td {
 font-family:verdana,sans-serif;
+padding: 0px 10px;
 }
 
 table a {
@@ -277,9 +277,7 @@ border-radius:15px;
 background-color:var(--color-bouton);
 font-size:15px;
 font-family:verdana,sans-serif;
-padding:15px;
-margin:0px;
-width:150px;
+width:auto;
 height:auto;
 justify-content:center;
 text-align:center;
