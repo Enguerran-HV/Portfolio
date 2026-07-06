@@ -291,3 +291,8 @@ table a:hover
 background-color:rgb(190,230,255);
 font-weight:bold;
 }
+
+table img {
+width:200px;
+height:200px;
+}
