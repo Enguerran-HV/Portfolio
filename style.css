@@ -261,6 +261,7 @@ table{
     border:1px solid black;
     text-align:center;
     margin:0 auto;
+    width:95%;
 }
 table th {
 justify-content:center;
@@ -277,9 +278,9 @@ background-color:var(--color-bouton);
 font-size:15px;
 font-family:verdana,sans-serif;
 padding:15px;
-margin:15px;
-width:120px;
-height:20px;
+margin:0px;
+width:150px;
+height:auto;
 justify-content:center;
 text-align:center;
 text-decoration:none;
