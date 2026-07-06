@@ -111,7 +111,7 @@ font-family:verdana,sans-serif;
 padding:15px;
 margin:15px;
 width:120px;
-height:50px;
+height:25px;
 justify-content:center;
 text-align:center;
 text-decoration:none;
@@ -257,6 +257,29 @@ content:"- ";
 }
 
 
-table,th,td{
+table{
     border:none;
+}
+table th {
+justify-content:center;
+font-family:verdana,sans-serif;
+text-decoration:underline;
+}
+table th {
+font-family:verdana,sans-serif;
+}
+
+table a {
+border-radius:15px;
+background-color:var(--color-bouton);
+font-size:15px;
+font-family:verdana,sans-serif;
+padding:15px;
+margin:15px;
+width:120px;
+height:20px;
+justify-content:center;
+text-align:center;
+text-decoration:none;
+border:1px solid black;
 }
