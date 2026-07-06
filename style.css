@@ -260,7 +260,8 @@ content:"- ";
 table{
     text-align:center;
     margin:0 auto;
-    width:95%;
+    width:98%;
+    border:none;
 }
 table th {
 justify-content:center;
