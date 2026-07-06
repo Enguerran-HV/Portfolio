@@ -274,6 +274,8 @@ padding: 0px 10px;
 }
 
 table a {
+padding:15px;
+margin:15px;
 border-radius:15px;
 background-color:var(--color-bouton);
 font-size:15px;
