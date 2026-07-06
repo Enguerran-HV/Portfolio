@@ -286,3 +286,9 @@ text-align:center;
 text-decoration:none;
 border:1px solid black;
 }
+
+table a:hover 
+{
+background-color:rgb(190,230,255);
+font-weight:bold;
+}
