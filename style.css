@@ -111,7 +111,8 @@ font-family:verdana,sans-serif;
 padding:15px;
 margin:15px;
 width:120px;
-height:auto;
+height:50px;
+justify-content:center;
 text-align:center;
 text-decoration:none;
 border:1px solid black;
@@ -243,9 +244,7 @@ footer h2{
 font-size:12px;
 font-family:verdana,sans-serif;
 color:rgb(200,0,0);
-text-align:left,bottom;
-
-
+text-align:right,bottom;
 }
 
 /*Liste sans poinçons avec - */
@@ -255,4 +254,9 @@ padding-left:10px;
 }
 .tirets li::before{
 content:"- ";
+}
+
+
+table,th,td{
+    border:none;
 }
