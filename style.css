@@ -261,19 +261,16 @@ content:"- ";
 table{
     text-align:center;
     margin:0 auto;
-    width:98%;
-    border:1px black;
+    width:95%;
     table-layout:fixed;
 }
 table th {
 justify-content:center;
 font-family:verdana,sans-serif;
 text-decoration:underline;
-width:25%;
 }
 table td {
 font-family:verdana,sans-serif;
-width:25%;
 padding:20px;
 margin:20px;
 overflow:hidden;
@@ -308,4 +305,20 @@ height:auto%;
 max-height:300px;
 object-fit:cover;
 margin:0 auto;
+}
+
+/* Largeur des colonnes selon le nombre de cases */
+.table-2col th,
+.table-2col td {
+    width: 50%;
+}
+
+.table-3col th,
+.table-3col td {
+    width: 33.33%;
+}
+
+.table-4col th,
+.table-4col td {
+    width: 25%;
 }
