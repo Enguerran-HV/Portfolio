@@ -263,7 +263,7 @@ table{
     text-align:center;
     margin:0 auto;
     width:98%;
-    border:none;
+    border:1px;
     table-layout:fixed;
 }
 table th {
