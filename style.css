@@ -276,14 +276,14 @@ padding: 15px 15px;
 }
 
 table a {
-padding:15px;
+padding:25px;
 margin:15px;
 border-radius:15px;
 background-color:var(--color-bouton);
 font-size:15px;
 font-family:verdana,sans-serif;
-width:230px;
-height:40px;
+width:auto;
+height:auto;
 justify-content:center;
 text-align:center;
 text-decoration:none;
@@ -297,8 +297,8 @@ font-weight:bold;
 }
 
 table img {
-width:250px;
-height:250px;
-padding:15px;
-margin:15px;
+width:300px;
+height:300px;
+padding:5px;
+margin:5px;
 }
