@@ -301,8 +301,12 @@ font-weight:bold;
 
 table img {
 display:block;
-width:200px;
-height:200px;
+width:90%;
+max-width:300px;
+height:auto;
+max-height:300px;
+object-fit:cover;
 padding:0px;
 margin:0px;
+justify-content:center;
 }
