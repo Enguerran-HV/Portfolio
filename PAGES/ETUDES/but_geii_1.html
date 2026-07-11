@@ -100,11 +100,11 @@
 <div id="footer-placeholder"></div>
 
 <script>
-    fetch('header.html')
+    fetch('/Portfolio/header.html')
         .then(res => res.text())
         .then(data => document.getElementById('header-placeholder').outerHTML = data);
 
-    fetch('footer.html')
+    fetch('/Portfolio/footer.html')
         .then(res => res.text())
         .then(data => document.getElementById('footer-placeholder').outerHTML = data);
 </script>
