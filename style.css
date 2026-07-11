@@ -264,15 +264,18 @@ table{
     margin:0 auto;
     width:98%;
     border:none;
+    table-layout:fixed;
 }
 table th {
 justify-content:center;
 font-family:verdana,sans-serif;
 text-decoration:underline;
+width:25%;
 }
 table td {
 font-family:verdana,sans-serif;
 padding: 15px 15px;
+width:25%;
 }
 
 table a {
@@ -297,8 +300,9 @@ font-weight:bold;
 }
 
 table img {
+display:block;
 width:200px;
 height:200px;
-padding:15px;
-margin:15px;
+padding:0px;
+margin:0px;
 }
