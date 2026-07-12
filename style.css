@@ -280,7 +280,7 @@ table a {
 padding:15px;
 margin:15px;
 border-radius:15px;
-background-color:var(--color-bouton);
+background-color:none;
 font-size:15px;
 font-family:verdana,sans-serif;
 width:auto;
