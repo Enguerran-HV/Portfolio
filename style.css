@@ -333,6 +333,12 @@ text-align:center;
     text-align: left;
 }
 
+.table-1col h2 {
+    font-size: 25px;
+    font-family: verdana, sans-serif;
+    text-align: center;
+}
+
 .table-2col th,
 .table-2col td {
     width: 50%;
