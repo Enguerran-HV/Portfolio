@@ -325,3 +325,24 @@ text-align:left;
 .table-4col td {
     width: 25%;
 }
+
+
+.bouton-table {
+padding:15px;
+margin:15px;
+border-radius:15px;
+background-color:none;
+font-size:15px;
+font-family:verdana,sans-serif;
+width:auto;
+height:auto;
+justify-content:center;
+text-align:center;
+text-decoration:none;
+border:none;
+}
+.bouton-table:hoover{
+background-color:none;
+font-weight:bold;
+text-decoration:underline;
+}
