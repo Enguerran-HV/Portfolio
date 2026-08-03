@@ -302,7 +302,7 @@ table img {
 display:block;
 width:90%;
 max-width:300px;
-height:auto%;
+height:auto;
 max-height:300px;
 object-fit:cover;
 margin:0 auto;
@@ -319,6 +319,12 @@ font-size:25px;
 font-family:verdana,sans-serif;
 }
 /* Largeur des colonnes selon le nombre de cases */
+
+.table-1col th,
+.table-1col td {
+    width: 100%;
+}
+
 .table-2col th,
 .table-2col td {
     width: 50%;
