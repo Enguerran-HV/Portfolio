@@ -317,12 +317,19 @@ font-family:verdana,sans-serif;
 table h2{
 font-size:25px;
 font-family:verdana,sans-serif;
+text-align:center;
 }
 /* Largeur des colonnes selon le nombre de cases */
 
 .table-1col th,
 .table-1col td {
     width: 100%;
+}
+
+.table-1col p {
+    font-size: 15px;
+    font-family: verdana, sans-serif;
+    text-align: left;
 }
 
 .table-2col th,
