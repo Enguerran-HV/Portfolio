@@ -361,7 +361,7 @@ text-align:center;
 text-decoration:none;
 border:none;
 }
-.bouton-table:hoover{
+.bouton-table:hover{
 background-color:blue;
 font-weight:bold;
 text-decoration:underline;
