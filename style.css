@@ -326,18 +326,11 @@ text-align:left;
     width: 25%;
 }
 
-
-.bouton-table::before,
-.bouton-table::after {
-  content: none !important;
-  display: none !important;
-}
-
 .bouton-table{
 padding:15px;
 margin:15px;
 border-radius:15px;
-background-color:none;
+background-color:transparent;
 font-size:15px;
 font-family:verdana,sans-serif;
 width:auto;
@@ -348,7 +341,7 @@ text-decoration:none;
 border:none;
 }
 .bouton-table:hoover{
-background-color:none;
+background-color:blue;
 font-weight:bold;
 text-decoration:underline;
 }
