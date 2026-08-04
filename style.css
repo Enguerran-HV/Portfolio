@@ -312,6 +312,8 @@ text-decoration:underline;
 .table-2col a:hover{
     background-color:transparent;
     text-decoration:underline,bold;
+    padding:0px;
+    margin:0px;
 }
 
 table img {
