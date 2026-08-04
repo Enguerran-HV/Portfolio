@@ -8,106 +8,188 @@
 </head>
 <body>
 
-<div id="header-placeholder"></div>
+    <div id="header-placeholder"></div>
 
-<!-- TITRE DE PAGE -->
     <header>
         Variateur de lumière
     </header>
-<!-- PRÉSENTATION DE LA PAGE -->
+
     <article>
         <h1>
-            <p>Analyse, conception, création et vérification</p>
-            <p>d'un variateur de lumière</p>
+            <span>Analyse, conception, création et vérification</span><br>
+            <span>d'un variateur de lumière</span>
         </h1>
-    </article> 
+    </article>
 
-<main>
-    <table class="table-1col">
-        <tr>
-        <td>
-            <h2>Ce premier projet nous était introduit et présenter par 4 grande parties</h2>
-            <p>Premierement une étude d'un système déjà existant, qui allait nous servir de base et d'inspiration</p>
-            <p>Secondement la conception de notre propre système via des schémas électronique et le routage d'un circuit imprimer sur Proteus</p>
-            <p>Ensuite la création physique du circuit imprimer, avec le soudure des composant</p>
-            <p>Enfin, la vérification du respect du cahier des charges, ainsi que du bon fonctionnement de l'objet</p> 
-        </td>
-        </tr>
-    </table>
-    <table class="table-1col">
-            <tr>
-			    <td>
-        	        <h2>I - Étude de l'existant</h2>
-                </td>
-		    </tr>
-    </table>
-        <table class="table-2col">
-		<tr>
-			<td>
-				Nous avons commencé par étudier un variateur de lumière déjà existant, 
-                afin de comprendre son fonctionnement et d'en tirer des conclusions pour notre propre conception. 
-                Nous avons analysé les composants utilisés, le schéma électrique et les principes de fonctionnement.   
-			</td>
-			<td>
-				IMAGE DE L'ETUDE DE L'EXISTANT
-			</td>
-		</tr>
-        </table>
-        <table class="table-1col">
-        <tr>
-            <td>
-                <h2>II - Conception des schémas et routage</h2>
-            </td>
-        </tr>
-        </table>
-        <table class="table-2col">
-        <tr>    
-			<td>
-				IMAGE DU SCHEMA ELECTRIQUE
-			</td>
-			<td>
-                <p>Suite à l'étude, nous avons commencer a concevoir nos propre schémas électronique sur Proteus.</p>
-                <p>Des contraintes de conceptions nous était imposé, telle que les références des composants et le placement de ceux-ci. </p> 
-                <p>Ces contraintes ont influencé notre conception et nous avons dû adapter notre approche pour respecter les spécifications demandées.</p> 
-			</td>
-        </tr>
-        <tr>
-            <td>
-                <p>Puis grace à l'outil de routage de Proteus, nous avons pu créer le circuit imprimé correspondant à notre schéma électronique.</p>
-                <p>La aussi des contraintes ont influencé le processus de routage, le placement des composants nous était dicté. ainsi que le spécificité des pistes.</p>
-            </td>
-            <td>
-                IMAGE DU ROUTAGE    
-            </td>
-        </tr>
-        </table>
-        <table class="table-1col">  
-        <tr>
-            <td>
-                <h2>III - Création et soudage</h2>
-            </td>
-        </tr>
-        </table>
-        <table class="table-1col">      
-        <tr>
-        	<td>
-        		<h2>IV - Procédure de test et vérification</h2>
-        	</td>
-        </tr>
-        </table>
-</main>
+    <main>
+        <section>
+            <table class="table-1col">
+                <tr>
+                    <td>
+                        <h2>Ce premier projet nous était introduit et présenter par 4 grande parties</h2>
+                        <p>Premierement une <a href="#etude-existant">étude d'un système déjà existant</a>, qui allait nous servir de base et d'inspiration</p>
+                        <p>Secondement la <a href="#conception">conception de notre propre système</a> via des schémas électronique et le routage d'un circuit imprimer sur Proteus</p>
+                        <p>Ensuite la <a href="#creation">création physique du circuit imprimer</a>, avec le soudure des composant</p>
+                        <p>Enfin, la <a href="#test">vérification du fonctionnement</a>ainsi que du respect des cahiers des charges</p>
+                    </td>
+                </tr>
+            </table>
+        </section>
 
-<div id="footer-placeholder"></div>
+        <section>
+            <table class="table-1col">
+                <tr>
+                    <td>
+                        <h2 id="etude-existant">I - Étude de l'existant</h2>
+                    </td>
+                </tr>
+            </table>
 
-<script>
-    fetch('/Portfolio/header.html')
-        .then(res => res.text())
-        .then(data => document.getElementById('header-placeholder').outerHTML = data);
+            <table class="table-2col">
+                <tr>
+                    <td>
+                        Nous avons commencé par étudier un variateur de lumière déjà existant,
+                        afin de comprendre son fonctionnement et d'en tirer des conclusions pour notre propre conception.
+                        Nous avons analysé les composants utilisés, le schéma électrique et les principes de fonctionnement.
+                    </td>
+                    <td>
+                        IMAGE DE L'ETUDE DE L'EXISTANT
+                    </td>
+                </tr>
+            </table>
+        </section>
 
-    fetch('/Portfolio/footer.html')
-        .then(res => res.text())
-        .then(data => document.getElementById('footer-placeholder').outerHTML = data);
-</script>
+        <section>
+            <table class="table-1col">
+                <tr>
+                    <td>
+                        <h2 id="conception">II - Conception des schémas et routage</h2>
+                    </td>
+                </tr>
+            </table>
+
+            <table class="table-2col">
+                <tr>
+                    <td>
+                        IMAGE DU SCHEMA ELECTRIQUE
+                    </td>
+                    <td>
+                        <p>Suite à l'étude, nous avons commencer a concevoir nos propre schémas électronique sur Proteus.</p>
+                        <p>Des contraintes de conceptions nous était imposé, telle que les références des composants et le placement de ceux-ci. </p>
+                        <p>Ces contraintes ont influencé notre conception et nous avons dû adapter notre approche pour respecter les spécifications demandées.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        IMAGE DU ROUTAGE
+                    </td>
+                    <td>
+                        <p>Puis grace à l'outil de routage de Proteus, nous avons pu créer le circuit imprimé correspondant à notre schéma électronique.</p>
+                        <p>La aussi des contraintes ont influencé le processus de routage, le placement des composants nous était dicté. ainsi que le spécificité des pistes.</p>
+                    </td>
+                </tr>
+            </table>
+        </section>
+
+        <section>
+            <table class="table-1col">
+                <tr>
+                    <td>
+                        <h2 id="creation">III - Création et soudage</h2>
+                    </td>
+                </tr>
+            </table>
+
+            <table class="table-2col">
+                <tr>
+                    <td>
+                        <p>Une fois les schémas finalisés et le routage effectué, nous avons procédé à la création physique du circuit imprimé.</p>
+                        <p>Notre carte nous était fournit avec les pistes de cuivres tracées mais sans plus.</p>
+                        <p>Nous avons donc commencer par percer les trous pour accueillir les composants.</p>
+                        <p>Puis nous avons soudé les composants sur le circuit imprimé en suivant le schéma et en respectant les contraintes de placement.</p>
+                    </td>
+                    <td>
+                        IMAGE DU CIRCUIT IMPRIME
+                    </td>
+                </tr>
+            </table>
+        </section>
+
+        <section>
+            <table class="table-1col">
+                <tr>
+                    <td>
+                        <h2 id="test">IV - Procédure de test et vérification</h2>
+                    </td>
+                </tr>
+            </table>
+
+            <table class="table-2col">
+                <tr>
+                    <td>
+                        IMAGE PROCEDURE DE TEST VISUEL
+                    </td>
+                    <td>
+                        <p>Une fois le circuit imprimé créé, nous avons procédé à la vérification de son bon fonctionnement.</p>
+                        <p>Le premier test était visuel. Un autre groupe à observé notre circuit et compléter un tableau pour juger à l'oeil nue les qualitées des soudures et des pistes de cuivres
+                            Ansi que le placement et le sens des composants.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        IMAGE PROCEDURE DE TEST TECHNIQUE
+                    </td>
+                    <td>
+                        <p>Le second test était plus technique. Les professeurs nous ont fournit une liste de test à effectuer pour vérifier la conformité du circuit.</p>
+                        <p>Premièrement des tests de continuitées. Nous avons exprécement positionner des points de test a plusieurs endroit du circuit
+                            pour tester que le courant circule correctrment partour où il devrait</p>
+                        <p>Ensuite des test de valeurs et de formes de signaux. Avec un multimètre et un oscilloscope nous avons vérifier la valeur et la forme de plusieurs signaux
+                            pour affirmer leur conformité, garrantissant un bon fonctionnement.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        IMAGE DU PRODUIT FINI
+                    </td>
+                    <td>
+                        <p>Enfin le dernier test était un test d'utilisation. Nous avons simplement testé les fonctionnalitées du produit fini pour en confirmer son bon fonctionnement</p>
+                        <p>Les 2 modes de fonctionnement, automatiques avec un detecteur de lumière et manuel avec un potentiomètre.
+                            L'interrupteur permettant de basculer d'un mode a l'autre. Ainsi que l'interrupteur ON/OFF</p>
+                    </td>
+                </tr>
+            </table>
+        </section>
+
+        <section>
+            <table class="table-1col">
+                <tr>
+                    <td>
+                        <h2 id="conclusion">V - Conclusion</h2>
+                    </td>
+                </tr>
+            </table>
+
+            <table class="table-1col">
+                <tr>
+                    <td>
+                        IMAGE PROCEDURE DE TEST VISUEL
+                    </td>
+                </tr>
+            </table>
+        </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script>
+        fetch('/Portfolio/header.html')
+            .then(res => res.text())
+            .then(data => document.getElementById('header-placeholder').outerHTML = data);
+
+        fetch('/Portfolio/footer.html')
+            .then(res => res.text())
+            .then(data => document.getElementById('footer-placeholder').outerHTML = data);
+    </script>
 
 </body>
 </html>

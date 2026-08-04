@@ -3,6 +3,10 @@
     --color-bouton:rgb(150,215,255);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /*Titre de page*/
 header {
 font-size:50px;
