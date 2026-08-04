@@ -8,34 +8,172 @@
 </head>
 <body>
 
-<div id="header-placeholder"></div>
+    <div id="header-placeholder"></div>
 
-<!-- TITRE DE PAGE -->
     <header>
         Carrefour automobile automatisé
     </header>
-<!-- PRÉSENTATION DE LA PAGE -->
+
     <article>
         <h1>
-            <p>Conception, création et programmation</p>
-            <p>d'une intersection routière</p>
+            <span>Conception, création et programmation</span><br>
+            <span>d'une intersection routière</span>
         </h1>
-    </article> 
+    </article>
 
-<main>
-    <!-- contenu spécifique à cette page -->
-</main>
+    <main>
 
-<div id="footer-placeholder"></div>
+        <section>
+            <table class="table-1col">
+                <tr>
+                    <td>
+                        <h2>Introduction</h2>
+                    </td>
+                </tr>
+            </table>
 
-<script>
-    fetch('/Portfolio/header.html')
-        .then(res => res.text())
-        .then(data => document.getElementById('header-placeholder').outerHTML = data);
+            <table class="table-1col">
+                <tr>
+                    <td>
+                        Ce  projet était le quatrième et et dernier projet réalisé dans le cadre de ma formation en BUT GEII.
+                        Il était orienté automatisme et m'a permis d'approfondir mes connaissances en programmation et en conception de systèmes automatisés.
+                        L'objectif était de concevoir un carrefour automobile automatisé, capable de gérer le trafic de manière efficace et sécurisée, 
+                        tout en respectant les normes de circulation. 
+                    </td>
+                </tr>
+            </table>
+        </section>
 
-    fetch('/Portfolio/footer.html')
-        .then(res => res.text())
-        .then(data => document.getElementById('footer-placeholder').outerHTML = data);
-</script>
+        <section>
+            <table class="table-1col">
+                <tr>
+                    <td>
+                        <h2>Ce projet s'est déroulé en 3 étapes clés</h2>
+                        <p>Premièrement, la <a href="#conception">conception de notre propre système</a>, à travers des schémas électroniques et le routage du circuit imprimé.</p>
+                        <p>Ensuite, la <a href="#creation">réalisation physique</a>, avec l'assemblage des composants et la mise en place du matériel.</p>
+                        <p>Enfin, la <a href="#programmation">Programmation</a> en langage Python sur Raspberry Pi en format de Structured Text</p>
+                    </td>
+                </tr>
+            </table>
+        </section>
+
+        <section>
+            <table class="table-1col">
+                <tr>
+                    <td>
+                        <h2 id="conception">I - Conception et schémas</h2>
+                    </td>
+                </tr>
+            </table>
+
+            <table class="table-2col">
+                <tr>
+                    <td>
+                        IMAGE
+                    </td>
+                    <td>
+                        <p>TEXT</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        IMAGE
+                    </td>
+                    <td>
+                        <p>TEXT</p>
+                    </td>
+                </tr>
+            </table>
+        </section>
+
+        <section>
+            <table class="table-1col">
+                <tr>
+                    <td>
+                        <h2 id="creation">II - Création et réalisation</h2>
+                    </td>
+                </tr>
+            </table>
+
+            <table class="table-2col">
+                <tr>
+                    <td>
+                        <p>TEXT</p>
+                    </td>
+                    <td>
+                        IMAGE
+                    </td>
+                </tr>
+            </table>
+        </section>
+
+        <section>
+            <table class="table-1col">
+                <tr>
+                    <td>
+                        <h2 id="programmation">III - Programmation</h2>
+                    </td>
+                </tr>
+            </table>
+
+            <table class="table-2col">
+                <tr>
+                    <td>
+                        IMAGE
+                    </td>
+                    <td>
+                        <p>TEXT</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        IMAGE
+                    </td>
+                    <td>
+                        <p>TEXT</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        IMAGE
+                    </td>
+                    <td>
+                        <p>TEXT</p>
+                    </td>
+                </tr>
+            </table>
+        </section>
+
+        <section>
+            <table class="table-1col">
+                <tr>
+                    <td>
+                        <h2 id="conclusion">Conclusion</h2>
+                    </td>
+                </tr>
+            </table>
+
+            <table class="table-1col">
+                <tr>
+                    <td>
+                        TEXT
+                    </td>
+                </tr>
+            </table>
+        </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script>
+        fetch('/Portfolio/header.html')
+            .then(res => res.text())
+            .then(data => document.getElementById('header-placeholder').outerHTML = data);
+
+        fetch('/Portfolio/footer.html')
+            .then(res => res.text())
+            .then(data => document.getElementById('footer-placeholder').outerHTML = data);
+    </script>
+
 </body>
 </html>
