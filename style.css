@@ -302,6 +302,18 @@ font-weight:bold;
 text-decoration:underline;
 }
 
+.table-1col a,
+.table-2col a{
+    background-color:transparent;
+    text-decoration:underline;
+}
+
+.table-1col a:hover,
+.table-2col a:hover{
+    background-color:transparent;
+    text-decoration:underline,bold;
+}
+
 table img {
 display:block;
 width:90%;
