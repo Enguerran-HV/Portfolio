@@ -8,35 +8,222 @@
 </head>
 <body>
 
-<div id="header-placeholder"></div>
+    <div id="header-placeholder"></div>
 
-<!-- TITRE DE PAGE -->
     <header>
         Console rétro gaming
     </header>
-<!-- PRÉSENTATION DE LA PAGE -->
+
     <article>
         <h1>
-            <p>Conception, création et programmation</p>
-            <p>d'une console de jeu rétro</p>
+            <span>Conception, création et programmation</span><br>
+            <span>d'une console de jeu rétro</span>
         </h1>
-    </article> 
+    </article>
 
-<main>
-    <!-- contenu spécifique à cette page -->
-</main>
+    <main>
 
-<div id="footer-placeholder"></div>
+        <section>
+            <table class="table-1col">
+                <tr>
+                    <td>
+                        <h2>Introduction</h2>
+                    </td>
+                </tr>
+            </table>
 
-<script>
-    fetch('/Portfolio/header.html')
-        .then(res => res.text())
-        .then(data => document.getElementById('header-placeholder').outerHTML = data);
+            <table class="table-1col">
+                <tr>
+                    <td>
+                        Ce projet a été le second projet réalisé dans le cadre de ma formation en BUT GEII.
+                        Il m'a permis d'approfondir mes connaissances en électronique et en conception de systèmes embarqués, tout en introduisant la programmation.
+                        L'objectif était de concevoir une console de jeu rétro fonctionnelle, capable de faire tourner des jeux classiques
+                        tout en offrant une expérience utilisateur agréable.
+                    </td>
+                </tr>
+            </table>
+        </section>
 
-    fetch('/Portfolio/footer.html')
-        .then(res => res.text())
-        .then(data => document.getElementById('footer-placeholder').outerHTML = data);
-</script>
+        <section>
+            <table class="table-1col">
+                <tr>
+                    <td>
+                        <h2>Ce projet s'est déroulé en 4 étapes clés</h2>
+                        <p>Premièrement, une <a href="#etude-existant">étude d'un système déjà existant</a>, afin de comprendre son fonctionnement et d'en tirer des principes utiles.</p>
+                        <p>Deuxièmement, la <a href="#conception">conception de notre propre système</a>, à travers des schémas électroniques et le routage du circuit imprimé.</p>
+                        <p>Ensuite, la <a href="#creation">réalisation physique</a>, avec l'assemblage des composants et la mise en place du matériel.</p>
+                        <p>Enfin, la <a href="#programmation">programmation des jeux</a> en langage C sur Raspberry Pi.</p>
+                    </td>
+                </tr>
+            </table>
+        </section>
+
+        <section>
+            <table class="table-1col">
+                <tr>
+                    <td>
+                        <h2 id="etude-existant">I - Étude de l'existant</h2>
+                    </td>
+                </tr>
+            </table>
+
+            <table class="table-2col">
+                <tr>
+                    <td>
+                        Le sujet d'étude était une boîte à histoire de la marque XXX.
+                    </td>
+                    <td>
+                        IMAGE DE L'ÉTUDE DE L'EXISTANT
+                    </td>
+                </tr>
+            </table>
+        </section>
+
+        <section>
+            <table class="table-1col">
+                <tr>
+                    <td>
+                        <h2 id="conception">II - Conception des schémas et routage</h2>
+                    </td>
+                </tr>
+            </table>
+
+            <table class="table-2col">
+                <tr>
+                    <td>
+                        IMAGE DU SCHÉMA
+                    </td>
+                    <td>
+                        <p>Cette fois, beaucoup moins de documentation était fournie.
+                            Une plus grande liberté nous a été laissée pour la conception du système, ce qui a rendu la tâche plus complexe.
+                            Seules les références des composants à utiliser ainsi que les contraintes de fonctionnement du système étaient imposées.
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        IMAGE DU ROUTAGE
+                    </td>
+                    <td>
+                        <p>Là encore, moins d'indications étaient fournies.
+                            Seules les dimensions du circuit imprimé ainsi que les contraintes de placement de certains composants, tels que l'écran et la Raspberry Pi, étaient imposées.
+                            La forme du routage et l'optimisation de l'espace disponible restaient donc à notre charge.
+                        </p>
+                    </td>
+                </tr>
+            </table>
+        </section>
+
+        <section>
+            <table class="table-1col">
+                <tr>
+                    <td>
+                        <h2 id="creation">III - Création et soudage</h2>
+                    </td>
+                </tr>
+            </table>
+
+            <table class="table-2col">
+                <tr>
+                    <td>
+                        <p>Le circuit imprimé nous était fourni avec seulement les pistes de cuivre tracées.</p>
+                        <p>Le perçage devait être effectué par nos soins, les diamètres des trous étant précisés.</p>
+                        <p>
+                            Ensuite, il a fallu souder les composants sur le circuit imprimé en respectant leurs polarités et leurs orientations.
+                        </p>
+                    </td>
+                    <td>
+                        IMAGE DU SYSTÈME RÉALISÉ
+                    </td>
+                </tr>
+            </table>
+        </section>
+
+        <section>
+            <table class="table-1col">
+                <tr>
+                    <td>
+                        <h2 id="programmation">IV - Programmation des jeux</h2>
+                    </td>
+                </tr>
+            </table>
+
+            <table class="table-2col">
+                <tr>
+                    <td>
+                        <p>La dernière partie du projet consistait à programmer les jeux de la console.</p>
+                        <p>Nous les avons programmés en langage C, que nous découvrions à ce moment-là. Des guides et des explications nous étaient donc fournis.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        IMAGE PREMIER JEU
+                    </td>   
+                    <td>
+                        <p>Le premier jeu programmé était un jeu d'arcade dans lequel il fallait déplacer son personnage pour survivre et gagner des points.</p>
+                        <p>Il a introduit les bases de la programmation en C, avec le déplacement d'un objet de manière aléatoire, les déplacements via des entrées système,
+                            l'affichage d'images, de score et de vies, ainsi que la gestion d'un menu d'introduction et de fin de partie.
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        IMAGE DEUXIEME JEU
+                    </td>   
+                    <td>
+                        <p>Le deuxième jeu programmé était un jeu de réaction dans lequel deux joueurs pouvaient s'affronter sur leurs réflexes pour faire perdre l'adversaire.</p>
+                        <p>Il a introduit la gestion de plusieurs entrées système simultanées, la gestion d'un timer et d'une horloge,
+                            ainsi que la gestion d'une sortie audio pour les effets sonores et la musique de fond.
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        IMAGE TROISIEME JEU
+                    </td>   
+                    <td>
+                        <p>Le troisième jeu programmé était un Pong dans lequel deux joueurs pouvaient s'affronter.</p>
+                        <p>
+                            Il a introduit la gestion de plusieurs objets en mouvement simultanément, ainsi que la gestion des collisions avec les bords
+                            et les barres du jeu, la gestion du score et la fin de partie avec un vainqueur.
+                        </p>
+                    </td>
+            </table>
+        </section>
+
+        <section>
+            <table class="table-1col">
+                <tr>
+                    <td>
+                        <h2 id="conclusion">V - Conclusion</h2>
+                    </td>
+                </tr>
+            </table>
+
+            <table class="table-1col">
+                <tr>
+                    <td>
+                        Bien que ce ne fût que le second projet réalisé dans le cadre de ma formation en BUT GEII, celui-ci était déjà plus complexe.
+                        L'autonomie et la communication au sein du groupe étaient plus importantes, tout comme la gestion du temps et de l'organisation.
+                        J'ai pu approfondir mes connaissances en électronique et en conception de systèmes embarqués, tout en découvrant la programmation en C sur Raspberry Pi,
+                        ce qui m'a permis de développer mes compétences en programmation et en développement de jeux.
+                    </td>
+                </tr>
+            </table>
+        </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script>
+        fetch('/Portfolio/header.html')
+            .then(res => res.text())
+            .then(data => document.getElementById('header-placeholder').outerHTML = data);
+
+        fetch('/Portfolio/footer.html')
+            .then(res => res.text())
+            .then(data => document.getElementById('footer-placeholder').outerHTML = data);
+    </script>
 
 </body>
 </html>
