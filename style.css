@@ -306,6 +306,8 @@ text-decoration:underline;
 .table-2col a{
     background-color:transparent;
     text-decoration:underline;
+    padding:0px;
+    margin:0px;
 }
 
 .table-1col a:hover,
@@ -390,7 +392,7 @@ text-decoration:none;
 border:none;
 }
 .bouton-table:hover{
-background-color:blue;
+background-color:transparent;
 font-weight:bold;
 text-decoration:underline;
 }
