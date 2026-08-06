@@ -73,7 +73,70 @@
                 <table class="table-2col">
                     <tr>
                         <td>IMAGE</td>
-                        <td><p>TEXT</p></td>
+                        <td>
+                            <p>Pour commencer avec la prgramation, aucun consigne particulière n'était imposé. L'organistion du code été libre</p>
+                            <p>Avant de se lancer dans la programmation, un temps de réflexion a été nécessaire pour structurer le code et définir les logiques de fonctionnement.</p>
+                            <p>Cette reflexion a mener a la création de grafcet de fonctionnement, utilisé dans la stucturation des programmes et dans leurs fonctionnement interne</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>IMAGE</td>
+                        <td>
+                            <p>Le code a été structuré en plusieurs programmes, chacun correspondant à une partie spécifique du système de forgeage.</p>
+                            <p>LA programmation ne sais pas fait dans l'odrelogique de la chaine de fonctionnement afin d'amener de manière fluide 
+                                les nouveté et ne pas nous retrouver submerger d'informations.</p>
+                            <p>La première partie portait sur la gestion d'une cuve d'eau, de son remplissage et de sa vidange, utilisé dans le netoyage final de la barre métallique.</p>
+                            <p>Des capteurs de niveaux ont été utilisés pour surveiller le niveau d'eau dans la cuve. 
+                                Et l'utilsiation d'une vanne d'entreé et de sortie ont été impliqué pour gérer le flux d'eau.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            IMAGE
+                        </td>
+                        <td>
+                            <p
+                            >La seconde partie portait sur la gestion et la régulation de la température d'unz zone de chauffe.
+                        </p>
+                            <p>
+                                Cette zone été utile dans la cahuffe de l'embout de la barre métallique avant le forgeage.
+                                Un capteur de température a été utilisé pour surveiller la température de la zone de chauffe.
+                                Une lampe de chauffe ainsi qu'un ventilateur ont été utilisés pour réguler la température.
+                                Cette réguation c'est éffectuer via hystérisis, avec une température de consigne de 100°C et une plage de tolérance de ±5°C.
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>IMAGE</td>
+                        <td>
+                            <p>
+                                La troisième partie consistait à forger la barre une fois celle-ci chauffée.
+                            </p>
+                            <p>
+                                Un convoyeur a été utilisé pour transporter la barre métallique à travers la chaîne de forgeage.
+                                Ce même convoyeur a été utilisé pour forger la barre. celle-ci vas avancer a tranvers plusieurs zone délimité par des capteurs de postion
+                                Chaque fois que la barre entre dans une nouvelle zone le tapis vas accélérer, rendant  ainsi cela progréssif et fluide.
+                            </p>
+                            <p>
+                                Au bout du convoyeur se trouvre le tampon de forgeage, qui vas alors donnéer la forme voulut à l'embout de la barre métallique.
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            IMAGE
+                        </td>
+                        <td>
+                            <p>
+                                La dernière partie été le transport de la barre entre chaque équipement de la chaine de forge.
+                            </p>
+                            <p>
+                                Ce transport c'est fait avec un robot cartésien 3 axes. Le robot prend la barre dans une zone de stockage.
+                                La transporte sur le convoyeur utilisé dans la chauffe et la forge. Une fois la barre forgé celle-ci retourne au début de convoyeur pour être reprise par le convoyeurs  
+                                Elle est ensuite maintenue par le bras dans la cuve, le temps a cette dernière de réaliser 2 cycle de vidange. 
+                                Pour finir, la barre est déposé dans une zone final, le bras retourne en postion de repos
+                            </p>
+                        </td>
                     </tr>
                 </table>
             </section>
@@ -89,8 +152,51 @@
 
                 <table class="table-2col">
                     <tr>
-                        <td>IMAGE</td>
-                        <td><p>TEXT</p></td>
+                        <td>
+                            IMAGE
+                        </td>
+                        <td>
+                            <p>
+                                La seconde partie du projet était la conception de l'IHM. L'IHM est un magelys de Schneinder, concu sur Vijéo designer. 
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            IMAGE
+                        </td>
+                        <td>
+                            <p>
+                                L'IMH avait 2 intéret, premièrement la supervison du système, voir les états des capteurs, l'avancement de la barre, les valeurs de température et de vitesse.
+                                Secondement, le controle du système en mode manuel, le réglage des consignes de températures, déplacer manuellement le robot, allumer et éteindre les équipements.
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>
+                                IMAGE
+                            </p>
+                        </td>
+                        <td>
+                            <p>
+                                La partie supervision devais contenir toutes les informations importantes utilisé dans la surveillance du système. Des pages dédier à chaque équipement pour surveiller leurs états 
+                                et leurs consignes, permetant rapidement de vérifier leurs conformités. 
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>
+                                IMAGE
+                            </p>
+                        </td>
+                        <td>
+                            <p>
+                                La partie de commande manuelle est semblable à la supervsion, chaque équipement a une page dédier dans lequelle il est possible de modifier les consignes voulut,
+                                ou encore de les controller si le mode manuel est activer.
+                            </p>
+                        </td>
                     </tr>
                 </table>
             </section>
@@ -106,8 +212,15 @@
 
                 <table class="table-2col">
                     <tr>
-                        <td><p>TEXT</p></td>
-                        <td>IMAGE</td>
+                        <td>
+                            <p>
+                                Afin de simuler le système pour le tester, un jumeau numérique à été mis en place sur VUP.
+                                Étant donnée que c'était notre premier projet, le jumeau nous était fournit. Aucune conception ni création de fut nécessaire, mais ce fut un premier pas utile pour décourvrir le logiciel VUP
+                            </p>
+                        </td>
+                        <td>
+                            IMAGE
+                        </td>
                     </tr>
                 </table>
             </section>
@@ -123,8 +236,16 @@
 
                 <table class="table-2col">
                     <tr>
-                        <td>IMAGE</td>
-                        <td><p>TEXT</p></td>
+                        <td>
+                            IMAGE
+                        </td>
+                        <td>
+                            <p>
+                                En paralelle du programme, de l'IHM et du VUP, un dossier technique et une notice d'utilsiation nous état demandé.
+                                Ce premier résumé tout le projet, expliquait sont fnctionnement dans la globatlité, et permettait a une personne extérieur de comprendre pourquoi et comment cela fonctionnait.
+                                Le second document plus consit expliquait la mise en route, les onctionnements automateique et manuel, ainsi que le fonctionnement de l'IHM.
+                            </p>
+                        </td>
                     </tr>
                 </table>
             </section>
