@@ -49,20 +49,22 @@ font-family:verdana,sans-serif;
 
 /*Bouton dans section*/
 section a{
-background-color:var(--color-bouton);
-width:255px;
-height:auto;
-display:inline-flex;
-padding:10px;
-margin:20px;
-font-size:18px;
-font-family:verdana,sans-serif;
-border-radius:15px;
-text-decoration:none;
-text-align:center;
-border:1px solid black;
-
+  background-color:var(--color-bouton);
+  min-width:255px;
+  width:auto;
+  white-space:nowrap;
+  height:auto;
+  display:inline-flex;
+  padding:10px;
+  margin:20px;
+  font-size:18px;
+  font-family:verdana,sans-serif;
+  border-radius:15px;
+  text-decoration:none;
+  text-align:center;
+  border:1px solid black;
 }
+
 /*Quand bouton survolé*/
 section a:hover{
 background-color:rgb(190,230,255);
