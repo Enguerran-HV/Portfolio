@@ -18,7 +18,7 @@
         <!-- PRÉSENTATION DE LA PAGE -->
         <article>
             <h1>
-                <p>Programmation d'un automate, création d'un IHM et jumeau numérique</p>
+                <p>Programmation d'un automate, création d'un IHM et d'un jumeau numérique</p>
                 <p>Pour le transport et le conditionnement de jetons</p>
             </h1>
         </article>
@@ -51,9 +51,9 @@
                     <tr>
                         <td>
                             <h2>Ce projet s'est déroulé en 4 étapes clés</h2>
-                            <p>Premièrement, <a href="#Jetons-Programmation">la programmation de l'automate</a> avec le grafcet, le Structured Text, et la gestion des entrées et sorties.</p>
+                            <p>Premièrement, <a href="#Jetons-Programmation">la programmation de l'automate</a> avec des grafcets, et la gestion des entrées et sorties.</p>
                             <p>Deuxièmement, <a href="#Jetons-IHM">la création de l'IHM</a> et sa mise en fonctionnement.</p>
-                            <p>Troisièmement, <a href="#Jetons-VUP">la création d'un jumeau numérique sur VUP</a> pour simuler le système.</p>
+                            <p>Troisièmement, <a href="#Jetons-VUP">la création d'un jumeau numérique sur VUP</a> pour simuler le fonctionnement du système.</p>
                             <p>Enfin, <a href="#Jetons-Dossier">la rédaction du dossier de projet</a> ainsi que de la notice d'utilisation.</p>
                         </td>
                     </tr>
@@ -75,7 +75,7 @@
                         <td>
                             <p>Comme tout les projets précédent, un temps de réflexion a été nécessaire pour concevoir la logique de programmation de l'automate.</p>
                             <p>Des Grafcet sont créés pour représenter les différentes phases du processus de conditionnement et de transport des jetons.</p>
-                            <p> Afin d'organiser au mieux les différentes étapes du processus, l'utilisation d'un gracet de conduit fut chosie. Celui-ci sera utilisé dans l'appelle de sous 
+                            <p> Afin d'organiser au mieux les différentes étapes du processus, l'utilisation d'un gracet de conduite fut chosie. Celui-ci sera utilisé dans l'appelle de sous 
                                 fonction pour gérer les différentes étapes du processus de conditionnement et de transport des jetons.</p>
                         </td>
                     </tr>
@@ -87,6 +87,22 @@
                             <p>Des sous fonctions sont créées pour gérer les différentes étapes du processus de conditionnement et de transport des jetons.</p>
                             <p>Chaque sous fonction est concu via un principe de conditions d'évolution, de changment d'étape, avec un regroupement des sorties dans un meme sous programme</p>
                         </td>
+                    </tr>
+                    <tr>
+                        <td>IMAGE</td>
+                        <td>
+                            <p>
+                                Un jeton arrive dans un première zone appeller magasin, un bras équiper d'un ventouse vien la récupérer afin de la transporter dans une seconde zone appeller 
+                                ascenseur. Un fois la pièce relacher, le bras retourne en position de repos, et un premier test est éffectue dans la zone de l'ascenseur.
+                                Celui-ci consistait en un test de couleurs et de matire, à l'aide de 2 capteurs, on pouvait determiner si la pièce état noire, rouge ou métallique.
+                                A la fin de se test, le résultat était stocker et sera en suite utilisé dans des bilans sur l'IHM. L'ascenseur ce met alors à monter pour atteindre la 
+                                seconde zone de test, qui est un test d'épaisseur. 2 capteurs se trouvent en haut de l'ascenseur et selon l'épaisser de la pièce, aucun, l'un ou les deux capteurs peuvent
+                                être activer. Dans le cas d'une deterction d'aucun capteurs ou des 2, la pièce est considérer mauvaise, dans le cas d'une detection pas 1 capteur, la pièce
+                                est considérer moyenne et donc bonne. Si la pièce est bonne un vérin vas l'éjecter lors que l'ascenseur est en position haute, dans le but de l'envoyer dans la seconde
+                                partie du système, si la pièce est défectueuse le vérin éjectera la pièce lors que l'ascenseur sera en position basse. Un fois l'ascenseur en position basse et le bras
+                                en position de repos, si une pièce est  présente au magasin un nouveau cycle vas se lancer, sinon le système en attendra une ou attendra un arret cycle.
+                            </p>
+                         </td>
                     </tr>
                 </table>
             </section>
