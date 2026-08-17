@@ -138,7 +138,8 @@
                     <tr>
                         <td>
                             <p>
-                                Premièrement un accueil, représetant le système dans son état, l'emplacement des équipements et la position de la pièce du cycle actuel 
+                                Premièrement un accueil, représetant le système dans son état, l'emplacement des équipements et la position de la pièce du cycle actuel.
+                                Celui-ci permet une vue en directe du cycle, de l'état des actionneurs simplifier et des réponses des capteurs.
                             </p>
                         </td>
                         <td>IMAGE</td>
@@ -156,7 +157,7 @@
                         <td>
                             <p>
                                 Une page d'alarme, montrant les 15 derniers défauts, leurs heures d'arrivé et leurs état actuel. Un bouton d'acquittement est aussi disposer,
-                                un appuie acquite tout les défauts et les alarmes actuellement déclenché.
+                                un appuie acquite toutes les alarmes et les défauts si ils ont réparé.
                             </p>
                         </td>
                         <td>IMAGE</td>
@@ -164,8 +165,8 @@
                     <tr>
                         <td>
                             <p>
-                                Une page de bilans, qui permet la vue des compteurs de pièces. 7 compteurs sont proposés, 3 pour la couleur de la pièce, 3 pour les épaisseurs, et un compteur
-                                de pièce total. Cette page propose aussi un reset des compteurs si nécessaire.
+                                Une page de bilans, qui permet la vue des compteurs de pièces. 7 compteurs sont proposés, 3 pour la couleur de la pièce entre rouge, noire et métallique, 
+                                3 pour les épaisseurs entre petit, moyen et grand, ainsi qu'un compteur de pièce total. Cette page propose aussi un reset des compteurs si nécessaire.
                             </p>
                         </td>
                         <td>IMAGE</td>
@@ -187,7 +188,7 @@
                         <td>
                             <p>
                                 Le jumeau numérique fut la grande nouveauté et le point clé de ce projet. Bien que nous ayont déjà utilisé VUP dans d'autre projet,
-                                ici les éxigence était bien plus élever. Seul les modèles 3D de la maquette nous était fournit. mais tout ce qui concernais leur placement,
+                                ici les éxigence était bien plus élever. Seul les modèles 3D de la maquette nous était fournit. Mais tout ce qui concernais leur placement,
                                 la gestion des capteurs et des actionneurs, la création des mouvement, ainsi que la communication et la gestion par l'automate était à notre charge.
                             </p>
                         </td>
@@ -197,6 +198,36 @@
                         <td>
                             <p>
                                 La première étape était donc d'importer, de renommer puis de placer tout les objets afin de créer la forme du jumeau numérique.
+                                Le jumeau représentait et copiait la maquette physique du sujet. On y retrouvre le même bras équipé d'une ventouse,
+                                l'ascenseur, et les différents décors et pièce de sécurité.
+                            </p>
+                        </td>
+                        <td>IMAGE</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>
+                                La seconde étape consistai a créer les movements des actionneurs. cela comprenait une rotation du bras ainsi que de la ventouse ascossier
+                                pour la garder coller au bras, et une translation vertical de l'ascenser, afin de le faire monter et descendre.
+                            </p>
+                        </td>
+                        <td>IMAGE</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>
+                                La trisème étape était de créer les capteurs, le fin de course du bras, de l'ascenseur, et des vérins, mais aussi le vide effectuer par la ventouse, les
+                                capteurs d'épaisseur de la pièce et de couleurs. Tout les capteurs en dehors de la couleur consistait a faire un test de collision entre l'objet et 
+                                et une pièce quelconque invisible.
+                            </p>
+                        </td>
+                        <td>IMAGE</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>
+                                Enfin le dernier objectif était de lié les mouvement avec les demandes de mouvement de l'API, et les capteurs numérique avec les entrées.
+                                Une section de programme est dédié au choix entre l'utilsiation des capteurs et actinneur phsique ou numérique.
                             </p>
                         </td>
                         <td>IMAGE</td>
@@ -216,7 +247,17 @@
                 <table class="table-2col">
                     <tr>
                         <td>IMAGE</td>
-                        <td><p>TEXT</p></td>
+                        <td><p>
+                            A l'instar des autres projet, un dossier technique nous était demandé. Celui-ci devait permettre la présentation simpliste et global du projet.
+                            Il devait rester sobre pour juste éfleurer la surface du système, mais permttre malgrés tout un compréhensin universelle.
+                        </p></td>
+                    </tr>
+                    <tr>
+                        <td>IMAGE</td>
+                        <td><p>
+                            A contrario, la notice d'utilsation est bien plus courte, mais aussi plus technique et spécialisé. Elle doit permettre une mise en marche
+                            du système par une technicien qualifier. Elle aborde de manière précise les modes de fonctionnement, et présentre de manière détaillé la fonctionnement.
+                        </p></td>
                     </tr>
                 </table>
             </section>
@@ -232,7 +273,10 @@
 
                 <table class="table-1col">
                     <tr>
-                        <td><p>TEXT</p></td>
+                        <td><p>Les parties programmation d'API et création d'IHM, bien que basique, m'ont permis d'approfondir mes connaissances et compétences.
+                            Là où le jumeau numérique était une vrai nouveauté, une découverte total d'un logiciel. De ce fait tout n'as pas pus être finalisé, telle que les 
+                            capteurs de couleurs qui n'ont pas était commencer par manque de temps et de connaissance.
+                        </p></td>
                     </tr>
                 </table>
             </section>

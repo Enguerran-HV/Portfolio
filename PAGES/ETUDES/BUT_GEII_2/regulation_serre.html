@@ -40,6 +40,7 @@
                             <p>Ce projet de BUT GEII 2 nous a introduits au principe et aux techniques de câblage d'un système composé d'un automate, d'une IHM, de capteurs et d'actionneurs, ainsi qu'aux principes de régulation.</p>
                             <p>Nous avons dû concevoir un système capable de réguler la température et la luminosité d'une serre, en utilisant des capteurs pour mesurer les conditions environnementales et des actionneurs pour ajuster ces conditions.</p>
                             <p>Ce projet a porté sur un automate Unitronics V130 possédant un IHM intégré, ainsi que des capteurs de température et de luminosité pour réguler le système.</p>
+                            <p></p>
                         </td>
                     </tr>
                 </table>
@@ -52,7 +53,7 @@
                             <h2>Ce projet s'est déroulé en 5 étapes clés</h2>
                             <p>Premièrement, <a href="#Serre-Schéma">l'étude et la création du schéma électrique</a>, en vue de câbler le système.</p>
                             <p>La seconde partie était <a href="#Serre-Cablage">la réalisation physique du câblage</a> avec un test de qualité.</p>
-                            <p>La troisième partie était la programmation de l'automate et la gestion de la régulation.</p>
+                            <p>La troisième partie était <a href="#Serre-Programmation">la programmation de l'automate</a> et la gestion de la régulation.</p>
                             <p>La quatrième partie était <a href="#Serre-IHM">la conception et création de l'IHM</a>.</p>
                             <p>La dernière partie était <a href="#Serre-Dossier">la rédaction du dossier de projet</a> ainsi que d'une notice d'utilisation.</p>
                         </td>
@@ -72,7 +73,26 @@
                 <table class="table-2col">
                     <tr>
                         <td>IMAGE</td>
-                        <td><p>TEXT</p></td>
+                        <td><p>
+                            Avant de se lancer dans le câblage de la maquette, une étude préliminaire était requise.
+                            Celle-ci permettait aussi bien de faire le point sur les équipements deja existants, que sur les ajouts à effectuer.
+                        </p></td>
+                    </tr>
+                    <tr>
+                        <td>IMAGE</td>
+                        <td><p>
+                            Les schémas ont était fait sur See Electrical après une formation éffectuer par un électricien professionnele.
+                            Cette formation nous à fait décourvrir l'interface, les méthodes et les normes utilisé dans le domaine électrique.
+                            Une rigueur nous était imposé, que ca soit sur le nommage des équipements, la représentation des équipements, l'organisation des folios par théme.
+                        </p></td>
+                    </tr>
+                    <tr>
+                        <td>IMAGE</td>
+                        <td><p>
+                            Une fois cette formation terminer la maquette à étudier nous était fournit. une expliquation de qu'est ce que le système devais réaliser nous était aussi données.
+                            C'est avec tout cela que nous avons commencé la création des schémas et des folios. L'organisation et la forme de ceux-ci nous était libres.
+                            Mais grâce au conseil et technique apris lors de la formation nous avons pus créer des documents de qualité suffisantes.
+                        </p></td>
                     </tr>
                 </table>
             </section>
@@ -89,7 +109,17 @@
                 <table class="table-2col">
                     <tr>
                         <td>IMAGE</td>
-                        <td><p>TEXT</p></td>
+                        <td><p>
+                            Une fois les schémas finalisé, tout le matériel nécessaire au câblage de la maquette nous était fournit. La aussi une certaine liberté nous était données,
+                            mais toujours avec un demande de faire le plus propre, claire et fonctionnelle possible.
+                        </p></td>
+                    </tr>
+                    <tr>
+                        <td>IMAGE</td>
+                        <td><p>
+                            Aucun équipement électrique n'était a ajouter, alimentaion, disjonteur, relais, bornier, capteurs et actionneurs, étaient déja présent.
+                            Notre devoir était donc de les reliers, de leurs amenés une tension, de récupérer les retours des capteurs, et de controller les actionneurs via les relais.
+                        </p></td>
                     </tr>
                 </table>
             </section>
@@ -105,7 +135,43 @@
 
                 <table class="table-2col">
                     <tr>
-                        <td><p>TEXT</p></td>
+                        <td><p>
+                            La seconde partie du projet était le contrôle et la régulation de la serre. Tout devais ce faire via l'automate Unitronics V130 de la maquette.
+                            La programmation s'est fait sur le logiciel Visilogic, tout le programme fut fait en LADDERS.
+                        </p></td>
+                        <td>IMAGE</td>
+                    </tr>
+                    <tr>
+                        <td><p>
+                            La première régulation faite est celle de la luminosité. La serre n'étant pas équipé de capteurs de luminosité, celle-ci c'est faite
+                            en comparant l'heure actuelle du système, avec les horaires indiqué sur l'IHM par l'opérateur. Si l'heure acteulle était compris dans la plage horaire
+                            indiqué, alors la lumière devais s'allumé.
+                        </p></td>
+                        <td>IMAGE</td>
+                    </tr>
+                    <tr>
+                        <td><p>
+                            La vrai difficulté et nouveaté concernait la régulation de la température. Pour la faire la serre était équipé d'un capteur de témpérateur de type sonde PT100,
+                            d'un ventillateur pour refroidir, et d'une résistante chauffante pour chauffer.
+                        </p></td>
+                        <td>IMAGE</td>
+                    </tr>
+                    <tr>
+                        <td><p>
+                            La régulation c'est faite en 3 étapes, afin d'amené de manière progressive les notions.
+                            Premièrement un tout ou rien basique, si la température est trop basse alors on chauffe, si trop haute alors on refrodit, simplement guider par une consisgne.
+                            Puis une régulation par hystérisis avec un fonctionnement PWM, 2 consignes, 1 de chauffe et 1 de refroidissement, pour ne pas user en permanance les actionneurs 
+                            et relais. Les équipements étaient actionner via un principe de PWM, plus la consigne était éloigner de l'entré, plus le rapport cyclique était élever, et 
+                            il diminuait progressivement pour s'annuler à l'atteinte de la consigne.
+                            La dernière régulation est via un principe de PID, celui-ci n'a pas eux le temps d'être étudier et mis en palce.
+                        </p></td>
+                        <td>IMAGE</td>
+                    </tr>
+                    <tr>
+                        <td><p>
+                            Un mode manuel était aussi proposé, que ca soit via le pupitre de boutton physique ou l'IHM. Un simple appuye permettait la mise en route ou l'arret
+                            d'un équipment pour le tester.
+                        </p></td>
                         <td>IMAGE</td>
                     </tr>
                 </table>
@@ -123,7 +189,7 @@
                 <table class="table-2col">
                     <tr>
                         <td>IMAGE</td>
-                        <td><p>TEXT</p></td>
+                        <td><p>Pour accopagner le programme et  </p></td>
                     </tr>
                 </table>
             </section>
