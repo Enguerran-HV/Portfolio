@@ -318,7 +318,7 @@ text-decoration:underline;
     text-decoration:underline;
     padding:0px;
     margin:0px;
-    display: block;
+    display: inline;
 }
 
 .table-1col a:hover,
