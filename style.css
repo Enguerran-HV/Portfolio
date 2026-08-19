@@ -50,7 +50,7 @@ font-family:verdana,sans-serif;
 /*Bouton dans section*/
 section a{
   background-color:var(--color-bouton);
-  width:255px;
+  width:auto;
   box-sizing:border-box;
   min-height:50px;
   height:auto;
@@ -236,16 +236,21 @@ font-weight:bold;
 footer{
 background-color:rgb(85,120,160);
 display:flex;
-justify-content:center;
+align-items:flex-start;
+padding:10px 40px;
 margin:-8px;
 margin-top:100px;
 position:sticky;
 
 }
 footer div{
-padding:10px;
 margin-left:150px;
 font-family:verdana,sans-serif;
+}
+
+footer div:last-child{
+margin-left:auto;
+margin-right:20px;
 }
 
 footer h1{
@@ -259,7 +264,7 @@ footer h2{
 font-size:12px;
 font-family:verdana,sans-serif;
 color:rgb(200,0,0);
-text-align:right,bottom;
+text-align:right;
 }
 
 /*Liste sans poinçons avec - */
