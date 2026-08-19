@@ -50,7 +50,8 @@ font-family:verdana,sans-serif;
 /*Bouton dans section*/
 section a{
   background-color:var(--color-bouton);
-  width: 250px;;
+  width: auto;
+  min-width: 200px;
   box-sizing:border-box;
   min-height:50px;
   height:auto;
