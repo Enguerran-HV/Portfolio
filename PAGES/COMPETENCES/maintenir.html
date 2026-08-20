@@ -1,60 +1,97 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <title>Titre de la page</title>
     <link rel="stylesheet" href="/Portfolio/style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+
 <body>
 
-<div id="header-placeholder"></div>
+    <div id="header-placeholder"></div>
 
-<!-- TITRE DE PAGE -->
+    <!-- TITRE DE PAGE -->
     <header>
         Maintenir
     </header>
-<!-- PRÉSENTATION DE LA PAGE -->
+    <!-- PRÉSENTATION DE LA PAGE -->
     <article>
         <h1>
             <p>Maintenir un système GEII</p>
             <p>Diagnostiquer les défauts et préserver la disponibilité du système</p>
         </h1>
-    </article>    
-<main>
-    <section>
-        <table class="table-1col"><tr><td><h2 id="maintenir-an1">Première année : Identifier les premiers défauts</h2></td></tr></table>
-        <table class="table-2col competences-table"><tr><td>
-            En première année, j'ai découvert les bases de la maintenance en repérant les erreurs de câblage, en contrôlant les composants et en appliquant une démarche simple de recherche de panne.
-        </td></tr></table>
-    </section>
+    </article>
+    <main>
+        <section>
+            <table class="table-1col">
+                <tr>
+                    <td>
+                        <h2 id="maintenir-an1">Première année : Identifier les premiers défauts</h2>
+                    </td>
+                </tr>
+            </table>
+            <table class="table-2col competences-table">
+                <tr>
+                    <td>
+                        En première année, j'ai découvert les bases de la maintenance en repérant les erreurs, et en les
+                        expliquant à l'aide de schémas et de documents techniques.
+                    </td>
+                </tr>
+            </table>
+        </section>
 
-    <section>
-        <table class="table-1col"><tr><td><h2 id="maintenir-an2">Seconde année : Diagnostiquer et sécuriser un équipement</h2></td></tr></table>
-        <table class="table-2col competences-table"><tr><td>
-            En deuxième année, j'ai suivi les alarmes, utilisé les modes manuel et automatique et rédigé des notices pour faciliter le diagnostic et l'exploitation des systèmes automatisés.
-        </td></tr></table>
-    </section>
+        <section>
+            <table class="table-1col">
+                <tr>
+                    <td>
+                        <h2 id="maintenir-an2">Seconde année : Diagnostiquer et sécuriser un équipement</h2>
+                    </td>
+                </tr>
+            </table>
+            <table class="table-2col competences-table">
+                <tr>
+                    <td>
+                        En deuxième année, j'ai suivi les alarmes, utilisé des modes manuel et automatique et rédigé des
+                        notices pour faciliter le diagnostic et l'exploitation des systèmes automatisés.
+                    </td>
+                </tr>
+            </table>
+        </section>
 
-    <section>
-        <table class="table-1col"><tr><td><h2 id="maintenir-an3">Troisième année : Inscrire la maintenance dans la durée</h2></td></tr></table>
-        <table class="table-2col competences-table"><tr><td>
-            En troisième année, j'ai adopté une approche plus professionnelle en reliant diagnostic, maintenance préventive et amélioration continue pour limiter les arrêts et fiabiliser les installations.
-        </td></tr></table>
-    </section>
-</main>
+        <section>
+            <table class="table-1col">
+                <tr>
+                    <td>
+                        <h2 id="maintenir-an3">Troisième année : Inscrire la maintenance dans la durée</h2>
+                    </td>
+                </tr>
+            </table>
+            <table class="table-2col competences-table">
+                <tr>
+                    <td>
+                        En troisième année, j'ai adopté une approche plus professionnelle en reliant diagnostic,
+                        maintenance préventive et amélioration continue pour limiter les arrêts et fiabiliser les
+                        installations.
+                    </td>
+                </tr>
+            </table>
+        </section>
+    </main>
 
-<div id="footer-placeholder"></div>
+    <div id="footer-placeholder"></div>
 
-<script>
-    fetch('/Portfolio/header.html')
-        .then(res => res.text())
-        .then(data => document.getElementById('header-placeholder').outerHTML = data);
+    <script>
+        fetch('/Portfolio/header.html')
+            .then(res => res.text())
+            .then(data => document.getElementById('header-placeholder').outerHTML = data);
 
-    fetch('/Portfolio/footer.html')
-        .then(res => res.text())
-        .then(data => document.getElementById('footer-placeholder').outerHTML = data);
-</script>
+        fetch('/Portfolio/footer.html')
+            .then(res => res.text())
+            .then(data => document.getElementById('footer-placeholder').outerHTML = data);
+    </script>
 
 </body>
+
 </html>

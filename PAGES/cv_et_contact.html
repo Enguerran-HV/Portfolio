@@ -1,54 +1,64 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <title>Titre de la page</title>
     <link rel="stylesheet" href="/Portfolio/style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+
 <body>
 
-<div id="header-placeholder"></div>
+    <div id="header-placeholder"></div>
 
-<!-- TITRE DE PAGE -->
+    <!-- TITRE DE PAGE -->
     <header>
         CV et contact
     </header>
-<!-- PRÉSENTATION DE LA PAGE -->
+    <!-- PRÉSENTATION DE LA PAGE -->
     <article>
         <h1>
             <p>Mon CV ainsi que les moyens de me contacter</p>
         </h1>
-    </article>    
-<main>
-<table class="table-2col">
-    <tr>
-        <td>
-            <img src="/Portfolio/MEDIA/cv.pdf" alt="CV">        
-        </td>
-        <td>
-        <ul class="tirets">
-        <p><li><a href="tel:+33602031423">Téléphone : 06 02 03 14 23</a></p></li>
-        <p><li><p><a href="mailto:hollender.enguerran@orange.fr">Email : hollender.enguerran@orange.fr</a></p></li>
-        </ul> 
-        </td>
-    </tr>
-    
-</table>
+    </article>
+    <main>
+        <table class="table-2col">
+            <tr>
+                <td>
+                    <img src="/Portfolio/MEDIA/IMAGES/cv.pdf" alt="CV">
+                </td>
+                <td>
+                    <ul class="tirets">
+                        <p>
+                            <li><a href="tel:+33602031423">Téléphone : 06 02 03 14 23</a>
+                        </p>
+                        </li>
+                        <p>
+                            <li>
+                                <p><a href="mailto:hollender.enguerran@orange.fr">Email :
+                                        hollender.enguerran@orange.fr</a></p>
+                            </li>
+                    </ul>
+                </td>
+            </tr>
 
-</main>
+        </table>
 
-<div id="footer-placeholder"></div>
+    </main>
 
-<script>
-    fetch('/Portfolio/header.html')
-        .then(res => res.text())
-        .then(data => document.getElementById('header-placeholder').outerHTML = data);
+    <div id="footer-placeholder"></div>
 
-    fetch('/Portfolio/footer.html')
-        .then(res => res.text())
-        .then(data => document.getElementById('footer-placeholder').outerHTML = data);
-</script>
+    <script>
+        fetch('/Portfolio/header.html')
+            .then(res => res.text())
+            .then(data => document.getElementById('header-placeholder').outerHTML = data);
+
+        fetch('/Portfolio/footer.html')
+            .then(res => res.text())
+            .then(data => document.getElementById('footer-placeholder').outerHTML = data);
+    </script>
 
 </body>
+
 </html>

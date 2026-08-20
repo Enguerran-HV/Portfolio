@@ -1,60 +1,96 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <title>Titre de la page</title>
     <link rel="stylesheet" href="/Portfolio/style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+
 <body>
 
-<div id="header-placeholder"></div>
+    <div id="header-placeholder"></div>
 
-<!-- TITRE DE PAGE -->
+    <!-- TITRE DE PAGE -->
     <header>
         Vérifier
     </header>
-<!-- PRÉSENTATION DE LA PAGE -->
+    <!-- PRÉSENTATION DE LA PAGE -->
     <article>
         <h1>
             <p>Vérifier un système GEII</p>
             <p>Mesurer, tester et valider chaque fonction du système</p>
         </h1>
-    </article>    
-<main>
-    <section>
-        <table class="table-1col"><tr><td><h2 id="verifier-an1">Première année : Apprendre à contrôler un circuit</h2></td></tr></table>
-        <table class="table-2col competences-table"><tr><td>
-            En première année, j'ai appris à vérifier un montage électronique grâce aux tests de continuité, aux mesures au multimètre et à l'observation des signaux à l'oscilloscope.
-        </td></tr></table>
-    </section>
+    </article>
+    <main>
+        <section>
+            <table class="table-1col">
+                <tr>
+                    <td>
+                        <h2 id="verifier-an1">Première année : Apprendre à contrôler un circuit</h2>
+                    </td>
+                </tr>
+            </table>
+            <table class="table-2col competences-table">
+                <tr>
+                    <td>
+                        En première année, j'ai appris à vérifier un montage électronique grâce aux tests de continuité,
+                        aux mesures du multimètre et à l'observation des signaux à l'oscilloscope.
+                    </td>
+                </tr>
+            </table>
+        </section>
 
-    <section>
-        <table class="table-1col"><tr><td><h2 id="verifier-an2">Seconde année : Diagnostiquer un système automatisé</h2></td></tr></table>
-        <table class="table-2col competences-table"><tr><td>
-            En deuxième année, j'ai vérifié les capteurs, les actionneurs et les cycles d'automates afin d'identifier les défauts et de valider le comportement attendu des maquettes automatisées.
-        </td></tr></table>
-    </section>
+        <section>
+            <table class="table-1col">
+                <tr>
+                    <td>
+                        <h2 id="verifier-an2">Seconde année : Diagnostiquer un système automatisé</h2>
+                    </td>
+                </tr>
+            </table>
+            <table class="table-2col competences-table">
+                <tr>
+                    <td>
+                        En deuxième année, j'ai vérifié les capteurs, les actionneurs et les cycles d'automates afin
+                        d'identifier les défauts et de valider le comportement attendu des maquettes automatisées.
+                    </td>
+                </tr>
+            </table>
+        </section>
 
-    <section>
-        <table class="table-1col"><tr><td><h2 id="verifier-an3">Troisième année : Valider une solution dans un contexte professionnel</h2></td></tr></table>
-        <table class="table-2col competences-table"><tr><td>
-            En troisième année, j'ai consolidé ma méthode de validation en confrontant les performances d'un système aux exigences du projet et en documentant les résultats obtenus en entreprise.
-        </td></tr></table>
-    </section>
-</main>
+        <section>
+            <table class="table-1col">
+                <tr>
+                    <td>
+                        <h2 id="verifier-an3">Troisième année : Valider une solution dans un contexte professionnel</h2>
+                    </td>
+                </tr>
+            </table>
+            <table class="table-2col competences-table">
+                <tr>
+                    <td>
+                        En troisième année, j'ai consolidé ma méthode de validation en confrontant les performances d'un
+                        système aux exigences du projet et en documentant les résultats obtenus en entreprise.
+                    </td>
+                </tr>
+            </table>
+        </section>
+    </main>
 
-<div id="footer-placeholder"></div>
+    <div id="footer-placeholder"></div>
 
-<script>
-    fetch('/Portfolio/header.html')
-        .then(res => res.text())
-        .then(data => document.getElementById('header-placeholder').outerHTML = data);
+    <script>
+        fetch('/Portfolio/header.html')
+            .then(res => res.text())
+            .then(data => document.getElementById('header-placeholder').outerHTML = data);
 
-    fetch('/Portfolio/footer.html')
-        .then(res => res.text())
-        .then(data => document.getElementById('footer-placeholder').outerHTML = data);
-</script>
+        fetch('/Portfolio/footer.html')
+            .then(res => res.text())
+            .then(data => document.getElementById('footer-placeholder').outerHTML = data);
+    </script>
 
 </body>
+
 </html>

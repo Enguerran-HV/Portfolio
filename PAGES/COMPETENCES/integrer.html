@@ -1,60 +1,97 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <title>Titre de la page</title>
     <link rel="stylesheet" href="/Portfolio/style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+
 <body>
 
-<div id="header-placeholder"></div>
+    <div id="header-placeholder"></div>
 
-<!-- TITRE DE PAGE -->
+    <!-- TITRE DE PAGE -->
     <header>
         Intégrer
     </header>
-<!-- PRÉSENTATION DE LA PAGE -->
+    <!-- PRÉSENTATION DE LA PAGE -->
     <article>
         <h1>
             <p>Intégrer un système GEII</p>
             <p>Assembler les éléments et mettre le système en service</p>
         </h1>
-    </article>    
-<main>
-    <section>
-        <table class="table-1col"><tr><td><h2 id="integrer-an1">Première année : Assembler les premiers éléments</h2></td></tr></table>
-        <table class="table-2col competences-table"><tr><td>
-            En première année, j'ai appris à intégrer des composants dans un montage en réalisant le câblage, la soudure et les premières mises en fonctionnement sur breadboard ou circuit imprimé.
-        </td></tr></table>
-    </section>
+    </article>
+    <main>
+        <section>
+            <table class="table-1col">
+                <tr>
+                    <td>
+                        <h2 id="integrer-an1">Première année : Assembler les premiers éléments</h2>
+                    </td>
+                </tr>
+            </table>
+            <table class="table-2col competences-table">
+                <tr>
+                    <td>
+                        En première année, j'ai appris à intégrer des composants dans un montage en réalisant le
+                        câblage, la soudure et les premières mises en fonctionnement sur breadboard ou circuit imprimé.
+                    </td>
+                </tr>
+            </table>
+        </section>
 
-    <section>
-        <table class="table-1col"><tr><td><h2 id="integrer-an2">Seconde année : Mettre en service un système automatisé</h2></td></tr></table>
-        <table class="table-2col competences-table"><tr><td>
-            En deuxième année, j'ai intégré automates, capteurs, actionneurs et IHM pour mettre en service des systèmes automatisés et assurer leur communication avec un jumeau numérique.
-        </td></tr></table>
-    </section>
+        <section>
+            <table class="table-1col">
+                <tr>
+                    <td>
+                        <h2 id="integrer-an2">Seconde année : Mettre en service un système</h2>
+                    </td>
+                </tr>
+            </table>
+            <table class="table-2col competences-table">
+                <tr>
+                    <td>
+                        En deuxième année, j'ai intégré automates, capteurs, actionneurs IHM et jumeau numérique pour mettre en service
+                        des systèmes automatisés et assurer leur communication.
+                    </td>
+                </tr>
+            </table>
+        </section>
 
-    <section>
-        <table class="table-1col"><tr><td><h2 id="integrer-an3">Troisième année : Adapter une intégration aux contraintes du terrain</h2></td></tr></table>
-        <table class="table-2col competences-table"><tr><td>
-            En troisième année, j'ai développé une intégration plus autonome en tenant compte des contraintes d'installation, d'exploitation et de maintenance propres aux projets et à l'entreprise.
-        </td></tr></table>
-    </section>
-</main>
+        <section>
+            <table class="table-1col">
+                <tr>
+                    <td>
+                        <h2 id="integrer-an3">Troisième année : Adapter une intégration aux contraintes du terrain</h2>
+                    </td>
+                </tr>
+            </table>
+            <table class="table-2col competences-table">
+                <tr>
+                    <td>
+                        En troisième année, j'ai développé une intégration plus autonome en tenant compte des
+                        contraintes d'installation, d'exploitation et de maintenance propres aux projets et à
+                        l'entreprise.
+                    </td>
+                </tr>
+            </table>
+        </section>
+    </main>
 
-<div id="footer-placeholder"></div>
+    <div id="footer-placeholder"></div>
 
-<script>
-    fetch('/Portfolio/header.html')
-        .then(res => res.text())
-        .then(data => document.getElementById('header-placeholder').outerHTML = data);
+    <script>
+        fetch('/Portfolio/header.html')
+            .then(res => res.text())
+            .then(data => document.getElementById('header-placeholder').outerHTML = data);
 
-    fetch('/Portfolio/footer.html')
-        .then(res => res.text())
-        .then(data => document.getElementById('footer-placeholder').outerHTML = data);
-</script>
+        fetch('/Portfolio/footer.html')
+            .then(res => res.text())
+            .then(data => document.getElementById('footer-placeholder').outerHTML = data);
+    </script>
 
 </body>
+
 </html>
