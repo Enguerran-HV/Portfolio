@@ -451,16 +451,26 @@ width:90%;
 max-width:400px;
 height:auto;
 max-height:400px;
-object-fit:cover;
+object-fit:contain;
 margin:0;
 }
 
 .table-image img {
-width:70px;
-height:70px;
+width:150px;
+height:150px;
 object-fit:contain;
 margin:0 auto;
 }
+/* Liens image des tableaux */
+.table-image{
+background-color:transparent;
+}
+
+/* Survol des liens image */
+.table-image:hover{
+background-color:transparent;
+}
+
 
 /* Paragraphes dans les tableaux */
 table p {
@@ -504,12 +514,3 @@ text-align:center;
     text-align: left;
 }
 
-/* Liens image des tableaux */
-.table-image{
-background-color:transparent;
-}
-
-/* Survol des liens image */
-.table-image:hover{
-background-color:transparent;
-}
