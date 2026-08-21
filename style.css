@@ -2,7 +2,6 @@
 /* Couleurs principales */
 :root{
     --color-bouton:rgb(150,215,255);
-    --color-nav:rgb(50, 50, 230);
     --color-texte-nav:whitesmoke;
 }
 
@@ -31,7 +30,7 @@ text-decoration:underline;
 /* ==================== STRUCTURE GENERALE ==================== */
 /* Fond de la page */
 body{
-background-color:rgb(200, 240, 240);
+background-color:rgb(211, 211, 211);
 margin:0;
 }
 
@@ -122,7 +121,7 @@ a:visited{
 /* Barre de navigation */
 nav {
 display:flex;
-background-color:var(--color-nav);
+background-color:rgb(50, 100, 255);
 border-radius:0px;
 width:100%;
 box-sizing:border-box;
@@ -181,11 +180,11 @@ position:absolute;
 top:100%;
 left:50%;
 transform:translateX(-50%);
-background-color:rgb(60,60,230);
+background-color:rgb(60,110,255);
 border-radius:0;
 padding:10px;
 z-index:10;
-min-width:160px;
+width:max-content;
 }
 
 /* Affichage du sous-menu au survol */
@@ -210,6 +209,7 @@ text-align:center;
 text-decoration:none;
 border:none;
 color:var(--color-texte-nav);
+white-space:nowrap;
 }
 
 
@@ -234,11 +234,11 @@ position:absolute;
 top:0;
 left:100%;
 right:auto;
-background-color:rgb(70,70,230);
+background-color:rgb(70,120,255);
 border-radius:0;
 padding:10px;
 z-index:20;
-min-width:240px;
+width:max-content;
 }
 
 /* Affichage du sous-sous-menu au survol */
