@@ -192,6 +192,11 @@ width:max-content;
 display:flex;
 }
 
+.nav-sousmenu:hover > a{
+font-weight:bold;
+text-decoration:underline;
+}
+
 /* Liens des sous-menus */
 .nav-sousmenu-content a{
 border-radius:0px; 
