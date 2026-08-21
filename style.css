@@ -121,7 +121,7 @@ a:visited{
 /* Barre de navigation */
 nav {
 display:flex;
-background-color:var(--color-nav);
+background-color:rgb(50,50,230);
 border-radius:0px;
 width:100%;
 margin:0;
@@ -138,10 +138,10 @@ border-radius:0px;
 background-color:transparent;
 font-size:15px;
 font-family:verdana,sans-serif;
-padding: 10px;; 
-margin:0;
+padding: 0px;
+margin:15px;
 width:auto;
-height:40px;
+height:50px;
 display:flex;
 align-items:center;
 justify-content:left;
@@ -175,7 +175,7 @@ position:absolute;
 top:100%;
 left:50%;
 transform:translateX(-50%);
-background-color:rgb(60, 60, 230);
+background-color:rgb(60,60,230);
 border-radius:0;
 padding:10px;
 z-index:10;
@@ -203,7 +203,7 @@ justify-content:left;
 text-align:center;
 text-decoration:none;
 border:none;
-color:rgb(70,70,230);
+color:var(--color-texte-nav);
 }
 
 
@@ -228,7 +228,7 @@ position:absolute;
 top:0;
 left:100%;
 right:auto;
-background-color:var(--color-nav);
+background-color:rgb(70,70,230);
 border-radius:0;
 padding:10px;
 z-index:20;
