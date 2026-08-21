@@ -31,8 +31,7 @@ text-decoration:underline;
 /* ==================== STRUCTURE GENERALE ==================== */
 /* Fond de la page */
 body{
-background-color:rgb(215, 255, 255);
-margin:0;
+background-color:rgb(180, 200, 200);
 }
 
 /* Zone principale */
@@ -136,10 +135,10 @@ border-radius:0px;
 background-color:transparent;
 font-size:15px;
 font-family:verdana,sans-serif;
-padding: 5px;; 
-margin:5px; 
+padding: 10px;; 
+margin:10px; 
 width:auto;
-height:20px;
+height:40px;
 justify-content:left;
 text-align:center;
 text-decoration:none;
@@ -189,10 +188,10 @@ border-radius:0px;
 background-color:transparent;
 font-size:15px;
 font-family:verdana,sans-serif;
-padding: 5px;; 
-margin:5px; 
+padding: 10px;; 
+margin:10px; 
 width:auto;
-height:20px;
+height:40px;
 justify-content:left;
 text-align:center;
 text-decoration:none;
@@ -203,8 +202,9 @@ color:var(--color-texte-nav);
 
 /* Survol des liens des sous-menus */
 .nav-sousmenu-content a:hover{
-background-color:rgb(190,230,255);
+background-color:transparent;
 font-weight:bold;
+text-decoration: underline;
 }
 
 /* Conteneur des sous-sous-menus */
@@ -239,10 +239,10 @@ border-radius:0px;
 background-color:transparent;
 font-size:15px;
 font-family:verdana,sans-serif;
-padding: 5px;; 
-margin:5px; 
+padding: 10px;; 
+margin:10px; 
 width:auto;
-height:20px;
+height:40px;
 justify-content:left;
 text-align:center;
 text-decoration:none;
@@ -253,8 +253,9 @@ color:var(--color-texte-nav);
 
 /* Survol des liens des sous-sous-menus */
 .nav-sousmenu2-content a:hover{
-background-color:rgb(190,230,255);
+background-color:transparent;
 font-weight:bold;
+text-decoration: underline;
 }
 
 
