@@ -411,13 +411,18 @@ font-weight:bold;
 text-decoration:underline;
 }
 
-/* Boutons principaux des pages de navigation */
-.table-menu tr:first-child a{
+/* Boutons texte des tableaux */
+.table-button{
 display:flex;
 width:100%;
 box-sizing:border-box;
 margin:0;
 align-items:center;
+justify-content:center;
+}
+
+.table-button:hover{
+background-color:rgb(200,100,0);
 }
 
 /* Liens des tableaux de contenu */
@@ -450,7 +455,7 @@ object-fit:cover;
 margin:0;
 }
 
-.bouton-table img {
+.table-image img {
 width:70px;
 height:70px;
 object-fit:contain;
@@ -499,12 +504,12 @@ text-align:center;
     text-align: left;
 }
 
-/* Boutons de tableaux */
-table .bouton-table{
+/* Liens image des tableaux */
+.table-image{
 background-color:transparent;
 }
 
-/* Survol des boutons de tableaux */
-table .bouton-table:hover{
+/* Survol des liens image */
+.table-image:hover{
 background-color:transparent;
 }
