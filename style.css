@@ -472,6 +472,19 @@ text-align:center;
     text-align: left;
 }
 
+.competences-table td {
+    font-family: verdana, sans-serif;
+    padding: 20px;
+    margin: 20px;
+    overflow: hidden;
+}
+
+.competences-table p {
+    text-align: left;
+    font-size: 15px;
+    font-family: verdana, sans-serif;
+}
+
 .table-3col th,
 .table-3col td {
     width: 33.33%;
