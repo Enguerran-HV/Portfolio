@@ -453,6 +453,8 @@ height:auto;
 max-height:400px;
 object-fit:contain;
 margin:0;
+justify-content: center;
+align-items:center ;
 }
 
 .table-image img {
@@ -460,6 +462,8 @@ width:150px;
 height:150px;
 object-fit:contain;
 margin:0 auto;
+justify-content: center;
+align-items:center ;
 }
 /* Liens image des tableaux */
 .table-image{
