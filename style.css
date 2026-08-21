@@ -422,7 +422,7 @@ text-decoration:underline;
 
 /* Liens des tableaux de contenu */
 .table-1col a,
-.table-2col a{
+.cv-table a{
     background-color:transparent;
     text-decoration:underline;
     padding:0px;
@@ -431,7 +431,7 @@ text-decoration:underline;
 }
 
 .table-1col a:hover,
-.table-2col a:hover{
+.cv-table a:hover{
     background-color:transparent;
     text-decoration:underline,bold;
     padding:0px;
