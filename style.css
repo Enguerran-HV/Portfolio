@@ -31,7 +31,8 @@ text-decoration:underline;
 /* ==================== STRUCTURE GENERALE ==================== */
 /* Fond de la page */
 body{
-background-color:rgb(180, 200, 200);
+background-color:rgb(200, 240, 240);
+margin:0;
 }
 
 /* Zone principale */
@@ -121,9 +122,10 @@ a:visited{
 /* Barre de navigation */
 nav {
 display:flex;
-background-color:rgb(50,50,230);
+background-color:var(--color-nav);
 border-radius:0px;
 width:100%;
+box-sizing:border-box;
 margin:0;
 padding:0;
 justify-content:right;
@@ -148,6 +150,10 @@ justify-content:left;
 text-align:center;
 text-decoration:none;
 border:none;
+color:var(--color-texte-nav);
+}
+
+nav a:visited{
 color:var(--color-texte-nav);
 }
 
