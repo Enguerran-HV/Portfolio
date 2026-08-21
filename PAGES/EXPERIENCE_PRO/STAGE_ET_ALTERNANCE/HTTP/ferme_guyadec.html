@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <title>template</title>
+    <link rel="stylesheet" href="/Portfolio/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<div id="header-placeholder"></div>
+
+<header>
+            Ferme Le Guyadec
+        </header>
+
+        <article>
+            <h1>
+                <span>Programmation d'un automate Schneider M340</span><br>
+                <span>Supervision avec IHM Weintek</span>
+            </h1>
+        </article>
+<main>
+    <section>
+        <table class="table-1col">
+            <tr>
+                <td>
+                    <p>Second projet en tant qu'alternant. Objectif d'ajouter des fonctionnalitées chez un client.
+                        Le sujet est un ferme utilisé dans dans la sèche et le stockage de grains, un nouveau silo est ajouté, ainsi qu'un nouveau
+                        trieur de grains. Tout cela ajoute des chemins créer par convoyeurs et élevateurs qui sont à programmer afin 
+                        de répondre au demande client. En paralèle un nouvel écran weintek est mis en place pour remplacer l'ancien Magelys.
+                    </p>
+                </td>
+            </tr>
+        </table>
+    </section>
+
+    <section>
+        <table class="table-1col">
+            <tr>
+                <td>
+                    <h2></h2>
+                    <p></p>
+                </td>
+            </tr>
+        </table>
+    </section>
+</main>
+
+<div id="footer-placeholder"></div>
+
+<script>
+    fetch('/Portfolio/header.html')
+        .then(res => res.text())
+        .then(data => document.getElementById('header-placeholder').outerHTML = data);
+
+    fetch('/Portfolio/footer.html')
+        .then(res => res.text())
+        .then(data => document.getElementById('footer-placeholder').outerHTML = data);
+</script>
+
+</body>
+</html>

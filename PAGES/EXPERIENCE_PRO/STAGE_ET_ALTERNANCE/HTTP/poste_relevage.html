@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <title>template</title>
+    <link rel="stylesheet" href="/Portfolio/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<div id="header-placeholder"></div>
+
+<header>
+            Poste de relevage
+        </header>
+
+        <article>
+            <h1>
+                <span>Programmation d'un automate Phoenix Contact</span><br>
+                <span>Télégestion et supervision web Grafana</span>
+            </h1>
+        </article>
+<main>
+    <section>
+        <table class="table-1col">
+            <tr>
+                <td>
+                    <p>Premier projet dans le monde professionnelles, un projet long terme qui m'as demandé d'apprendre le 
+                        fonctionnement d'un nouvelle automate de chez Phoenix contact, de m'apprché du mon de la supervision web avec grafana
+                        Ainsi que de découvrir le domaine de l'eau et de l'assainnissement dans sa globalité.
+                    </p>
+                </td>
+            </tr>
+        </table>
+    </section>
+
+    <section>
+        <table class="table-1col">
+            <tr>
+                <td>
+                    <h2></h2>
+                    <p></p>
+                </td>
+            </tr>
+        </table>
+    </section>
+</main>
+
+<div id="footer-placeholder"></div>
+
+<script>
+    fetch('/Portfolio/header.html')
+        .then(res => res.text())
+        .then(data => document.getElementById('header-placeholder').outerHTML = data);
+
+    fetch('/Portfolio/footer.html')
+        .then(res => res.text())
+        .then(data => document.getElementById('footer-placeholder').outerHTML = data);
+</script>
+
+</body>
+</html>

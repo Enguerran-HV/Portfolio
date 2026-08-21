@@ -442,11 +442,18 @@ text-decoration:underline;
 table img {
 display:block;
 width:90%;
-max-width:800;
+max-width:400;
 height:auto;
-max-height:800;
+max-height:400;
 object-fit:cover;
 margin:0;
+}
+
+.bouton-table img {
+width:70px;
+height:70px;
+object-fit:contain;
+margin:0 auto;
 }
 
 /* Paragraphes dans les tableaux */
