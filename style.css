@@ -125,7 +125,7 @@ background-color:rgb(50, 100, 255);
 border-radius:0px;
 width:100%;
 box-sizing:border-box;
-margin:0;
+margin-bottom:10px;
 padding:0;
 justify-content:right;
 align-items:center;
@@ -139,7 +139,7 @@ border-radius:0px;
 background-color:transparent;
 font-size:15px;
 font-family:verdana,sans-serif;
-padding-bottom: 10px;
+padding:10px;
 margin:15px;
 width:auto;
 height:50px;
@@ -224,6 +224,15 @@ text-decoration: underline;
 .nav-sousmenu2{
 position:relative;
 display:flex;
+}
+
+.nav-sousmenu2 > a{
+margin:0;
+}
+
+.nav-sousmenu2:hover > a{
+font-weight:bold;
+text-decoration:underline;
 }
 
 /* Sous-sous-menu de deuxieme niveau */
