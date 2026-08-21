@@ -136,9 +136,9 @@ border-radius:0px;
 background-color:transparent;
 font-size:15px;
 font-family:verdana,sans-serif;
-padding: 15px;; 
-margin:15px; 
-width:140px;
+padding: 5px;; 
+margin:5px; 
+width:auto;
 height:20px;
 justify-content:left;
 text-align:center;
@@ -185,12 +185,13 @@ display:flex;
 
 /* Liens des sous-menus */
 .nav-sousmenu-content a{
+border-radius:0px; 
 background-color:transparent;
 font-size:15px;
 font-family:verdana,sans-serif;
 padding: 5px;; 
-margin:2px; 
-width:140px;
+margin:5px; 
+width:auto;
 height:20px;
 justify-content:left;
 text-align:center;
@@ -198,6 +199,7 @@ text-decoration:none;
 border:none;
 color:var(--color-texte-nav);
 }
+
 
 /* Survol des liens des sous-menus */
 .nav-sousmenu-content a:hover{
@@ -233,12 +235,13 @@ display:flex;
 
 /* Liens des sous-sous-menus */
 .nav-sousmenu2-content a{
+border-radius:0px; 
 background-color:transparent;
 font-size:15px;
 font-family:verdana,sans-serif;
-padding: 15px;; 
-margin:15px; 
-width:140px;
+padding: 5px;; 
+margin:5px; 
+width:auto;
 height:20px;
 justify-content:left;
 text-align:center;
@@ -246,6 +249,7 @@ text-decoration:none;
 border:none;
 color:var(--color-texte-nav);
 }
+
 
 /* Survol des liens des sous-sous-menus */
 .nav-sousmenu2-content a:hover{
@@ -339,6 +343,9 @@ overflow:hidden;
 width:min(595px, 100%);
 aspect-ratio:210 / 297;
 margin:0 auto;
+display:block;
+overflow:hidden;
+box-sizing:border-box;
 }
 
 /* Affichage du document PDF */
