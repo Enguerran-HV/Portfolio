@@ -123,10 +123,24 @@ width:100%;
 box-sizing:border-box;
 margin-bottom:30px;
 padding-right:30px;
-justify-content:right;
+justify-content:space-between;
 align-items:center;
 position:sticky;
 top:0px;
+}
+
+.nav-logos{
+display:flex;
+align-items:center;
+gap:10px;
+flex-shrink:0;
+}
+
+.nav-logos img{
+display:block;
+width:50px;
+height:40px;
+object-fit:contain;
 }
 
 /* Liens principaux de navigation */
@@ -517,4 +531,3 @@ text-align:center;
     padding-left: 20px;
     text-align: left;
 }
-
