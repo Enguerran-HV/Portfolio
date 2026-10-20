@@ -382,6 +382,64 @@ padding-left:10px;
 content:"- ";
 }
 
+/* ==================== CARTES DE CONTENU ==================== */
+.portfolio-card-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+    align-items:stretch;
+    gap:24px;
+    width:95%;
+    margin:0 auto;
+}
+
+.portfolio-card{
+    display:flex;
+    flex-direction:column;
+    align-items:stretch;
+    gap:16px;
+    padding:20px;
+    border:1px solid rgba(0,0,0,0.15);
+    border-radius:15px;
+    background-color:var(--color-background-contenu);
+}
+
+.portfolio-card-title{
+    display:flex;
+    min-height:50px;
+    align-items:center;
+    justify-content:center;
+    padding:10px;
+    border-radius:10px;
+    background-color:var(--color-bouton);
+    color:inherit;
+    font-family:var(--font-family-general);
+    text-align:center;
+    text-decoration:none;
+}
+
+.portfolio-card-title:hover{
+    background-color:var(--color-bouton-hover);
+    font-weight:bold;
+    text-decoration:underline;
+}
+
+.portfolio-card-image{
+    display:block;
+}
+
+.portfolio-card-image img{
+    display:block;
+    width:100%;
+    height:180px;
+    object-fit:contain;
+}
+
+.portfolio-card-description{
+    display:block;
+    margin:0;
+    font-family:var(--font-family-general);
+    text-align:center;
+}
 
 /* ==================== TABLEAUX ==================== */
 /* Structure generale des tableaux */
@@ -444,20 +502,6 @@ font-weight:bold;
 text-decoration:underline;
 }
 
-/* Boutons texte des tableaux */
-.table-button{
-display:flex;
-width:100%;
-box-sizing:border-box;
-margin:0;
-align-items:center;
-justify-content:center;
-}
-
-.table-button:hover{
-background-color:var(--color-bouton-hover);
-}
-
 /* Liens des tableaux de contenu */
 .table-1col a,
 .cv-table a{
@@ -489,25 +533,6 @@ margin:0 auto;
 justify-content:center;
 align-items:center ;
 }
-
-.table-image img {
-width:150px;
-height:150px;
-object-fit:contain;
-margin:0 auto;
-justify-content: center;
-align-items:center ;
-}
-/* Liens image des tableaux */
-.table-image{
-background-color:transparent;
-}
-
-/* Survol des liens image */
-.table-image:hover{
-background-color:transparent;
-}
-
 
 /* Paragraphes dans les tableaux */
 table p {
