@@ -1,586 +1,514 @@
-﻿:root {
-    --page-bg: #e7edf4;
-    --panel-bg: #f3f4f6;
-    --panel-strong: #dfe9f5;
-    --card-bg: #ffffff;
-    --blue: #0a72d7;
-    --blue-dark: #0a5ab2;
-    --blue-soft: #1f8af1;
-    --nav-bg: #2a7eea;
-    --nav-dark: #0c5cc0;
-    --text: #111111;
-    --muted: #2d2d2d;
-    --border: rgba(15, 38, 70, 0.12);
-    --shadow: 0 12px 28px rgba(17, 39, 82, 0.12);
+/* ==================== VARIABLES ==================== */
+/* Couleurs principales */
+:root{
+    --color-bouton:rgb(150,215,255);
+    --color-texte-nav:whitesmoke;
 }
 
-* {
-    box-sizing: border-box;
-}
-
+/* ==================== BASE DE LA PAGE ==================== */
+/* Defilement et ancres */
 html {
-    scroll-behavior: smooth;
-    scroll-padding-top: 100px;
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
 }
 
 [id] {
-    scroll-margin-top: 100px;
+  scroll-margin-top: 100px;
 }
 
-body {
-    margin: 0;
-    background: var(--page-bg);
-    color: var(--text);
-    font-family: Verdana, sans-serif;
-    line-height: 1.5;
-}
-
-img {
-    display: block;
-    max-width: 100%;
-}
-
-a {
-    color: inherit;
-    text-decoration: none;
-}
-
-a:visited {
-    color: inherit;
-}
-
-main {
-    width: min(1420px, calc(100% - 48px));
-    margin: 0 auto 32px;
-    padding: 12px 0 0;
-}
-
-main.content-panel {
-    background: rgba(255, 255, 255, 0.12);
-    border-radius: 0;
-    padding: 32px 16px 0;
-}
-
-section {
-    margin: 0;
-}
-
+/* ==================== TYPOGRAPHIE ==================== */
+/* Titre de page */
 header {
-    display: block;
-    width: 100%;
-    margin: 0;
-    text-align: center;
+font-size:50px;
+font-family: verdana,sans-serif;
+text-align:center;
+font-weight:bold;
+text-decoration:underline;
 }
 
-.page-header {
-    background: rgba(215, 226, 236, 0.95);
-    padding: 28px 18px 14px;
-    border-top: 0;
+/* ==================== STRUCTURE GENERALE ==================== */
+body{
+background-color:rgb(235,240,250);
+margin:0;
 }
 
-.page-header h1 {
-    margin: 0;
-    line-height: 1.1;
-    font-size: clamp(2.2rem, 4vw, 5rem);
-    font-family: Verdana, sans-serif;
-    font-weight: 900;
-    letter-spacing: -0.06em;
-    color: #070707;
-    text-transform: uppercase;
+main{
+background-color:rgb(255,255,255);
+border-radius:10px;
+margin:40px;
+padding:40px;
 }
 
-.page-intro {
-    width: min(1320px, calc(100% - 48px));
-    margin: 0 auto;
-    padding: 18px 12px 0;
-    text-align: center;
+/* Alignement des contenus principaux */
+main div{
+display:flex;
+align-items:center;
 }
 
-.page-intro p {
-    margin: 0 0 16px;
-    font-size: clamp(1.5rem, 2.2vw, 3rem);
-    line-height: 1.2;
-    font-weight: 700;
-    letter-spacing: -0.03em;
-    color: #111111;
+/* ==================== SECTIONS ==================== */
+/* Texte des sections */
+section p{
+font-family:verdana,sans-serif;
 }
 
-.page-intro p:last-child {
-    margin-bottom: 0;
+/* Boutons des sections */
+section a{
+  background-color:var(--color-bouton);
+  width: auto;
+  min-width: 200px;
+  box-sizing:border-box;
+  min-height:50px;
+  height:auto;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  line-height:1.3;
+  padding:10px;
+  margin:20px;
+  font-size:18px;
+  font-family:verdana,sans-serif;
+  border-radius:15px;
+  text-decoration:none;
+  border:1px solid black;
 }
 
-.card-grid {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 42px 22px;
-    align-items: start;
-    width: min(1280px, 100%);
-    margin: 0 auto;
-    padding: 18px 18px 12px;
+/* Survol des boutons de section */
+section a:hover{
+background-color:rgb(190,230,255);
+font-weight:bold;
+text-shadow: 1px 0px;
 }
 
-.project-card {
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
-    min-height: 100%;
-}
 
-.card-link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-}
-
-.card-link span {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    min-height: 58px;
-    padding: 16px 14px;
-    background: linear-gradient(180deg, var(--blue-soft) 0%, var(--blue) 100%);
-    border: 1px solid rgba(0, 0, 0, 0.12);
-    border-radius: 18px;
-    color: #0d1d2e;
-    font-size: clamp(1rem, 1.2vw, 1.5rem);
-    font-weight: 700;
-    text-align: center;
-    box-shadow: var(--shadow);
-    transition: transform 0.2s ease, filter 0.2s ease;
-}
-
-.card-link:hover span,
-.card-link:focus-visible span {
-    transform: translateY(-1px);
-    filter: brightness(1.02);
-}
-
-.card-visual {
-    display: block;
-    width: 100%;
-    max-width: 260px;
-    margin: 0 auto;
-}
-
-.card-visual img {
-    width: 100%;
-    height: 200px;
-    object-fit: contain;
-    padding: 10px;
-    background: rgba(255, 255, 255, 0.26);
-    border-radius: 14px;
-}
-
-.project-card p,
-.project-card .card-description {
-    margin: 0;
-    color: var(--muted);
-    font-size: clamp(0.98rem, 1vw, 1.2rem);
-    line-height: 1.55;
-    text-align: left;
-}
-
-article h1,
-h1 {
-    font-size: 30px;
-    font-family: Verdana, sans-serif;
-    text-align: center;
-    margin: 0;
-}
-
-h2 {
-    font-size: 25px;
-    font-family: Arial Black, sans-serif;
-    text-align: center;
-    margin: 0 0 18px;
-}
-
-h3 {
-    font-size: 20px;
-    font-family: Arial Black, sans-serif;
-    text-align: center;
-}
-
-section p {
-    font-family: Verdana, sans-serif;
-}
-
-section a {
-    background-color: var(--blue-soft);
-    width: auto;
-    min-width: 200px;
-    box-sizing: border-box;
-    min-height: 50px;
-    height: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    line-height: 1.3;
-    padding: 10px;
-    margin: 20px;
-    font-size: 18px;
-    font-family: Verdana, sans-serif;
-    border-radius: 15px;
-    text-decoration: none;
-    border: 1px solid black;
-}
-
-section a:hover {
-    background-color: rgb(190, 230, 255);
-    font-weight: bold;
-}
-
+/* Introduction de page */
 article p {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+display:flex;
+align-items:center;
+justify-content:center;
 }
 
+
+/* Titres */
+h1 {
+font-size:30px;
+font-family:verdana,sans-serif;
+text-align:center;
+
+}
+h2 {
+font-size:25px;
+font-family:Arial Black;
+text-align:center;
+
+}
+h3 {
+font-size:20px;
+font-family:Arial Black;
+text-align:center;
+}
+
+/* Liens visites */
+a:visited{
+    color:inherit;
+}
+
+/* ==================== NAVIGATION ==================== */
+/* Barre de navigation */
 nav {
-    display: flex;
-    background: linear-gradient(180deg, var(--nav-bg) 0%, var(--nav-dark) 100%);
-    width: 100%;
-    min-height: 80px;
-    box-sizing: border-box;
-    margin-bottom: 10px;
-    padding-right: 10px;
-    justify-content: flex-end;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.06);
+display:flex;
+background-color:rgb(50, 100, 255);
+border-radius:0px;
+width:100%;
+height:80px;
+box-sizing:border-box;
+margin-bottom:10px;
+padding-right:10px;
+justify-content:flex-end;
+align-items:center;
+position:sticky;
+top:0px;
 }
 
-.nav-logos {
-    display: flex;
-    align-items: stretch;
-    align-self: stretch;
-    padding: 10px;
-    gap: 10px;
-    flex-shrink: 0;
-    margin-right: auto;
+.nav-logos{
+display:flex;
+align-items:stretch;
+align-self:stretch;
+padding:10px;
+gap:10px;
+flex-shrink:0;
+margin-right:auto;
 }
 
-.nav-logos img {
-    display: block;
-    height: 90%;
-    width: auto;
-    object-fit: contain;
+.nav-logos img{
+display:block;
+height:90%;
+width:auto;
+object-fit:contain;
 }
 
-nav a {
-    border-radius: 0;
-    background-color: transparent;
-    font-size: 15px;
-    font-family: Verdana, sans-serif;
-    padding: 5px 10px;
-    margin: 5px;
-    width: auto;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    text-decoration: none;
-    border: none;
-    color: #f5f7fb;
+/* Liens principaux de navigation */
+nav a{
+border-radius:0px; 
+background-color:transparent;
+font-size:15px;
+font-family:verdana,sans-serif;
+padding:5px;
+margin:5px;
+width:auto;
+height:50px;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+text-decoration:none;
+border:none;
+color:var(--color-texte-nav);
 }
 
-nav a:visited {
-    color: #f5f7fb;
+nav a:visited{
+color:var(--color-texte-nav);
 }
 
-nav a:hover {
-    background-color: transparent;
-    font-weight: bold;
-    text-decoration: underline;
+/* Survol des liens principaux */
+nav a:hover 
+{
+background-color:transparent;
+font-weight:bold;
+text-decoration: underline;
 }
 
-.nav-sousmenu {
-    position: relative;
-    display: flex;
-    align-items: center;
+/* ==================== MENUS DEROULANTS ==================== */
+/* Conteneur des sous-menus */
+.nav-sousmenu{
+position:relative;
+display:flex;
+align-items:center;
 }
 
-.nav-sousmenu-content {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    background: linear-gradient(180deg, rgba(67, 123, 231, 1) 0%, rgba(53, 102, 192, 1) 100%);
-    padding: 10px;
-    z-index: 10;
-    width: max-content;
-    box-shadow: 0 10px 12px rgba(0, 0, 0, 0.12);
+/* Sous-menu de premier niveau */
+.nav-sousmenu-content{
+display:none;
+flex-direction:column;
+position:absolute;
+top:100%;
+left:50%;
+transform:translateX(-50%);
+background-color:rgb(60,110,255);
+border-radius:0;
+padding:10px;
+z-index:10;
+width:max-content;
 }
 
-.nav-sousmenu:hover .nav-sousmenu-content {
-    display: flex;
+/* Affichage du sous-menu au survol */
+.nav-sousmenu:hover .nav-sousmenu-content{
+display:flex;
 }
 
-.nav-sousmenu:hover > a {
-    font-weight: bold;
-    text-decoration: underline;
+.nav-sousmenu:hover > a{
+font-weight:bold;
+text-decoration:underline;
 }
 
-.nav-sousmenu-content a {
-    border-radius: 0;
-    background-color: transparent;
-    font-size: 15px;
-    font-family: Verdana, sans-serif;
-    padding: 10px;
-    margin: 0;
-    width: auto;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: left;
-    text-decoration: none;
-    border: none;
-    color: #f5f7fb;
-    white-space: nowrap;
+/* Liens des sous-menus */
+.nav-sousmenu-content a{
+border-radius:0px; 
+background-color:transparent;
+font-size:15px;
+font-family:verdana,sans-serif;
+padding:10px;
+margin:0;
+width:auto;
+height:40px;
+display:flex;
+align-items:center;
+justify-content:left;
+text-align:center;
+text-decoration:none;
+border:none;
+color:var(--color-texte-nav);
+white-space:nowrap;
 }
 
-.nav-sousmenu-content a:hover {
-    background-color: transparent;
-    font-weight: bold;
-    text-decoration: underline;
+
+/* Survol des liens des sous-menus */
+.nav-sousmenu-content a:hover{
+background-color:transparent;
+font-weight:bold;
+text-decoration: underline;
 }
 
-.nav-sousmenu2 {
-    position: relative;
-    display: flex;
+/* Conteneur des sous-sous-menus */
+.nav-sousmenu2{
+position:relative;
+display:flex;
 }
 
-.nav-sousmenu2 > a {
-    margin: 0;
+.nav-sousmenu2 > a{
+margin:0;
 }
 
-.nav-sousmenu2:hover > a {
-    font-weight: bold;
-    text-decoration: underline;
+.nav-sousmenu2:hover > a{
+font-weight:bold;
+text-decoration:underline;
 }
 
-.nav-sousmenu2-content {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: -10px;
-    left: calc(100% + 8px);
-    background: linear-gradient(180deg, rgba(86, 141, 244, 1) 0%, rgba(62, 111, 203, 1) 100%);
-    padding: 10px;
-    z-index: 20;
-    width: max-content;
-    box-shadow: 0 10px 12px rgba(0, 0, 0, 0.12);
+/* Sous-sous-menu de deuxieme niveau */
+.nav-sousmenu2-content{
+display:none;
+flex-direction:column;
+position:absolute;
+top:-10px;
+left:calc(100% + 8px);
+right:auto;
+background-color:rgb(70,120,255);
+border-radius:0;
+padding:10px;
+z-index:20;
+width:max-content;
 }
 
-.nav-sousmenu2:hover .nav-sousmenu2-content {
-    display: flex;
+.nav-sousmenu2-content::before{
+content:"";
+position:absolute;
+top:0;
+left:-8px;
+width:8px;
+height:100%;
 }
 
-.nav-sousmenu2-content a {
-    border-radius: 0;
-    background-color: transparent;
-    font-size: 15px;
-    font-family: Verdana, sans-serif;
-    padding: 10px;
-    margin: 0;
-    width: auto;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: left;
-    text-decoration: none;
-    border: none;
-    color: #f5f7fb;
-    white-space: nowrap;
+/* Affichage du sous-sous-menu au survol */
+.nav-sousmenu2:hover .nav-sousmenu2-content{
+display:flex;
 }
 
-.nav-sousmenu2-content a:hover {
-    background-color: transparent;
-    font-weight: bold;
-    text-decoration: underline;
+/* Liens des sous-sous-menus */
+.nav-sousmenu2-content a{
+border-radius:0px; 
+background-color:transparent;
+font-size:15px;
+font-family:verdana,sans-serif;
+padding:10px;
+margin:0;
+width:auto;
+height:40px;
+display:flex;
+align-items:center;
+justify-content:left;
+text-align:center;
+text-decoration:none;
+border:none;
+color:var(--color-texte-nav);
+white-space:nowrap;
 }
 
-footer {
-    background-color: rgb(85, 120, 160);
-    display: grid;
-    grid-template-columns: 1fr auto auto 1fr;
-    align-items: flex-start;
-    padding: 10px 40px;
-    margin-top: 100px;
+
+/* Survol des liens des sous-sous-menus */
+.nav-sousmenu2-content a:hover{
+background-color:transparent;
+font-weight:bold;
+text-decoration: underline;
 }
 
-footer div {
-    font-family: Verdana, sans-serif;
+
+/* ==================== PIED DE PAGE ==================== */
+/* Structure du pied de page */
+footer{
+background-color:rgb(85,120,160);
+display:grid;
+grid-template-columns:1fr auto auto 1fr;
+align-items:flex-start;
+padding:10px 40px;
+margin:-8px;
+margin-top:100px;
+
+}
+/* Texte du pied de page */
+footer div{
+font-family:verdana,sans-serif;
 }
 
-footer div:nth-child(1) {
-    grid-column: 2;
+/* Positionnement des colonnes */
+footer div:nth-child(1){
+grid-column:2;
 }
 
-footer div:nth-child(2) {
-    grid-column: 3;
+footer div:nth-child(2){
+grid-column:3;
 }
 
-footer div:last-child {
-    grid-column: 4;
-    justify-self: end;
-    margin-right: 20px;
+footer div:last-child{
+grid-column:4;
+justify-self:end;
+margin-right:20px;
 }
 
-footer h1 {
-    font-size: 12px;
-    text-decoration: underline;
-    font-family: Verdana, sans-serif;
-    text-align: left;
+footer h1{
+font-size:12px;
+text-decoration:underline;
+font-family:verdana,sans-serif;
 }
 
-footer h2 {
-    font-size: 12px;
-    font-family: Verdana, sans-serif;
-    color: rgb(200, 0, 0);
-    text-align: right;
+footer h2{
+font-size:12px;
+font-family:verdana,sans-serif;
+color:rgb(200,0,0);
+text-align:right;
 }
 
-.tirets {
-    list-style: none;
-    padding-left: 10px;
+/* ==================== LISTES ==================== */
+/* Liste avec tirets */
+.tirets{
+list-style:none;
+padding-left:10px;
+}
+.tirets li::before{
+content:"- ";
 }
 
-.tirets li::before {
-    content: "- ";
+
+/* ==================== TABLEAUX ==================== */
+/* Structure generale des tableaux */
+table{
+    text-align:center;
+    margin:0 auto;
+    width:95%;
+    table-layout:fixed;
+}
+/* En-tetes de tableaux */
+table th {
+font-family:verdana,sans-serif;
+text-decoration:underline;
+}
+/* Cellules de tableaux */
+table td {
+font-family:verdana,sans-serif;
+padding:20px;
+overflow:hidden;
 }
 
-.table {
-    text-align: center;
-    margin: 0 auto;
-    width: 95%;
-    table-layout: fixed;
+/* Lecteur PDF du CV */
+.cv-pdf-container{
+width:min(595px, 100%);
+aspect-ratio:210 / 297;
+margin:0 auto;
+display:block;
+overflow:hidden;
+box-sizing:border-box;
 }
 
-.table th {
-    font-family: Verdana, sans-serif;
-    text-decoration: underline;
+/* Affichage du document PDF */
+.cv-pdf{
+display:block;
+width:100%;
+height:100%;
+border:none;
 }
 
-.table td {
-    font-family: Verdana, sans-serif;
-    padding: 20px;
-    overflow: hidden;
+/* Liens dans les tableaux */
+table a {
+padding:15px;
+margin:15px;
+border-radius:15px;
+background-color:rgb(0, 100, 200);
+font-size:15px;
+font-family:verdana,sans-serif;
+width:auto;
+height:auto;
+text-align:center;
+text-decoration:none;
+border:none;
 }
 
-.cv-pdf-container {
-    width: min(595px, 100%);
-    aspect-ratio: 210 / 297;
-    margin: 0 auto;
-    display: block;
-    overflow: hidden;
-    box-sizing: border-box;
+/* Survol des liens dans les tableaux */
+table a:hover 
+{
+background-color:transparent;
+font-weight:bold;
+text-decoration:underline;
 }
 
-.cv-pdf {
-    display: block;
-    width: 100%;
-    height: 100%;
-    border: none;
+/* Boutons texte des tableaux */
+.table-button{
+display:flex;
+width:100%;
+box-sizing:border-box;
+margin:0;
+align-items:center;
+justify-content:center;
 }
 
-.table a {
-    padding: 15px;
-    margin: 15px;
-    border-radius: 15px;
-    background-color: rgb(0, 100, 200);
-    font-size: 15px;
-    font-family: Verdana, sans-serif;
-    width: auto;
-    height: auto;
-    text-align: center;
-    text-decoration: none;
-    border: none;
+.table-button:hover{
+background-color:rgb(0, 50, 255);
 }
 
-.table a:hover {
-    background-color: transparent;
-    font-weight: bold;
-    text-decoration: underline;
-}
-
-.table-button {
-    display: flex;
-    width: 100%;
-    box-sizing: border-box;
-    margin: 0;
-    align-items: center;
-    justify-content: center;
-}
-
-.table-button:hover {
-    background-color: rgb(0, 50, 255);
-}
-
+/* Liens des tableaux de contenu */
 .table-1col a,
-.cv-table a {
-    background-color: transparent;
-    text-decoration: underline;
-    padding: 0px;
-    margin: 0px;
+.cv-table a{
+    background-color:transparent;
+    text-decoration:underline;
+    padding:0px;
+    margin:0px;
     display: inline;
 }
 
 .table-1col a:hover,
-.cv-table a:hover {
-    background-color: transparent;
-    text-decoration: underline;
-    font-weight: bold;
-    padding: 0px;
-    margin: 0px;
+.cv-table a:hover{
+    background-color:transparent;
+    text-decoration:underline;
+    font-weight:bold;
+    padding:0px;
+    margin:0px;
 }
 
-.table img {
-    display: block;
-    width: 90%;
-    max-width: 400px;
-    height: auto;
-    max-height: 400px;
-    object-fit: contain;
-    margin: 0 auto;
+/* Images dans les tableaux */
+table img {
+display:block;
+width:90%;
+max-width:400px;
+height:auto;
+max-height:400px;
+object-fit:contain;
+margin:0 auto;
+justify-content:center;
+align-items:center ;
 }
 
 .table-image img {
-    width: 150px;
-    height: 150px;
-    object-fit: contain;
-    margin: 0 auto;
+width:150px;
+height:150px;
+object-fit:contain;
+margin:0 auto;
+justify-content: center;
+align-items:center ;
+}
+/* Liens image des tableaux */
+.table-image{
+background-color:transparent;
 }
 
-.table-image {
-    background-color: transparent;
+/* Survol des liens image */
+.table-image:hover{
+background-color:transparent;
 }
 
-.table-image:hover {
-    background-color: transparent;
+
+/* Paragraphes dans les tableaux */
+table p {
+text-align:left;
+font-size:15px;
+font-family:verdana,sans-serif;
 }
 
-.table p {
-    text-align: left;
-    font-size: 15px;
-    font-family: Verdana, sans-serif;
+/* Sous-titres dans les tableaux */
+table h2{
+font-size:25px;
+font-family:verdana,sans-serif;
+text-align:center;
 }
 
-.table h2 {
-    font-size: 25px;
-    font-family: Verdana, sans-serif;
-    text-align: center;
-}
-
+/* Largeur des colonnes selon le nombre de cases */
 .table-1col th,
 .table-1col td {
     width: 100%;

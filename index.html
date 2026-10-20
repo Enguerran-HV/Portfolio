@@ -1,53 +1,81 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
+
 <head>
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="/Portfolio/style.css">
+    <title>index</title>
+    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="keywords" content="Portfolio, Enguerran, CHAD">
     <meta name="author" content="Enguerran Hollender Voegeli">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+
 <body>
+
     <div id="header-placeholder"></div>
 
-    <header class="page-header">
-        <h1>Bienvenue sur mon Portfolio !</h1>
+    <!-- TITRE DE PAGE -->
+    <header>
+        Bienvenue sur mon Portfolio !
     </header>
-
-    <section class="page-intro">
-        <p>Technicien automaticien</p>
-        <p>Conception et réalisation de projet mêlant électronique, automatisme et système embarqué.</p>
-        <p>Découvrez mon parcours, mes projets et mes compétences.</p>
-        <p>Par Enguerran Hollender Voegeli</p>
-    </section>
-
-    <main class="content-panel">
-        <div class="card-grid">
-            <article class="project-card">
-                <a class="card-link" href="/Portfolio/PAGES/competences.html"><span>Compétences</span></a>
-                <a class="card-visual" href="/Portfolio/PAGES/competences.html"><img src="/Portfolio/MEDIA/IMAGES/logocompetences.png" alt="Compétences"></a>
-                <p>Les compétences que j'ai acquises et développées.</p>
-            </article>
-
-            <article class="project-card">
-                <a class="card-link" href="/Portfolio/PAGES/etudes.html"><span>Études</span></a>
-                <a class="card-visual" href="/Portfolio/PAGES/etudes.html"><img src="/Portfolio/MEDIA/IMAGES/logoetudes.png" alt="Études"></a>
-                <p>Mon parcours scolaire et les projets réalisés.</p>
-            </article>
-
-            <article class="project-card">
-                <a class="card-link" href="/Portfolio/PAGES/experience_pro.html"><span>Expériences professionnelles</span></a>
-                <a class="card-visual" href="/Portfolio/PAGES/experience_pro.html"><img src="/Portfolio/MEDIA/IMAGES/logoxppro.png" alt="Expériences professionnelles"></a>
-                <p>Mes expériences dans le monde du travail et en entreprise.</p>
-            </article>
-
-            <article class="project-card">
-                <a class="card-link" href="/Portfolio/PAGES/cv_et_contact.html"><span>Mes contacts</span></a>
-                <a class="card-visual" href="/Portfolio/PAGES/cv_et_contact.html"><img src="/Portfolio/MEDIA/IMAGES/logocontact.png" alt="Contacts"></a>
-                <p>Si mon profil vous intéresse, voici mes coordonnées.</p>
-            </article>
-        </div>
+    <!-- PRÉSENTATION DE LA PAGE -->
+    <article>
+        <h1>
+            <p>Technicien automaticien</p>
+            <p>Conception et réalisation de projet mêlant électronique, automatisme et système embarqué.</p>
+            <p>Découvrez mon parcours, mes projets et mes compétences.</p>
+            <p style="text-decoration:underline">Par Enguerran Hollender Voegeli</p>
+            <p>
+                <img src="/Portfolio/MEDIA/IMAGES/logoiut.png" alt="Logo de l'IUT de Rennes"
+                    style="width:100px;height:100px">
+                Étudiant en BUT GEII à l'IUT de Rennes
+            </p>
+            <p>
+                <img src="/Portfolio/MEDIA/IMAGES/GENERAL/novesis.png" alt="Logo NOVESIS"
+                    style="width:240pxpx;height:80px">
+                Alternant chez <a href="https://www.novesis.bzh/" target="_blank"> NOVESIS</a>
+            </p>
+        </h1>
+    </article>
+    <!-- ZONE PRINCIPALE -->
+    <main>
+        <table class="table-4col">
+            <tr>
+                <td><a class="table-button" href="/Portfolio/PAGES/competences.html">Compétences</a></td>
+                <td><a class="table-button" href="/Portfolio/PAGES/etudes.html">Études</a></td>
+                <td><a class="table-button" href="/Portfolio/PAGES/experience_pro.html">Expériences professionnelles</a>
+                </td>
+                <td><a class="table-button" href="/Portfolio/PAGES/cv_et_contact.html">Mes contacts</a></td>
+            </tr>
+            <tr>
+                <td>
+                    <a class="table-image" href="/Portfolio/PAGES/competences.html">
+                        <img src="/Portfolio/MEDIA/IMAGES/logocompetences.png" alt="Compétences">
+                    </a>
+                </td>
+                <td>
+                    <a class="table-image" href="/Portfolio/PAGES/etudes.html">
+                        <img src="/Portfolio/MEDIA/IMAGES/logoetudes.png" alt="Études">
+                    </a>
+                </td>
+                <td>
+                    <a class="table-image" href="/Portfolio/PAGES/experience_pro.html">
+                        <img src="/Portfolio/MEDIA/IMAGES/logoxppro.png" alt="Expériences professionnelles">
+                    </a>
+                </td>
+                <td>
+                    <a class="table-image" href="/Portfolio/PAGES/cv_et_contact.html">
+                        <img src="/Portfolio/MEDIA/IMAGES/logocontact.png" alt="Contacts">
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>Les compétences que j'ai acquises et développées</td>
+                <td>Mon parcours scolaire et les projets réalisés</td>
+                <td>Mes expériences dans le monde du travail et en entreprise</td>
+                <td>Si mon profil vous intéresse, voici mes coordonnées</td>
+            </tr>
+        </table>
     </main>
 
     <div id="footer-placeholder"></div>
@@ -61,5 +89,7 @@
             .then(res => res.text())
             .then(data => document.getElementById('footer-placeholder').outerHTML = data);
     </script>
+
 </body>
+
 </html>

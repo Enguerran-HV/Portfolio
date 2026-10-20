@@ -1,48 +1,70 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
-    <title>BUT GEII 3</title>
+    <title>but_geii_3</title>
     <link rel="stylesheet" href="/Portfolio/style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    <div id="header-placeholder"></div>
 
-    <header class="page-header">
-        <h1>BUT GEII 3</h1>
+<div id="header-placeholder"></div>
+
+<!-- TITRE DE PAGE -->
+    <header>
+        BUT GEII 3
     </header>
+<!-- PRÉSENTATION DE LA PAGE -->
+    <article>
+        <h1>
+            <p>Projet de troisième année de BUT GEII</p>
+        </h1>
+    </article> 
 
-    <section class="page-intro">
-        <p>Projet de troisième année de BUT GEII</p>
-    </section>
+<main>
+    <table class="table-4col">
+        <tr>
+            <td>
+                <a class="table-button" href="/Portfolio/PAGES/ETUDES/BUT_GEII_3/robotique.html">Robotique avancées</a>
+            </td>
+            <td>
+                <a class="table-button" href="/Portfolio/PAGES/ETUDES/BUT_GEII_3/jeu_vr.html">Jeu de réalité virtuelle</a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class="table-image" href="/Portfolio/PAGES/ETUDES/BUT_GEII_3/robotique.html">
+                    <img src="/Portfolio/MEDIA/IMAGES/BUT3/ROBOTIQUE/robotique.png" alt="Robotique et Roboguide">
+                </a> 
+            </td> 
+            <td>
+                <a class="table-image" href="/Portfolio/PAGES/ETUDES/BUT_GEII_3/jeu_vr.html">
+                    <img src="/Portfolio/MEDIA/IMAGES/BUT3/ROBOTIQUE/jeu_vr.png" alt="jeu_vr">
+                </a>          
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Projet plus complet et complexes, mise en place vision et comm API
+            </td>
+            <td>
+                Conception et création d'un jeu de réalité virtuelle, avec interaction et physique
+            </td>
+        </tr>
+    </table>
+</main>
 
-    <main class="content-panel">
-        <div class="card-grid">
-            <article class="project-card">
-                <a class="card-link" href="/Portfolio/PAGES/ETUDES/BUT_GEII_3/robotique.html"><span>Robotique avancée</span></a>
-                <a class="card-visual" href="/Portfolio/PAGES/ETUDES/BUT_GEII_3/robotique.html"><img src="/Portfolio/MEDIA/IMAGES/BUT3/ROBOTIQUE/robotique.png" alt="Robotique avancée"></a>
-                <p>Projet plus complet et complexe, mise en place vision et communication API.</p>
-            </article>
+<div id="footer-placeholder"></div>
 
-            <article class="project-card">
-                <a class="card-link" href="/Portfolio/PAGES/ETUDES/BUT_GEII_3/jeu_vr.html"><span>Jeu de réalité virtuelle</span></a>
-                <a class="card-visual" href="/Portfolio/PAGES/ETUDES/BUT_GEII_3/jeu_vr.html"><img src="/Portfolio/MEDIA/IMAGES/BUT3/ROBOTIQUE/jeu_vr.png" alt="Jeu VR"></a>
-                <p>Conception et création d'un jeu de réalité virtuelle avec interaction et physique.</p>
-            </article>
-        </div>
-    </main>
+<script>
+    fetch('/Portfolio/header.html')
+        .then(res => res.text())
+        .then(data => document.getElementById('header-placeholder').outerHTML = data);
 
-    <div id="footer-placeholder"></div>
+    fetch('/Portfolio/footer.html')
+        .then(res => res.text())
+        .then(data => document.getElementById('footer-placeholder').outerHTML = data);
+</script>
 
-    <script>
-        fetch('/Portfolio/header.html')
-            .then(res => res.text())
-            .then(data => document.getElementById('header-placeholder').outerHTML = data);
-
-        fetch('/Portfolio/footer.html')
-            .then(res => res.text())
-            .then(data => document.getElementById('footer-placeholder').outerHTML = data);
-    </script>
 </body>
 </html>
