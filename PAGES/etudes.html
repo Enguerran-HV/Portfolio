@@ -1,43 +1,47 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <title>etudes</title>
     <link rel="stylesheet" href="/Portfolio/style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+
 <body>
 
-<div id="header-placeholder"></div>
+    <div id="header-placeholder"></div>
 
-<!-- TITRE DE PAGE -->
+    <!-- TITRE DE PAGE -->
     <header>
         Mon parcours scolaire
     </header>
-<!-- PRÉSENTATION DE LA PAGE -->
+    <!-- PRÉSENTATION DE LA PAGE -->
     <article>
         <h1>
             <p>Les projets réalisés</p>
         </h1>
-    </article>    
-<main>
+    </article>
+    <main>
         <section>
             <div class="content-panel">
-                            <div class="content-row">
-                                <div class="content-cell">
-                                    Je me suis dirigé vers un BUT Génie Électrique et Informatique Industrielle à l'IUT de Rennes.
-                                    Ces 3 années m'ont permis de développer mes compétences et connaissances dans l'automatisme industriel,
-                                    ainsi qu'en système embarqué et en électricité.
-                                </div>
-                            </div>
-                        </div>
+                <div class="content-row">
+                    <div class="content-cell">
+                        Je me suis dirigé vers un BUT Génie Électrique et Informatique Industrielle à l'IUT de Rennes.
+                        Ces 3 années m'ont permis de développer mes compétences et connaissances dans l'automatisme
+                        industriel,
+                        ainsi qu'en système embarqué et en électricité.
+                    </div>
+                </div>
+            </div>
             <div class="portfolio-card-grid">
                 <article class="portfolio-card">
                     <a class="card-button" href="/Portfolio/PAGES/ETUDES/but_geii_1.html">BUT GEII 1</a>
                     <a class="card-image" href="/Portfolio/PAGES/ETUDES/but_geii_1.html">
                         <img src="/Portfolio/MEDIA/IMAGES/logocompetences.png" alt="BUT GEII 1">
                     </a>
-                    <p class="card-text">Les projets réalisés en première année de BUT GEII, découverte et premiers pas</p>
+                    <p class="card-text">Les projets réalisés en première année de BUT GEII, découverte et premiers pas
+                    </p>
                 </article>
                 <article class="portfolio-card">
                     <a class="card-button" href="/Portfolio/PAGES/ETUDES/but_geii_2.html">BUT GEII 2</a>
@@ -55,19 +59,20 @@
                 </article>
             </div>
         </section>
-</main>
+    </main>
 
-<div id="footer-placeholder"></div>
+    <div id="footer-placeholder"></div>
 
-<script>
-    fetch('/Portfolio/header.html')
-        .then(res => res.text())
-        .then(data => document.getElementById('header-placeholder').outerHTML = data);
+    <script>
+        fetch('/Portfolio/header.html')
+            .then(res => res.text())
+            .then(data => document.getElementById('header-placeholder').outerHTML = data);
 
-    fetch('/Portfolio/footer.html')
-        .then(res => res.text())
-        .then(data => document.getElementById('footer-placeholder').outerHTML = data);
-</script>
+        fetch('/Portfolio/footer.html')
+            .then(res => res.text())
+            .then(data => document.getElementById('footer-placeholder').outerHTML = data);
+    </script>
 
 </body>
+
 </html>
