@@ -1,76 +1,61 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="fr">
 <head>
-    <title>competences</title>
+    <title>Mes compétences</title>
     <link rel="stylesheet" href="/Portfolio/style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
+    <div id="header-placeholder"></div>
 
-<div id="header-placeholder"></div>
-
-<!-- TITRE DE PAGE -->
-    <header>
-        Mes Compétences
+    <header class="page-header">
+        <h1>Mes Compétences</h1>
     </header>
-<!-- PRÉSENTATION DE LA PAGE -->
-    <article>
-        <h1>
-            <p>Les compétences que j'ai développées</p>
-            <p>et construites au fil de mes expériences</p>
-        </h1>
-    </article>    
-<main>
-        <table class="table-4col">
-            <tr>
-                <td><a class="table-button" href="/Portfolio/PAGES/COMPETENCES/concevoir.html">Concevoir</a></td>
-                <td><a class="table-button" href="/Portfolio/PAGES/COMPETENCES/verifier.html">Vérifier</a></td>
-                <td><a class="table-button" href="/Portfolio/PAGES/COMPETENCES/integrer.html">Intégrer</a></td>
-                <td><a class="table-button" href="/Portfolio/PAGES/COMPETENCES/maintenir.html">Maintenir</a></td>
-            </tr>
-            <tr>
-                <td>
-                    <a class="table-image" href="/Portfolio/PAGES/COMPETENCES/concevoir.html">
-                        <img src="/Portfolio/MEDIA/IMAGES/COMPETENCES/concevoir.png" alt="Concevoir">
-                    </a>
-                </td>
-                <td>
-                    <a class="table-image" href="/Portfolio/PAGES/COMPETENCES/verifier.html">
-                        <img src="/Portfolio/MEDIA/IMAGES/COMPETENCES/verifier.png" alt="Vérifier">
-                    </a>
-                </td>
-                <td>
-                    <a class="table-image" href="/Portfolio/PAGES/COMPETENCES/integrer.html">
-                        <img src="/Portfolio/MEDIA/IMAGES/COMPETENCES/integrer.png" alt="Intégrer">
-                    </a>
-                </td>
-                <td>
-                    <a class="table-image" href="/Portfolio/PAGES/COMPETENCES/maintenir.html">
-                        <img src="/Portfolio/MEDIA/IMAGES/COMPETENCES/maintenir.png" alt="Maintenir">
-                    </a>
-                </td>
-            </tr>
-            <tr>
-                <td>La conception d'un système GEII</td>
-                <td>Le contrôle et la vérification d'un système GEII</td>
-                <td>L'intégration d'un système GEII</td>
-                <td>La maintenance d'un système GEII</td>
-            </tr>
-        </table>
-</main>
 
-<div id="footer-placeholder"></div>
+    <section class="page-intro">
+        <p>Les compétences que j'ai développées</p>
+        <p>et construites au fil de mes expériences</p>
+    </section>
 
-<script>
-    fetch('/Portfolio/header.html')
-        .then(res => res.text())
-        .then(data => document.getElementById('header-placeholder').outerHTML = data);
+    <main class="content-panel">
+        <div class="card-grid">
+            <article class="project-card">
+                <a class="card-link" href="/Portfolio/PAGES/COMPETENCES/concevoir.html"><span>Concevoir</span></a>
+                <a class="card-visual" href="/Portfolio/PAGES/COMPETENCES/concevoir.html"><img src="/Portfolio/MEDIA/IMAGES/COMPETENCES/concevoir.png" alt="Concevoir"></a>
+                <p>La conception d'un système GEII.</p>
+            </article>
 
-    fetch('/Portfolio/footer.html')
-        .then(res => res.text())
-        .then(data => document.getElementById('footer-placeholder').outerHTML = data);
-</script>
+            <article class="project-card">
+                <a class="card-link" href="/Portfolio/PAGES/COMPETENCES/verifier.html"><span>Vérifier</span></a>
+                <a class="card-visual" href="/Portfolio/PAGES/COMPETENCES/verifier.html"><img src="/Portfolio/MEDIA/IMAGES/COMPETENCES/verifier.png" alt="Vérifier"></a>
+                <p>Le contrôle et la vérification d'un système GEII.</p>
+            </article>
 
+            <article class="project-card">
+                <a class="card-link" href="/Portfolio/PAGES/COMPETENCES/integrer.html"><span>Intégrer</span></a>
+                <a class="card-visual" href="/Portfolio/PAGES/COMPETENCES/integrer.html"><img src="/Portfolio/MEDIA/IMAGES/COMPETENCES/integrer.png" alt="Intégrer"></a>
+                <p>L'intégration d'un système GEII.</p>
+            </article>
+
+            <article class="project-card">
+                <a class="card-link" href="/Portfolio/PAGES/COMPETENCES/maintenir.html"><span>Maintenir</span></a>
+                <a class="card-visual" href="/Portfolio/PAGES/COMPETENCES/maintenir.html"><img src="/Portfolio/MEDIA/IMAGES/COMPETENCES/maintenir.png" alt="Maintenir"></a>
+                <p>La maintenance d'un système GEII.</p>
+            </article>
+        </div>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script>
+        fetch('/Portfolio/header.html')
+            .then(res => res.text())
+            .then(data => document.getElementById('header-placeholder').outerHTML = data);
+
+        fetch('/Portfolio/footer.html')
+            .then(res => res.text())
+            .then(data => document.getElementById('footer-placeholder').outerHTML = data);
+    </script>
 </body>
 </html>

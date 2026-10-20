@@ -1,93 +1,61 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="fr">
 <head>
-    <title>but_geii_1</title>
+    <title>BUT GEII 1</title>
     <link rel="stylesheet" href="/Portfolio/style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
+    <div id="header-placeholder"></div>
 
-<div id="header-placeholder"></div>
-
-<!-- TITRE DE PAGE -->
-    <header>
-        BUT GEII 1
+    <header class="page-header">
+        <h1>BUT GEII 1</h1>
     </header>
-<!-- PRÉSENTATION DE LA PAGE -->
-    <article>
-        <h1>
-            <p>Les projets réalisés en première année de BUT GEII</p>
-            <p>Une découverte et un premier pas dans le monde du GEII</p>
-        </h1>
-    </article> 
 
-<main>
-    <table class="table-4col">
-        <tr>
-            <td>
-                <a class="table-button" href="/Portfolio/PAGES/ETUDES/BUT_GEII_1/variateur_de_lumiere.html">Variateur de lumière</a>
-            </td>
-            <td>
-                <a class="table-button" href="/Portfolio/PAGES/ETUDES/BUT_GEII_1/console_retro_gaming.html">Console rétro gaming</a>
-            </td>
-            <td>
-                <a class="table-button" href="/Portfolio/PAGES/ETUDES/BUT_GEII_1/borne_de_recharge.html">Borne de recharge</a>
-            </td>
-            <td>
-                <a class="table-button" href="/Portfolio/PAGES/ETUDES/BUT_GEII_1/carrefour_automobile.html">Carrefour routier</a>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a class="table-image" href="/Portfolio/PAGES/ETUDES/BUT_GEII_1/variateur_de_lumiere.html">
-                    <img  src="/Portfolio/MEDIA/IMAGES/BUT1/VARIATEUR/existant.png" alt="Variateur de lumière">
-                </a>
-            </td>
-            <td>
-                <a class="table-image" href="/Portfolio/PAGES/ETUDES/BUT_GEII_1/console_retro_gaming.html">
-                    <img src="/Portfolio/MEDIA/IMAGES/BUT1/CONSOLE/console_carte.png" alt="Console rétro gaming">
-                </a>            
-            </td>
-            <td>
-                <a class="table-image" href="/Portfolio/PAGES/ETUDES/BUT_GEII_1/borne_de_recharge.html">
-                    <img src="/Portfolio/MEDIA/IMAGES/BUT1/BORNE/borne_borne.png" alt="Borne de recharge">
-                </a>            
-            </td>
-            <td>
-                <a class="table-image" href="/Portfolio/PAGES/ETUDES/BUT_GEII_1/carrefour_automobile.html">
-                    <img src="/Portfolio/MEDIA/IMAGES/BUT1/CARREFOUR/carrefour_carrefour.png" alt="Carrefour automobile">
-                </a>            
-            </td>
-        </tr>
-        <tr>
-            <td>
-            Étude de l'éxistant, Schéma électronique, routage Proteus, circuit imprimé, soudage et procédure de test
-            </td>
-            <td>
-            Étude de l'éxistant, Schéma électronique, routage Proteus, circuit imprimé, soudage et programmation en C
-            </td>
-            <td>
-            Étude de l'éxistant, Schéma électrique et câblage sur breadboard
-            </td>
-            <td>
-            Schéma électronique, circuit imprimé et programation en Structured Text
-            </td>
-        </tr>
-</table>
-</main>
+    <section class="page-intro">
+        <p>Les projets réalisés en première année de BUT GEII</p>
+        <p>Une découverte et un premier pas dans le monde du GEII</p>
+    </section>
 
-<div id="footer-placeholder"></div>
+    <main class="content-panel">
+        <div class="card-grid">
+            <article class="project-card">
+                <a class="card-link" href="/Portfolio/PAGES/ETUDES/BUT_GEII_1/variateur_de_lumiere.html"><span>Variateur de lumière</span></a>
+                <a class="card-visual" href="/Portfolio/PAGES/ETUDES/BUT_GEII_1/variateur_de_lumiere.html"><img src="/Portfolio/MEDIA/IMAGES/BUT1/VARIATEUR/existant.png" alt="Variateur de lumière"></a>
+                <p>Étude de l'existant, schéma électronique, routage Proteus, circuit imprimé, soudage et procédure de test.</p>
+            </article>
 
-<script>
-    fetch('/Portfolio/header.html')
-        .then(res => res.text())
-        .then(data => document.getElementById('header-placeholder').outerHTML = data);
+            <article class="project-card">
+                <a class="card-link" href="/Portfolio/PAGES/ETUDES/BUT_GEII_1/console_retro_gaming.html"><span>Console rétro gaming</span></a>
+                <a class="card-visual" href="/Portfolio/PAGES/ETUDES/BUT_GEII_1/console_retro_gaming.html"><img src="/Portfolio/MEDIA/IMAGES/BUT1/CONSOLE/console_carte.png" alt="Console rétro gaming"></a>
+                <p>Étude de l'existant, schéma électronique, routage Proteus, circuit imprimé, soudage et programmation en C.</p>
+            </article>
 
-    fetch('/Portfolio/footer.html')
-        .then(res => res.text())
-        .then(data => document.getElementById('footer-placeholder').outerHTML = data);
-</script>
+            <article class="project-card">
+                <a class="card-link" href="/Portfolio/PAGES/ETUDES/BUT_GEII_1/borne_de_recharge.html"><span>Borne de recharge</span></a>
+                <a class="card-visual" href="/Portfolio/PAGES/ETUDES/BUT_GEII_1/borne_de_recharge.html"><img src="/Portfolio/MEDIA/IMAGES/BUT1/BORNE/borne_borne.png" alt="Borne de recharge"></a>
+                <p>Étude de l'existant, schéma électrique et câblage sur breadboard.</p>
+            </article>
 
+            <article class="project-card">
+                <a class="card-link" href="/Portfolio/PAGES/ETUDES/BUT_GEII_1/carrefour_automobile.html"><span>Carrefour routier</span></a>
+                <a class="card-visual" href="/Portfolio/PAGES/ETUDES/BUT_GEII_1/carrefour_automobile.html"><img src="/Portfolio/MEDIA/IMAGES/BUT1/CARREFOUR/carrefour_carrefour.png" alt="Carrefour automobile"></a>
+                <p>Schéma électronique, circuit imprimé et programmation en Structured Text.</p>
+            </article>
+        </div>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script>
+        fetch('/Portfolio/header.html')
+            .then(res => res.text())
+            .then(data => document.getElementById('header-placeholder').outerHTML = data);
+
+        fetch('/Portfolio/footer.html')
+            .then(res => res.text())
+            .then(data => document.getElementById('footer-placeholder').outerHTML = data);
+    </script>
 </body>
 </html>

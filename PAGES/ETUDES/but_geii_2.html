@@ -1,117 +1,61 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="fr">
 <head>
-    <title>but_geii_2</title>
+    <title>BUT GEII 2</title>
     <link rel="stylesheet" href="/Portfolio/style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
+    <div id="header-placeholder"></div>
 
-<div id="header-placeholder"></div>
-
-<!-- TITRE DE PAGE -->
-    <header>
-        BUT GEII 2
+    <header class="page-header">
+        <h1>BUT GEII 2</h1>
     </header>
-<!-- PRÉSENTATION DE LA PAGE -->
-    <article>
-        <h1>
-            <p>Projets réalisé lors de ma seconde année de BUT GEII</p>
-            <p>Plus en autonomie et bien plus complets</p>
-        </h1>
-    </article> 
 
-<main>
-    <table class="table-4col">
-        <tr>
-            <td>
-                <a class="table-button" href="/Portfolio/PAGES/ETUDES/BUT_GEII_2/forge_barre_metallique.html">Forge d'une barre métallique</a>
-            </td>
-            <td>
-                <a class="table-button" href="/Portfolio/PAGES/ETUDES/BUT_GEII_2/conditionnement_jetons.html">Conditionnement de Jetons</a>
-            </td>
-            <td>
-                <a class="table-button" href="/Portfolio/PAGES/ETUDES/BUT_GEII_2/regulation_serre.html">Câblage et régulation d'une serre</a>
-            </td>
-            <td>
-                <a class="table-button" href="/Portfolio/PAGES/ETUDES/BUT_GEII_2/robotique.html">Robotique et Roboguide</a>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a class="table-image" href="/Portfolio/PAGES/ETUDES/BUT_GEII_2/forge_barre_metallique.html">
-                    <img src="/Portfolio/MEDIA/IMAGES/BUT2/FORGE/variateur_variateur.png" alt="Forge de barre">
-                </a>
-            </td>
-            <td>
-                <a class="table-image" href="/Portfolio/PAGES/ETUDES/BUT_GEII_2/conditionnement_jetons.html">
-                    <img src="/Portfolio/MEDIA/IMAGES/BUT2/JETONS/jetons.png" alt="Maquette festo et jetons">
-                </a>            
-            </td>
-            <td>
-                <a class="table-image" href="/Portfolio/PAGES/ETUDES/BUT_GEII_2/regulation_serre.html">
-                    <img src="/Portfolio/MEDIA/IMAGES/BUT2/SERRE/serre.png" alt="Serre Unitronics">
-                </a>
-            </td>
-            <td>
-                <a class="table-image" href="/Portfolio/PAGES/ETUDES/BUT_GEII_2/robotique.html">
-                    <img src="/Portfolio/MEDIA/IMAGES/BUT2/ROBOTIQUE/robotique.png" alt="Robotique et Roboguide">
-                </a>            
-            </td>
-        </tr>
-        <tr>
-            <td>
-                Automate M340 Schneider, G7 et ST, IHM Magelis
-            </td>
-            <td>
-                Automate S1200 Siemens, G7 ST et FB, IHM Siemens, Jumeau numérique VUP
-            </td>
-            <td>
-                Automate V130 Unitronics, Câblage, schémas électriques, G7 et Ladders, IHM Unitronics
-            </td>
-            <td>
-                Robot ABB et FANUC, refléxion et optimsiation robotique, simulation roboguide
-            </td>
-        </tr>
-</table>
+    <section class="page-intro">
+        <p>Projets réalisés lors de ma seconde année de BUT GEII</p>
+        <p>Plus en autonomie et bien plus complets</p>
+    </section>
 
-<article>
-    <h1>
-        En plus des projets, des cours nous était donnée dans divers domaines utiles au domaine GEII
-    </h1>
-</article>
-<table class="table-1col">
-    <!-- Boutton orange avec texte   -->
-    <tr>
-        <td><a class="table-button" href="">Réseaux</a></td>
-    </tr>
-    <!-- Image clickable-->
-    <tr>
-        <td>
-            <a class="table-image" href="">
-                <img src="" alt="image réseau">
-            </a>
-        </td>
-    </tr>
-    <!-- Description texte-->
-    <tr>
-        <td>Mise en communication IP, LAN et WAN, sous réseaux</td>
-    </tr>
-</table>
-</main>
+    <main class="content-panel">
+        <div class="card-grid">
+            <article class="project-card">
+                <a class="card-link" href="/Portfolio/PAGES/ETUDES/BUT_GEII_2/forge_barre_metallique.html"><span>Forge d'une barre métallique</span></a>
+                <a class="card-visual" href="/Portfolio/PAGES/ETUDES/BUT_GEII_2/forge_barre_metallique.html"><img src="/Portfolio/MEDIA/IMAGES/BUT2/FORGE/variateur_variateur.png" alt="Forge d'une barre métallique"></a>
+                <p>Automate M340 Schneider, G7 et ST, IHM Magelis.</p>
+            </article>
 
-<div id="footer-placeholder"></div>
+            <article class="project-card">
+                <a class="card-link" href="/Portfolio/PAGES/ETUDES/BUT_GEII_2/conditionnement_jetons.html"><span>Conditionnement de jetons</span></a>
+                <a class="card-visual" href="/Portfolio/PAGES/ETUDES/BUT_GEII_2/conditionnement_jetons.html"><img src="/Portfolio/MEDIA/IMAGES/BUT2/JETONS/jetons.png" alt="Conditionnement de jetons"></a>
+                <p>Automate S1200 Siemens, G7 ST et FB, IHM Siemens, jumeau numérique VUP.</p>
+            </article>
 
-<script>
-    fetch('/Portfolio/header.html')
-        .then(res => res.text())
-        .then(data => document.getElementById('header-placeholder').outerHTML = data);
+            <article class="project-card">
+                <a class="card-link" href="/Portfolio/PAGES/ETUDES/BUT_GEII_2/regulation_serre.html"><span>Régulation d'une serre</span></a>
+                <a class="card-visual" href="/Portfolio/PAGES/ETUDES/BUT_GEII_2/regulation_serre.html"><img src="/Portfolio/MEDIA/IMAGES/BUT2/SERRE/serre.png" alt="Régulation d'une serre"></a>
+                <p>Automate V130 Unitronics, câblage, schémas électriques, G7 et Ladder, IHM Unitronics.</p>
+            </article>
 
-    fetch('/Portfolio/footer.html')
-        .then(res => res.text())
-        .then(data => document.getElementById('footer-placeholder').outerHTML = data);
-</script>
+            <article class="project-card">
+                <a class="card-link" href="/Portfolio/PAGES/ETUDES/BUT_GEII_2/robotique.html"><span>Robotique et Roboguide</span></a>
+                <a class="card-visual" href="/Portfolio/PAGES/ETUDES/BUT_GEII_2/robotique.html"><img src="/Portfolio/MEDIA/IMAGES/BUT2/ROBOTIQUE/robotique.png" alt="Robotique et Roboguide"></a>
+                <p>Robot ABB et FANUC, réflexion et optimisation robotique, simulation Roboguide.</p>
+            </article>
+        </div>
+    </main>
 
+    <div id="footer-placeholder"></div>
+
+    <script>
+        fetch('/Portfolio/header.html')
+            .then(res => res.text())
+            .then(data => document.getElementById('header-placeholder').outerHTML = data);
+
+        fetch('/Portfolio/footer.html')
+            .then(res => res.text())
+            .then(data => document.getElementById('footer-placeholder').outerHTML = data);
+    </script>
 </body>
 </html>
