@@ -11,7 +11,7 @@
     --color-background-sous-menu:rgb(60,110,255); /* First blue shade for first-level dropdown menus */
     --color-background-sous-sous-menu:rgb(70,120,255); /* Second blue shade for second-level dropdown menus */
     --color-texte-nav:whitesmoke; /* Text color of navigation links */
-    
+
     --font-family-general:Verdana,sans-serif; /* General font used throughout the page */
 }
 
@@ -339,6 +339,11 @@ footer div{
 font-family:var(--font-family-general);
 }
 
+footer a:hover{
+    text-decoration:underline;
+    font-weight:bold;
+}
+
 /* Positionnement des colonnes */
 footer div:nth-child(1){
 grid-column:2;
@@ -364,7 +369,7 @@ footer h2{
 font-size:12px;
 font-family:var(--font-family-general);
 color:var(--color-texte-alerte);
-text-align:right;
+text-align:bottom,right;
 }
 
 /* ==================== LISTES ==================== */
