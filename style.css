@@ -475,6 +475,11 @@ content:"- ";
     align-items:initial;
 }
 
+.content-panel .content-cell,
+.content-panel .content-cell p{
+    text-align:center;
+}
+
 .content-grid .content-cell{
     text-align:left;
 }
