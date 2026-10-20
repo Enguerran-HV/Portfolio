@@ -403,7 +403,7 @@ content:"- ";
     background-color:var(--color-background-contenu);
 }
 
-.portfolio-card-title{
+.card-button{
     display:flex;
     min-height:50px;
     align-items:center;
@@ -417,48 +417,81 @@ content:"- ";
     text-decoration:none;
 }
 
-.portfolio-card-title:hover{
+.card-button:hover{
     background-color:var(--color-bouton-hover);
     font-weight:bold;
     text-decoration:underline;
 }
 
-.portfolio-card-image{
+.card-image{
     display:block;
 }
 
-.portfolio-card-image img{
+.card-image img{
     display:block;
     width:100%;
     height:180px;
     object-fit:contain;
 }
 
-.portfolio-card-description{
+.card-text{
     display:block;
     margin:0;
     font-family:var(--font-family-general);
     text-align:center;
 }
 
-/* ==================== TABLEAUX ==================== */
-/* Structure generale des tableaux */
-table{
-    text-align:center;
-    margin:0 auto;
+/* ==================== CONTENU EN GRILLE ==================== */
+.content-panel,
+.content-grid{
+    display:block;
     width:95%;
-    table-layout:fixed;
+    margin:0 auto;
+    box-sizing:border-box;
+    align-items:initial;
 }
-/* En-tetes de tableaux */
-table th {
-font-family:var(--font-family-general);
-text-decoration:underline;
+
+.content-panel .content-row{
+    display:block;
 }
-/* Cellules de tableaux */
-table td {
-font-family:var(--font-family-general);
-padding:20px;
-overflow:hidden;
+
+.content-grid .content-row{
+    display:grid;
+    grid-template-columns:repeat(2, minmax(0, 1fr));
+    align-items:center;
+    gap:24px;
+    padding:12px 0;
+}
+
+.content-grid .content-row:has(> .content-cell:nth-child(3)){
+    grid-template-columns:repeat(3, minmax(0, 1fr));
+}
+
+.content-cell{
+    display:block;
+    min-width:0;
+    padding:20px;
+    font-family:var(--font-family-general);
+    align-items:initial;
+}
+
+.content-grid .content-cell{
+    text-align:left;
+}
+
+.content-panel h2,
+.content-grid h2{
+    font-size:25px;
+    font-family:var(--font-family-general);
+    font-weight:bold;
+    text-align:center;
+}
+
+@media (max-width: 700px){
+    .content-grid .content-row,
+    .content-grid .content-row:has(> .content-cell:nth-child(3)){
+        grid-template-columns:1fr;
+    }
 }
 
 /* Lecteur PDF du CV */
@@ -479,8 +512,8 @@ height:100%;
 border:none;
 }
 
-/* Liens dans les tableaux */
-table a {
+/* Liens dans les blocs de contenu */
+.content-cell a {
 padding:15px;
 margin:15px;
 border-radius:15px;
@@ -494,16 +527,15 @@ text-decoration:none;
 border:none;
 }
 
-/* Survol des liens dans les tableaux */
-table a:hover 
+.content-cell a:hover
 {
 background-color:transparent;
 font-weight:bold;
 text-decoration:underline;
 }
 
-/* Liens des tableaux de contenu */
-.table-1col a,
+/* Liens intégrés dans le texte */
+.content-panel a,
 .cv-table a{
     background-color:transparent;
     text-decoration:underline;
@@ -512,7 +544,7 @@ text-decoration:underline;
     display: inline;
 }
 
-.table-1col a:hover,
+.content-panel a:hover,
 .cv-table a:hover{
     background-color:transparent;
     text-decoration:underline;
@@ -521,8 +553,8 @@ text-decoration:underline;
     margin:0px;
 }
 
-/* Images dans les tableaux */
-table img {
+/* Images dans les blocs de contenu */
+.content-cell img {
 display:block;
 width:90%;
 max-width:400px;
@@ -534,39 +566,11 @@ justify-content:center;
 align-items:center ;
 }
 
-/* Paragraphes dans les tableaux */
-table p {
+/* Paragraphes dans les blocs de contenu */
+.content-cell p {
 text-align:left;
 font-size:15px;
 font-family:var(--font-family-general);
-}
-
-/* Sous-titres dans les tableaux */
-table h2{
-font-size:25px;
-font-family:var(--font-family-general);
-text-align:center;
-}
-
-/* Largeur des colonnes selon le nombre de cases */
-.table-1col th,
-.table-1col td {
-    width: 100%;
-}
-
-.table-2col th,
-.table-2col td {
-    width: 50%;
-}
-
-.table-3col th,
-.table-3col td {
-    width: 33.33%;
-}
-
-.table-4col th,
-.table-4col td {
-    width: 25%;
 }
 
 .competences-table ul {
