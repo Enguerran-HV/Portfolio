@@ -1,40 +1,170 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <title>jeu_vr</title>
     <link rel="stylesheet" href="/Portfolio/style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+
 <body>
 
-<div id="header-placeholder"></div>
+    <div id="header-placeholder"></div>
 
-<!-- TITRE DE PAGE -->
+    <!-- TITRE DE PAGE -->
     <header>
         Jeu VR
     </header>
-<!-- PRÉSENTATION DE LA PAGE -->
+    <!-- PRÉSENTATION DE LA PAGE -->
     <article>
         <h1>
-            <p>JSP</p>
+            <p>Découverte de la création de jeux vidéo avec Unity et C#</p>
+            <p>Organisation dans un groupe, réflexion sur les méthodes de travail et la communication</p>
         </h1>
-    </article>    
-<main>
-    <!-- contenu spécifique à cette page -->
-</main>
+    </article>
+    <main>
+        <section>
+            <table class="table-1col">
+                <tr>
+                    <td>
+                        <h2>Introduction</h2>
+                    </td>
+                </tr>
+            </table>
 
-<div id="footer-placeholder"></div>
+            <table class="table-1col">
+                <tr>
+                    <td>
+                        <p>
+                            L'objectif de ce projet était de créer un jeu vidéo en réalité vituelle (VR) en utilisant le
+                            moteur
+                            de jeu Unity et le langage C#.
+                        </p>
+                        <p>
+                            Ce jeu devait être un escape game, dans lequel était incorporer des élements du GEII.
+                            Les testeurs sont les nouveaux étudiants de BUT GEII 1, en groupe de 2,
+                            l'un dans le jeu en VR et l'autre avec un manuel d'aide afin de créer une coopération entre
+                            les joueurs.
+                        </p>
+                        <p>
+                            L'un des point clé du projet était l'organisation du travail en groupe.
+                            La gestion de projet, la communication et la répartition des tâches étaient un élement
+                            essentiel pour la réussite du projet.
+                        </p>
+                    </td>
+                </tr>
+            </table>
+        </section>
+        <section>
+            <table class="table-1col">
+                <tr>
+                    <td>
+                        <p>
+                            Nous avons commencer par apprendre les bases et les conceptes des escapes game et de la VR.
+                            Ainsi que trouvé notre thème et nos idées d'énigmes.
+                        </p>
+                        <p>
+                            Nous somme ensuite passer à la création du jeu.
+                            Nous nous somme réparties les tâches afin d'avancer en simultané et de manière efficace.
+                            Je me suis particulier occupé de la création des énigmes et de la programmation d'une partie
+                            du jeu.
+                        </p>
+                        <p>
+                            La première énigmes que j'ai faite était un déchiffrement de code.
+                            Le joueur devait trouver un code en binaire et son acolyte devait le convertire en décimal.
+                            Le joueur pouvait alors le rentrer dans un digicode faisiant alors avancer le jeu.
+                        </p>
+                    </td>
+                </tr>
+            </table>
+        </section>
 
-<script>
-    fetch('/Portfolio/header.html')
-        .then(res => res.text())
-        .then(data => document.getElementById('header-placeholder').outerHTML = data);
+        <section>
+            <table class="table-1col">
+                <tr>
+                    <td>
+                        <h2 id="Serre-Schéma">I - Gestion de projet</h2>
+                    </td>
+                </tr>
+            </table>
+            <table class="table-2col">
+                <tr>
+                    <td>
+                        <p>
+                            L'objectif premier de ce projet était de nous faire travailler en groupe, pour forcer la communication
+                            et la répartition. La gestion de projet était primordiale pour la réussite.
+                            Nous avons passer plusieurs heures d'avant projet à organiser et répartir nos tâches,
+                            à créer un planning type GANTT, et a réfléchir au meilleir moyen de travailler en groupe.
+                        </p>
+                    </td>
+                    <td>IMAGE</td>
+                </tr>
+            </table>
+        </section>
 
-    fetch('/Portfolio/footer.html')
-        .then(res => res.text())
-        .then(data => document.getElementById('footer-placeholder').outerHTML = data);
-</script>
+        <section>
+            <table class="table-1col">
+                <tr>
+                    <td>
+                        <h2 id="Serre-Schéma">II - Énigme déchiffrement binaire</h2>
+                    </td>
+                </tr>
+            </table>
+            <table class="table-2col">
+                <tr>
+                    <td>IMAGE</td>
+                    <td>
+                        <p>
+                            Cette première éngimes était le seconde du jeu.
+                            Le joueur devait trouver un code en binaire et le communiquer à son acolyte.
+                            L'acolyte devait alors le convertir en décimal.
+                            Le code binaire était écrit sur un post-it, celui-ci devait avoir des collisions avec le décors,
+                            mais aussi avec le joueur de manière à être prenable dans la main.
+                            C'est interaction passe par des Box Collider et des Rigidbody.
+                            Ceux-ci permet de créer une physique de contact entre les objets, et de permettre au joueur de prendre le post-it.
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>IMAGE</td>
+                    <td>
+                        <p>
+                            Ensuite, l'acolyte avais a déchiffrer ce code pour le traduire en décimal.
+                            Pour cela il était muni d'un manuel d'aide contenant le nécessaire pour faire la conversion.
+                            Ce manuel devais être suffisament clair mais pas trop pour ne pas rendre l'énigme trop facile.
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>IMAGE</td>
+                    <td>
+                        <p>
+                            Finalement, le joueur VR entrais le code sur un digicode, qui était un objet interactif dans le jeu.
+                            Ici aussi des Box Collider et des Rigidbody étaient utilisés pour permettre l'interaction avec le digicode.
+                            Celui-ci était muni d'un script C# qui permettait d'afficher le code entré, vérifier si celui-ci
+                            était correcte et faire avancer le jeu via des lumières et sons indiquant sa réussite.
+                            Le modèle du digicode ainsi que le script nous étaient en partie fournit par les enseignants, 
+                            mais nous avons du les modifier pour les adapter à notre jeu.
+                        </p>
+                    </td>
+                </tr>
+            </table>
+        </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script>
+        fetch('/Portfolio/header.html')
+            .then(res => res.text())
+            .then(data => document.getElementById('header-placeholder').outerHTML = data);
+
+        fetch('/Portfolio/footer.html')
+            .then(res => res.text())
+            .then(data => document.getElementById('footer-placeholder').outerHTML = data);
+    </script>
 
 </body>
+
 </html>
