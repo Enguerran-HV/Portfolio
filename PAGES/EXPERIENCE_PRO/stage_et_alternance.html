@@ -1,50 +1,55 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <title>stage_et_alternance</title>
-    <link rel="stylesheet" href="/Portfolio/style.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body>
 
-<div id="header-placeholder"></div>
+    <head>
+        <title>stage_et_alternance</title>
+        <link rel="stylesheet" href="/Portfolio/style.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
 
-<!-- TITRE DE PAGE -->
-    <header>
-        Stages et alternances
-    </header>
-<!-- PRÉSENTATION DE LA PAGE -->
-    <article>
-        <h1>
-            <p>Les Stages et Alternance réaslisées</p>
-            <p>Présentation des projets</p>
-        </h1>
-    </article> 
+    <body>
 
-<main>
-    <div class="portfolio-card-grid">
-        <article class="portfolio-card">
-            <a class="card-button" href="/Portfolio/PAGES/EXPERIENCE_PRO/STAGE_ET_ALTERNANCE/HTTProject.html">HTTProject/NOVESIS</a>
-            <a class="card-image" href="/Portfolio/PAGES/EXPERIENCE_PRO/STAGE_ET_ALTERNANCE/HTTProject.html">
-                <img src="/Portfolio/MEDIA/IMAGES/GENERAL/novesis.png" alt="Logo NOVESIS">
-            </a>
-            <p class="card-text">Premier stage et alternance ches HTTProject/NOVESIS à Redon. durée totale de 18 mois.</p>
+        <div id="header-placeholder"></div>
+
+        <!-- TITRE DE PAGE -->
+        <header>
+            Stages et alternances
+        </header>
+        <!-- PRÉSENTATION DE LA PAGE -->
+        <article>
+            <h1>
+                <p>Les Stages et Alternance réaslisées</p>
+                <p>Présentation des projets</p>
+            </h1>
         </article>
-    </div>
-</main>
 
-<div id="footer-placeholder"></div>
+        <main>
+            <div class="portfolio-card-grid">
+                <article class="portfolio-card">
+                    <a class="card-button"
+                        href="/Portfolio/PAGES/EXPERIENCE_PRO/STAGE_ET_ALTERNANCE/HTTProject.html">HTTProject/NOVESIS</a>
+                    <a class="card-image" href="/Portfolio/PAGES/EXPERIENCE_PRO/STAGE_ET_ALTERNANCE/HTTProject.html">
+                        <img src="/Portfolio/MEDIA/IMAGES/GENERAL/novesis.png" alt="Logo NOVESIS">
+                    </a>
+                    <p class="card-text">Premier stage et alternance ches HTTProject/NOVESIS à Redon. durée totale de 18
+                        mois.</p>
+                </article>
+            </div>
+        </main>
 
-<script>
-    fetch('/Portfolio/header.html')
-        .then(res => res.text())
-        .then(data => document.getElementById('header-placeholder').outerHTML = data);
+        <div id="footer-placeholder"></div>
 
-    fetch('/Portfolio/footer.html')
-        .then(res => res.text())
-        .then(data => document.getElementById('footer-placeholder').outerHTML = data);
-</script>
+        <script>
+            fetch('/Portfolio/header.html')
+                .then(res => res.text())
+                .then(data => document.getElementById('header-placeholder').outerHTML = data);
 
-</body>
+            fetch('/Portfolio/footer.html')
+                .then(res => res.text())
+                .then(data => document.getElementById('footer-placeholder').outerHTML = data);
+        </script>
+
+    </body>
+
 </html>

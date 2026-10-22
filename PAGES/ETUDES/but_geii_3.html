@@ -1,56 +1,63 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <title>but_geii_3</title>
-    <link rel="stylesheet" href="/Portfolio/style.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body>
 
-<div id="header-placeholder"></div>
+    <head>
+        <title>but_geii_3</title>
+        <link rel="stylesheet" href="/Portfolio/style.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
 
-<!-- TITRE DE PAGE -->
-    <header>
-        BUT GEII 3
-    </header>
-<!-- PRÉSENTATION DE LA PAGE -->
-    <article>
-        <h1>
-            <p>Projet de troisième année de BUT GEII</p>
-        </h1>
-    </article> 
+    <body>
 
-<main>
-    <div class="portfolio-card-grid">
-        <article class="portfolio-card">
-            <a class="card-button" href="/Portfolio/PAGES/ETUDES/BUT_GEII_3/robotique.html">Robotique avancées</a>
-            <a class="card-image" href="/Portfolio/PAGES/ETUDES/BUT_GEII_3/robotique.html">
-                <img src="/Portfolio/MEDIA/IMAGES/BUT3/ROBOTIQUE/robotique.png" alt="Robotique et Roboguide">
-            </a>
-            <p class="card-text">Projet plus complet et complexes, mise en place vision et comm API</p>
+        <div id="header-placeholder"></div>
+
+        <!-- TITRE DE PAGE -->
+        <header>
+            BUT GEII 3
+        </header>
+        <!-- PRÉSENTATION DE LA PAGE -->
+        <article>
+            <h1>
+                <p>Projet de troisième année de BUT GEII</p>
+            </h1>
         </article>
-        <article class="portfolio-card">
-            <a class="card-button" href="/Portfolio/PAGES/ETUDES/BUT_GEII_3/jeu_vr.html">Jeu de réalité virtuelle</a>
-            <a class="card-image" href="/Portfolio/PAGES/ETUDES/BUT_GEII_3/jeu_vr.html">
-                <img src="/Portfolio/MEDIA/IMAGES/BUT3/ROBOTIQUE/jeu_vr.png" alt="jeu_vr">
-            </a>
-            <p class="card-text">Conception et création d'un jeu de réalité virtuelle, avec interaction et physique</p>
-        </article>
-    </div>
-</main>
 
-<div id="footer-placeholder"></div>
+        <main>
+            <div class="portfolio-card-grid">
+                <article class="portfolio-card">
+                    <a class="card-button" href="/Portfolio/PAGES/ETUDES/BUT_GEII_3/robotique.html">Robotique
+                        avancées</a>
+                    <a class="card-image" href="/Portfolio/PAGES/ETUDES/BUT_GEII_3/robotique.html">
+                        <img src="/Portfolio/MEDIA/IMAGES/BUT3/ROBOTIQUE/robotique.png" alt="Robotique et Roboguide">
+                    </a>
+                    <p class="card-text">Projet plus complet et complexes, mise en place vision et comm API</p>
+                </article>
+                <article class="portfolio-card">
+                    <a class="card-button" href="/Portfolio/PAGES/ETUDES/BUT_GEII_3/jeu_vr.html">Jeu de réalité
+                        virtuelle</a>
+                    <a class="card-image" href="/Portfolio/PAGES/ETUDES/BUT_GEII_3/jeu_vr.html">
+                        <img src="/Portfolio/MEDIA/IMAGES/BUT3/ROBOTIQUE/jeu_vr.png" alt="jeu_vr">
+                    </a>
+                    <p class="card-text">Conception et création d'un jeu de réalité virtuelle, avec interaction et
+                        physique
+                    </p>
+                </article>
+            </div>
+        </main>
 
-<script>
-    fetch('/Portfolio/header.html')
-        .then(res => res.text())
-        .then(data => document.getElementById('header-placeholder').outerHTML = data);
+        <div id="footer-placeholder"></div>
 
-    fetch('/Portfolio/footer.html')
-        .then(res => res.text())
-        .then(data => document.getElementById('footer-placeholder').outerHTML = data);
-</script>
+        <script>
+            fetch('/Portfolio/header.html')
+                .then(res => res.text())
+                .then(data => document.getElementById('header-placeholder').outerHTML = data);
 
-</body>
+            fetch('/Portfolio/footer.html')
+                .then(res => res.text())
+                .then(data => document.getElementById('footer-placeholder').outerHTML = data);
+        </script>
+
+    </body>
+
 </html>

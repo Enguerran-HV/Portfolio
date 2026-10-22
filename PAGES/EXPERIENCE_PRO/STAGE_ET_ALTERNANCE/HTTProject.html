@@ -1,58 +1,70 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <title>HTTProject</title>
-    <link rel="stylesheet" href="/Portfolio/style.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body>
 
-<div id="header-placeholder"></div>
+    <head>
+        <title>HTTProject</title>
+        <link rel="stylesheet" href="/Portfolio/style.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
 
-<!-- TITRE DE PAGE -->
-    <header>
-        HTTProject/NOVESIS
-    </header>
-<!-- PRÉSENTATION DE LA PAGE -->
-    <article>
-        <h1>
-            <p>Un stage de 3 mois puis une alternance de 15 mois chez HTTProject/NOVESIS</p>
-        </h1>
-    </article> 
+    <body>
 
-<main>
-    <section>
-        <div class="portfolio-card-grid">
-            <article class="portfolio-card">
-                <a class="card-button" href="/Portfolio/PAGES/EXPERIENCE_PRO/STAGE_ET_ALTERNANCE/HTTP/poste_relevage.html">Poste de relevage</a>
-                <a class="card-image" href="/Portfolio/PAGES/EXPERIENCE_PRO/STAGE_ET_ALTERNANCE/HTTP/poste_relevage.html">
-                    <img src="/Portfolio/MEDIA/IMAGES/logocompetences.png" alt="Compétences">
-                </a>
-                <p class="card-text">J'ai créé une application modèle de controle de poste de relevage avec télégestion web</p>
-            </article>
-            <article class="portfolio-card">
-                <a class="card-button" href="/Portfolio/PAGES/EXPERIENCE_PRO/STAGE_ET_ALTERNANCE/HTTP/ferme_guyadec.html">Ferme Le Guyadec</a>
-                <a class="card-image" href="/Portfolio/PAGES/EXPERIENCE_PRO/STAGE_ET_ALTERNANCE/HTTP/ferme_guyadec.html">
-                    <img src="/Portfolio/MEDIA/IMAGES/logoetudes.png" alt="Études">
-                </a>
-                <p class="card-text">J'ai améliorer le fonctionnement d'une ferme en y modifiant et ajoutants des fonctions selon une base existante et un CDC</p>
-            </article>
-        </div>
-    </section>
-</main>
+        <div id="header-placeholder"></div>
 
-<div id="footer-placeholder"></div>
+        <!-- TITRE DE PAGE -->
+        <header>
+            HTTProject/NOVESIS
+        </header>
+        <!-- PRÉSENTATION DE LA PAGE -->
+        <article>
+            <h1>
+                <p>Un stage de 3 mois puis une alternance de 15 mois chez HTTProject/NOVESIS</p>
+            </h1>
+        </article>
 
-<script>
-    fetch('/Portfolio/header.html')
-        .then(res => res.text())
-        .then(data => document.getElementById('header-placeholder').outerHTML = data);
+        <main>
+            <section>
+                <div class="portfolio-card-grid">
+                    <article class="portfolio-card">
+                        <a class="card-button"
+                            href="/Portfolio/PAGES/EXPERIENCE_PRO/STAGE_ET_ALTERNANCE/HTTP/poste_relevage.html">Poste de
+                            relevage</a>
+                        <a class="card-image"
+                            href="/Portfolio/PAGES/EXPERIENCE_PRO/STAGE_ET_ALTERNANCE/HTTP/poste_relevage.html">
+                            <img src="/Portfolio/MEDIA/IMAGES/logocompetences.png" alt="Compétences">
+                        </a>
+                        <p class="card-text">J'ai créé une application modèle de controle de poste de relevage avec
+                            télégestion web</p>
+                    </article>
+                    <article class="portfolio-card">
+                        <a class="card-button"
+                            href="/Portfolio/PAGES/EXPERIENCE_PRO/STAGE_ET_ALTERNANCE/HTTP/ferme_guyadec.html">Ferme Le
+                            Guyadec</a>
+                        <a class="card-image"
+                            href="/Portfolio/PAGES/EXPERIENCE_PRO/STAGE_ET_ALTERNANCE/HTTP/ferme_guyadec.html">
+                            <img src="/Portfolio/MEDIA/IMAGES/logoetudes.png" alt="Études">
+                        </a>
+                        <p class="card-text">J'ai améliorer le fonctionnement d'une ferme en y modifiant et ajoutants
+                            des
+                            fonctions selon une base existante et un CDC</p>
+                    </article>
+                </div>
+            </section>
+        </main>
 
-    fetch('/Portfolio/footer.html')
-        .then(res => res.text())
-        .then(data => document.getElementById('footer-placeholder').outerHTML = data);
-</script>
+        <div id="footer-placeholder"></div>
 
-</body>
+        <script>
+            fetch('/Portfolio/header.html')
+                .then(res => res.text())
+                .then(data => document.getElementById('header-placeholder').outerHTML = data);
+
+            fetch('/Portfolio/footer.html')
+                .then(res => res.text())
+                .then(data => document.getElementById('footer-placeholder').outerHTML = data);
+        </script>
+
+    </body>
+
 </html>

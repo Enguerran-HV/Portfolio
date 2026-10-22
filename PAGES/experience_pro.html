@@ -1,55 +1,60 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <title>experience_pro</title>
-    <link rel="stylesheet" href="/Portfolio/style.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body>
 
-<div id="header-placeholder"></div>
+    <head>
+        <title>experience_pro</title>
+        <link rel="stylesheet" href="/Portfolio/style.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
 
-<!-- TITRE DE PAGE -->
-    <header>
-        Expériences professionnelles
-    </header>
-<!-- PRÉSENTATION DE LA PAGE -->
-    <article>
-        <h1>
-            <p>Mes expériences professionnelles</p>
-        </h1>
-    </article>    
-<main>
-        <div class="portfolio-card-grid">
-            <article class="portfolio-card">
-                <a class="card-button" href="/Portfolio/PAGES/EXPERIENCE_PRO/stage_et_alternance.html">Stages et alternances</a>
-                <a class="card-image" href="/Portfolio/PAGES/EXPERIENCE_PRO/stage_et_alternance.html">
-                    <img src="/Portfolio/MEDIA/IMAGES/logocompetences.png" alt="Stages et alternances">
-                </a>
-                <p class="card-text">Les stages et alternances que j'ai effectués</p>
-            </article>
-            <article class="portfolio-card">
-                <a class="card-button" href="/Portfolio/PAGES/EXPERIENCE_PRO/entreprise.html">Expériences professionnelles</a>
-                <a class="card-image" href="/Portfolio/PAGES/EXPERIENCE_PRO/entreprise.html">
-                    <img src="/Portfolio/MEDIA/IMAGES/logoetudes.png" alt="Expériences professionnelles">
-                </a>
-                <p class="card-text">Mes expériences professionnelles</p>
-            </article>
-        </div>
-</main>
+    <body>
 
-<div id="footer-placeholder"></div>
+        <div id="header-placeholder"></div>
 
-<script>
-    fetch('/Portfolio/header.html')
-        .then(res => res.text())
-        .then(data => document.getElementById('header-placeholder').outerHTML = data);
+        <!-- TITRE DE PAGE -->
+        <header>
+            Expériences professionnelles
+        </header>
+        <!-- PRÉSENTATION DE LA PAGE -->
+        <article>
+            <h1>
+                <p>Mes expériences professionnelles</p>
+            </h1>
+        </article>
+        <main>
+            <div class="portfolio-card-grid">
+                <article class="portfolio-card">
+                    <a class="card-button" href="/Portfolio/PAGES/EXPERIENCE_PRO/stage_et_alternance.html">Stages et
+                        alternances</a>
+                    <a class="card-image" href="/Portfolio/PAGES/EXPERIENCE_PRO/stage_et_alternance.html">
+                        <img src="/Portfolio/MEDIA/IMAGES/logocompetences.png" alt="Stages et alternances">
+                    </a>
+                    <p class="card-text">Les stages et alternances que j'ai effectués</p>
+                </article>
+                <article class="portfolio-card">
+                    <a class="card-button" href="/Portfolio/PAGES/EXPERIENCE_PRO/entreprise.html">Expériences
+                        professionnelles</a>
+                    <a class="card-image" href="/Portfolio/PAGES/EXPERIENCE_PRO/entreprise.html">
+                        <img src="/Portfolio/MEDIA/IMAGES/logoetudes.png" alt="Expériences professionnelles">
+                    </a>
+                    <p class="card-text">Mes expériences professionnelles</p>
+                </article>
+            </div>
+        </main>
 
-    fetch('/Portfolio/footer.html')
-        .then(res => res.text())
-        .then(data => document.getElementById('footer-placeholder').outerHTML = data);
-</script>
+        <div id="footer-placeholder"></div>
 
-</body>
+        <script>
+            fetch('/Portfolio/header.html')
+                .then(res => res.text())
+                .then(data => document.getElementById('header-placeholder').outerHTML = data);
+
+            fetch('/Portfolio/footer.html')
+                .then(res => res.text())
+                .then(data => document.getElementById('footer-placeholder').outerHTML = data);
+        </script>
+
+    </body>
+
 </html>

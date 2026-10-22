@@ -1,75 +1,76 @@
 <!DOCTYPE html>
 <html lang="fr">
 
-<head>
-    <title>robotique</title>
-    <link rel="stylesheet" href="/Portfolio/style.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
+    <head>
+        <title>robotique</title>
+        <link rel="stylesheet" href="/Portfolio/style.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
 
-<body>
+    <body>
 
-    <div id="header-placeholder"></div>
+        <div id="header-placeholder"></div>
 
-    <!-- TITRE DE PAGE -->
-    <header>
-        Robotique avancée
-    </header>
-    <!-- PRÉSENTATION DE LA PAGE -->
-    <article>
-        <h1>
-            <p>
-                Des projets de robotique plus complexes et développés
-            </p>
-        </h1>
-    </article>
+        <!-- TITRE DE PAGE -->
+        <header>
+            Robotique avancée
+        </header>
+        <!-- PRÉSENTATION DE LA PAGE -->
+        <article>
+            <h1>
+                <p>
+                    Des projets de robotique plus complexes et développés
+                </p>
+            </h1>
+        </article>
 
-    <main>
-        <section>
-            <div class="content-panel">
-                <div class="content-row">
-                    <div class="content-cell">
-                        <h2>Introduction</h2>
+        <main>
+            <section>
+                <div class="content-panel">
+                    <div class="content-row">
+                        <div class="content-cell">
+                            <h2>Introduction</h2>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="content-panel">
-                <div class="content-row">
-                    <div class="content-cell">
-                        <p>
-                            Nous avons réaliser 3 cyles de projets, devenant plus complets et complexes.
-                        </p>
-                        <p>
-                            Le premier ne rajoutais aucun élément, et nous demandais de mettre en oeuvre toutes les
-                            connaissances acquises pour réaliser des projets plus complexes.
-                        </p>
-                        <p>
-                            Le second cylce amenait un système de vision ainsi que de la communication robot-automate
-                        </p>
-                        <p>
-                            Le dernier cycle était un projet de 14h, mettant en oeuvre tous les éléments 
-                            des cycles précédents, ainsi que de la communication entre robots..
-                        </p>
+                <div class="content-panel">
+                    <div class="content-row">
+                        <div class="content-cell">
+                            <p>
+                                Nous avons réaliser 3 cyles de projets, devenant plus complets et complexes.
+                            </p>
+                            <p>
+                                Le premier ne rajoutais aucun élément, et nous demandais de mettre en oeuvre toutes les
+                                connaissances acquises pour réaliser des projets plus complexes.
+                            </p>
+                            <p>
+                                Le second cylce amenait un système de vision ainsi que de la communication
+                                robot-automate
+                            </p>
+                            <p>
+                                Le dernier cycle était un projet de 14h, mettant en oeuvre tous les éléments
+                                des cycles précédents, ainsi que de la communication entre robots..
+                            </p>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
-    </main>
+            </section>
+        </main>
 
-    <div id="footer-placeholder"></div>
+        <div id="footer-placeholder"></div>
 
-    <script>
-        fetch('/Portfolio/header.html')
-            .then(res => res.text())
-            .then(data => document.getElementById('header-placeholder').outerHTML = data);
+        <script>
+            fetch('/Portfolio/header.html')
+                .then(res => res.text())
+                .then(data => document.getElementById('header-placeholder').outerHTML = data);
 
-        fetch('/Portfolio/footer.html')
-            .then(res => res.text())
-            .then(data => document.getElementById('footer-placeholder').outerHTML = data);
-    </script>
+            fetch('/Portfolio/footer.html')
+                .then(res => res.text())
+                .then(data => document.getElementById('footer-placeholder').outerHTML = data);
+        </script>
 
-</body>
+    </body>
 
 </html>

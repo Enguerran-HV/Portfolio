@@ -1,77 +1,80 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <title>Ressources</title>
-    <link rel="stylesheet" href="/Portfolio/style.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body>
 
-<div id="header-placeholder"></div>
+    <head>
+        <title>Ressources</title>
+        <link rel="stylesheet" href="/Portfolio/style.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
 
-<!-- TITRE DE PAGE -->
-    <header>
-        Ressources
-    </header>
-<!-- PRÉSENTATION DE LA PAGE -->
-    <article>
-        <h1>
-            <p>Ressources généralles </p>
-        </h1>
-    </article>
+    <body>
 
-<main>
-    <div class="portfolio-card-grid">
-        <article class="portfolio-card">
-            <a class="card-button" href="/Portfolio/PAGES/ETUDES/RESSOURCES/electronique.html">Électronique</a>
-            <a class="card-image" href="/Portfolio/PAGES/ETUDES/RESSOURCES/electronique.html">
-                <img src="/Portfolio/MEDIA/IMAGES/RESSOURCES/electronique.png" alt="image electronique">
-            </a>
-            <p class="card-text">Électronique, système embarqué, AOP, filtre, Raspberry pi</p>
+        <div id="header-placeholder"></div>
+
+        <!-- TITRE DE PAGE -->
+        <header>
+            Ressources
+        </header>
+        <!-- PRÉSENTATION DE LA PAGE -->
+        <article>
+            <h1>
+                <p>Ressources généralles </p>
+            </h1>
         </article>
-        <article class="portfolio-card">
-            <a class="card-button" href="/Portfolio/PAGES/ETUDES/RESSOURCES/electricite.html">Électricite</a>
-            <a class="card-image" href="/Portfolio/PAGES/ETUDES/RESSOURCES/electricite.html">
-                <img src="/Portfolio/MEDIA/IMAGES/RESSOURCES/electricite.png" alt="image electricite">
-            </a>
-            <p class="card-text">Moteur, monophasé et triphasé, schéma, transformateur, alimentation</p>
-        </article>
-        <article class="portfolio-card">
-            <a class="card-button" href="/Portfolio/PAGES/ETUDES/RESSOURCES/reseau.html">Réseaux</a>
-            <a class="card-image" href="/Portfolio/PAGES/ETUDES/RESSOURCES/reseau.html">
-                <img src="/Portfolio/MEDIA/IMAGES/RESSOURCES/reseau.png" alt="image reseau">
-            </a>
-            <p class="card-text">Gestion LAN, sous réseau, communication IP</p>
-        </article>
-        <article class="portfolio-card">
-            <a class="card-button" href="/Portfolio/PAGES/ETUDES/RESSOURCES/vision.html">Vision</a>
-            <a class="card-image" href="/Portfolio/PAGES/ETUDES/RESSOURCES/vision.html">
-                <img src="/Portfolio/MEDIA/IMAGES/RESSOURCES/vision.png" alt="image vision">
-            </a>
-            <p class="card-text">Caméra Cognex, couleurs, Noir Blanc, repérage, suivie</p>
-        </article>
-        <article class="portfolio-card">
-            <a class="card-button" href="/Portfolio/PAGES/ETUDES/RESSOURCES/physique.html">Physique</a>
-            <a class="card-image" href="/Portfolio/PAGES/ETUDES/RESSOURCES/physique.html">
-                <img src="/Portfolio/MEDIA/IMAGES/RESSOURCES/physique.png" alt="image physique">
-            </a>
-            <p class="card-text">Capteurs, force, température, pont de wheatstone, propagation des signaux</p>
-        </article>
-    </div>
-</main>
 
-<div id="footer-placeholder"></div>
+        <main>
+            <div class="portfolio-card-grid">
+                <article class="portfolio-card">
+                    <a class="card-button" href="/Portfolio/PAGES/ETUDES/RESSOURCES/electronique.html">Électronique</a>
+                    <a class="card-image" href="/Portfolio/PAGES/ETUDES/RESSOURCES/electronique.html">
+                        <img src="/Portfolio/MEDIA/IMAGES/RESSOURCES/electronique.png" alt="image electronique">
+                    </a>
+                    <p class="card-text">Électronique, système embarqué, AOP, filtre, Raspberry pi</p>
+                </article>
+                <article class="portfolio-card">
+                    <a class="card-button" href="/Portfolio/PAGES/ETUDES/RESSOURCES/electricite.html">Électricite</a>
+                    <a class="card-image" href="/Portfolio/PAGES/ETUDES/RESSOURCES/electricite.html">
+                        <img src="/Portfolio/MEDIA/IMAGES/RESSOURCES/electricite.png" alt="image electricite">
+                    </a>
+                    <p class="card-text">Moteur, monophasé et triphasé, schéma, transformateur, alimentation</p>
+                </article>
+                <article class="portfolio-card">
+                    <a class="card-button" href="/Portfolio/PAGES/ETUDES/RESSOURCES/reseau.html">Réseaux</a>
+                    <a class="card-image" href="/Portfolio/PAGES/ETUDES/RESSOURCES/reseau.html">
+                        <img src="/Portfolio/MEDIA/IMAGES/RESSOURCES/reseau.png" alt="image reseau">
+                    </a>
+                    <p class="card-text">Gestion LAN, sous réseau, communication IP</p>
+                </article>
+                <article class="portfolio-card">
+                    <a class="card-button" href="/Portfolio/PAGES/ETUDES/RESSOURCES/vision.html">Vision</a>
+                    <a class="card-image" href="/Portfolio/PAGES/ETUDES/RESSOURCES/vision.html">
+                        <img src="/Portfolio/MEDIA/IMAGES/RESSOURCES/vision.png" alt="image vision">
+                    </a>
+                    <p class="card-text">Caméra Cognex, couleurs, Noir Blanc, repérage, suivie</p>
+                </article>
+                <article class="portfolio-card">
+                    <a class="card-button" href="/Portfolio/PAGES/ETUDES/RESSOURCES/physique.html">Physique</a>
+                    <a class="card-image" href="/Portfolio/PAGES/ETUDES/RESSOURCES/physique.html">
+                        <img src="/Portfolio/MEDIA/IMAGES/RESSOURCES/physique.png" alt="image physique">
+                    </a>
+                    <p class="card-text">Capteurs, force, température, pont de wheatstone, propagation des signaux</p>
+                </article>
+            </div>
+        </main>
 
-<script>
-    fetch('/Portfolio/header.html')
-        .then(res => res.text())
-        .then(data => document.getElementById('header-placeholder').outerHTML = data);
+        <div id="footer-placeholder"></div>
 
-    fetch('/Portfolio/footer.html')
-        .then(res => res.text())
-        .then(data => document.getElementById('footer-placeholder').outerHTML = data);
-</script>
+        <script>
+            fetch('/Portfolio/header.html')
+                .then(res => res.text())
+                .then(data => document.getElementById('header-placeholder').outerHTML = data);
 
-</body>
+            fetch('/Portfolio/footer.html')
+                .then(res => res.text())
+                .then(data => document.getElementById('footer-placeholder').outerHTML = data);
+        </script>
+
+    </body>
+
 </html>
