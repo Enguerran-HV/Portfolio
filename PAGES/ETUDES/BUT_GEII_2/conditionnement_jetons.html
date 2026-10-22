@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>conditionnement_jetons</title>
-        <link rel="stylesheet" href="/Portfolio/style.css">
+        <link rel="stylesheet" href="//Portfolio/style.css">
     </head>
     <body>
 
@@ -18,7 +18,7 @@
         <!-- PRÉSENTATION DE LA PAGE -->
         <article>
             <h1>
-                <p>Programmation d'un automate, création d'un IHM et d'un jumeau numérique</p>
+                <p>Programmation d'un automate, création d'une IHM et d'un jumeau numérique</p>
                 <p>Pour le transport et le conditionnement de jetons</p>
             </h1>
         </article>
@@ -38,9 +38,9 @@
                     <div class="content-row">
                         <div class="content-cell">
                             <p>Ce dernier projet de BUT GEII 2 m'a permis de mettre en pratique mes compétences en programmation d'automate et en création d'IHM.
-                            Ce projet, effectué en duo, nous a demandé de mettre en pratique toutes les compétences acquises au cours de notre formation pour concevoir un système de transport et de conditionnement de jetons.</p>
-                            <p>Nous avons dû concevoir un système capable de transporter les jetons d'un point A à un point B, tout en les conditionnant de manière efficace et sécurisée.</p>
-                            <p>Ce projet a porté sur un automate Siemens S7-1200, un IHM Siemens KTP700 et un jumeau numérique sur VUP pour simuler le fonctionnement du système.</p>
+                            Réalisé en duo, il nous a demandé de mobiliser toutes les compétences acquises au cours de notre formation pour concevoir un système de transport et de conditionnement de jetons.</p>
+                            <p>Nous devions concevoir un système capable de transporter les jetons d'un point A à un point B, tout en les contrôlant de manière efficace et sécurisée. Notre équipe était chargée de la première partie de la chaîne : le transport de la pièce et les tests qualité.</p>
+                            <p>Ce projet a porté sur un automate Siemens CPU 1512SP F-1 PN, une IHM Siemens SIMATIC MTP1000 Unified Comfort, programmés avec TIA Portal V20, ainsi que sur un jumeau numérique réalisé sous Virtual Universe Pro (VUP) pour simuler le fonctionnement du système.</p>
                         </div>
                     </div>
                 </div>
@@ -54,7 +54,7 @@
                             <p>Premièrement, <a href="#Jetons-Programmation">la programmation de l'automate</a> avec des grafcets, et la gestion des entrées et sorties.</p>
                             <p>Deuxièmement, <a href="#Jetons-IHM">la création de l'IHM</a> et sa mise en fonctionnement.</p>
                             <p>Troisièmement, <a href="#Jetons-VUP">la création d'un jumeau numérique sur VUP</a> pour simuler le fonctionnement du système.</p>
-                            <p>Enfin, <a href="#Jetons-Dossier">la rédaction du dossier de projet</a> ainsi que de la notice d'utilisation.</p>
+                            <p>Enfin, <a href="#Jetons-Dossier">la rédaction du dossier technique</a> ainsi que de la notice d'utilisation.</p>
                             <p>Pour découvrir les <a href="#Jetons-Competences">compétences mobilisées et acquises</a> dans ce projet.</p>
                         </div>
                     </div>
@@ -72,41 +72,54 @@
 
                 <div class="content-grid">
                     <div class="content-row">
-                        
+
                         <div class="content-cell">
-                            <p>Comme tout les projets précédent, un temps de réflexion a été nécessaire pour concevoir la logique de programmation de l'automate.</p>
-                            <p>Des Grafcet sont créés pour représenter les différentes phases du processus de conditionnement et de transport des jetons.</p>
-                            <p> Afin d'organiser au mieux les différentes étapes du processus, l'utilisation d'un gracet de conduite fut chosie. Celui-ci sera utilisé dans l'appelle de sous 
-                                fonction pour gérer les différentes étapes du processus de conditionnement et de transport des jetons.</p>
+                            <p>Comme pour les projets précédents, un temps de réflexion a été nécessaire pour concevoir la logique de programmation de l'automate.</p>
+                            <p>Des grafcets ont été créés pour représenter les différentes phases du processus de transport et de conditionnement des jetons.</p>
+                            <p>Afin d'organiser au mieux ces phases, nous avons choisi d'utiliser un grafcet de conduite. Il appelle des sous-fonctions qui gèrent chacune une étape du processus : le bras, le test de couleur, l'ascenseur et le test d'épaisseur.</p>
                         </div>
-                        <div class="content-cell">IMAGE</div>
+                        <div class="content-cell"><img src="/Portfolio/MEDIA/IMAGES/BUT2/JETONS/grafcet_conduite.png" alt="Grafcet de conduite"></div>
                     </div>
                     <div class="content-row">
-                        
+
                         <div class="content-cell">
-                            <p>La programmaton s'est donc fait sur un S7-1200 de Siemens.</p>
-                            <p>Tout le programme fut créer en langage stucturé avec une logique de programmation claire et maintenable.</p>
-                            <p>Des sous fonctions sont créées pour gérer les différentes étapes du processus de conditionnement et de transport des jetons.</p>
-                            <p>Chaque sous fonction est concu via un principe de conditions d'évolution, de changment d'étape, avec un regroupement des sorties dans un meme sous programme</p>
+                            <p>La programmation s'est donc faite sur un automate Siemens, avec TIA Portal.</p>
+                            <p>Tout le programme a été créé en langage structuré, avec une logique de programmation claire et maintenable.</p>
+                            <p>Chaque sous-fonction est conçue selon le même principe : des conditions d'évolution, un changement d'étape, et un regroupement des sorties dans un même sous-programme.</p>
+                            <p>Le fonctionnement du bras, qui prend une pièce au magasin et l'amène à l'ascenseur, en est un exemple.</p>
                         </div>
-                        <div class="content-cell">IMAGE</div>
+                        <div class="content-cell"><img src="/Portfolio/MEDIA/IMAGES/BUT2/JETONS/grafcet_bras.png" alt="Grafcet de fonctionnement du bras"></div>
                     </div>
                     <div class="content-row">
-                        
+
                         <div class="content-cell">
                             <p>
-                                Un jeton arrive dans une première zone appelée magasin, un bras équipé d'une ventouse vient le récupérer afin de le transporter dans une seconde zone appelée
+                                Un jeton arrive dans une première zone appelée magasin. Un bras équipé d'une ventouse vient le récupérer afin de le transporter dans une seconde zone appelée
                                 ascenseur. Une fois la pièce relâchée, le bras retourne en position de repos, et un premier test est effectué dans la zone de l'ascenseur.
-                                Celui-ci consistait en un test de couleurs et de matière, à l'aide de 2 capteurs, on pouvait déterminer si la pièce était noire, rouge ou métallique.
-                                A la fin de se test, le résultat était stocker et sera en suite utilisé dans des bilans sur l'IHM. L'ascenseur ce met alors à monter pour atteindre la 
-                                seconde zone de test, qui est un test d'épaisseur. 2 capteurs se trouvent en haut de l'ascenseur et selon l'épaisser de la pièce, aucun, l'un ou les deux capteurs peuvent
-                                être activer. Dans le cas d'une deterction d'aucun capteurs ou des 2, la pièce est considérer mauvaise, dans le cas d'une detection pas 1 capteur, la pièce
-                                est considérer moyenne et donc bonne. Si la pièce est bonne un vérin vas l'éjecter lors que l'ascenseur est en position haute, dans le but de l'envoyer dans la seconde
-                                partie du système, si la pièce est défectueuse le vérin éjectera la pièce lorsque l'ascenseur sera en position basse. Une fois l'ascenseur en position basse et le bras
-                                en position de repos, si une pièce est  présente au magasin un nouveau cycle vas se lancer, sinon le système en attendra une ou attendra un arret cycle.
+                                Il s'agit d'un test de couleur et de matière : à l'aide de 2 capteurs, on détermine si la pièce est noire, rouge ou métallique.
+                                À la fin de ce test, le résultat est stocké pour être utilisé ensuite dans les bilans de l'IHM. L'ascenseur se met alors à monter pour atteindre la
+                                seconde zone de test, un test d'épaisseur. Deux capteurs se trouvent en haut de l'ascenseur et, selon l'épaisseur de la pièce, aucun, l'un ou les deux capteurs peuvent
+                                être activés. Si aucun capteur ou les deux sont activés, la pièce est considérée comme mauvaise. Si un seul capteur détecte la pièce, elle est
+                                considérée comme moyenne, donc bonne. Si la pièce est bonne, un vérin l'éjecte lorsque l'ascenseur est en position haute, afin de l'envoyer vers la seconde
+                                partie du système. Si la pièce est défectueuse, le vérin l'éjecte lorsque l'ascenseur est en position basse. Une fois l'ascenseur en position basse et le bras
+                                en position de repos, si une pièce est présente au magasin, un nouveau cycle se lance. Sinon, le système attend une pièce ou un arrêt de cycle.
                             </p>
-                         </div>
-                         <div class="content-cell">IMAGE</div>
+                        </div>
+                        <div class="content-cell"><img src="/Portfolio/MEDIA/IMAGES/BUT2/JETONS/maquette_festo_photo.png" alt="Photo de la maquette Festo"></div>
+                    </div>
+                    <div class="content-row">
+
+                        <div class="content-cell">
+                            <p>
+                                Les compteurs de pièces s'appuient sur les étapes des grafcets de test. Par exemple, la variable de l'étape du test d'épaisseur ne prend une valeur donnée que si la pièce
+                                est petite, moyenne ou grande. Un front montant sur cette étape incrémente donc le compteur correspondant, une seule fois par pièce. Le principe est identique pour la couleur.
+                            </p>
+                            <p>
+                                Des défauts sont également surveillés. Le bras et l'ascenseur sont chacun commandés par un vérin bistable : si leurs deux capteurs de position sont actifs en même temps,
+                                un défaut est déclenché. Un défaut de vide est aussi levé si l'aspiration dure plus de 4 secondes sans retour du pressostat.
+                            </p>
+                        </div>
+                        <div class="content-cell"><img src="/Portfolio/MEDIA/IMAGES/BUT2/JETONS/grafcet_ascenseur.png" alt="Grafcet de fonctionnement de l'ascenseur"></div>
                     </div>
                 </div>
             </section>
@@ -122,64 +135,64 @@
 
                 <div class="content-grid">
                     <div class="content-row">
-                        <div class="content-cell">IMAGE</div>
+                        <div class="content-cell"><img src="/Portfolio/MEDIA/IMAGES/BUT2/JETONS/IHM_MTP1000.png" alt="IHM Siemens SIMATIC MTP1000 Unified Comfort"></div>
                         <div class="content-cell">
                             <p>
-                                La second partie du projet consistait à concevoir et créer l'IHM. Il sera aussi bien utilisé comme mode manuel, que comme information sur l'état du système 
-                                et sur les bilans et compteurs.
+                                La seconde partie du projet consistait à concevoir et créer l'IHM. Elle sert aussi bien de mode manuel que d'affichage de l'état du système,
+                                des bilans et des compteurs. Elle est complétée par un pupitre physique à 3 boutons poussoirs et un bouton coup de poing d'arrêt d'urgence.
                             </p>
                         </div>
-                        
+
                     </div>
                     <div class="content-row">
-                        <div class="content-cell">IMAGE</div>
+                        <div class="content-cell"><img src="/Portfolio/MEDIA/IMAGES/BUT2/JETONS/ihm_barre_navigation.png" alt="Barre de navigation de l'IHM"></div>
                         <div class="content-cell">
                             <p>
-                                Pour proposer une expérience de navigation agréable, des boutons spécials ont était créer et disposer dans une barre de navigation.
-                                Grace à eux, les 4 pages de l'IHM sont atteingables. 
+                                Pour proposer une navigation agréable, des boutons spéciaux ont été créés et disposés dans une barre de navigation, à gauche de chaque page.
+                                Grâce à eux, les 4 pages de l'IHM sont atteignables.
                             </p>
                         </div>
-                        
+
                     </div>
                     <div class="content-row">
-                        <div class="content-cell">IMAGE</div>
+                        <div class="content-cell"><img src="/Portfolio/MEDIA/IMAGES/BUT2/JETONS/ihm_page_accueil.png" alt="Page d'accueil de l'IHM"></div>
                         <div class="content-cell">
                             <p>
-                                Premièrement un accueil, représetant le système dans son état, l'emplacement des équipements et la position de la pièce du cycle actuel.
-                                Celui-ci permet une vue en directe du cycle, de l'état des actionneurs simplifier et des réponses des capteurs.
+                                Premièrement, une page d'accueil représente le système dans son état, l'emplacement des équipements et la position de la pièce du cycle en cours.
+                                Elle permet une vue en direct du cycle, de l'état simplifié des actionneurs et des réponses des capteurs.
                             </p>
                         </div>
-                        
+
                     </div>
                     <div class="content-row">
-                        <div class="content-cell">IMAGE</div>
+                        <div class="content-cell"><img src="/Portfolio/MEDIA/IMAGES/BUT2/JETONS/ihm_page_mode_manu.png" alt="Page Mode Manu de l'IHM"></div>
                         <div class="content-cell">
                             <p>
-                                Une page de controle manuel, proposant le control des équipements lorsque le mode manuel est activer. Celui-ci permet le déplacement des équipements,
-                                l'activation des vérins et de l'aspiration de la ventouse. 
+                                Une page de contrôle manuel propose la commande des équipements lorsque le mode manuel est activé. Elle permet le déplacement des équipements,
+                                l'activation des vérins et de l'aspiration de la ventouse.
                             </p>
                         </div>
-                        
+
                     </div>
                     <div class="content-row">
-                        <div class="content-cell">IMAGE</div>
+                        <div class="content-cell"><img src="/Portfolio/MEDIA/IMAGES/BUT2/JETONS/ihm_page_alarmes.png" alt="Page Alarmes de l'IHM"></div>
                         <div class="content-cell">
                             <p>
-                                Une page d'alarme, montrant les 15 derniers défauts, leurs heures d'arrivé et leurs état actuel. Un bouton d'acquittement est aussi disposer,
-                                un appuie acquite toutes les alarmes et les défauts si ils ont réparé.
+                                Une page d'alarmes montre les 15 derniers défauts, leurs heures d'arrivée et leur état actuel. Un bouton d'acquittement est aussi disponible :
+                                un appui acquitte toutes les alarmes et les défauts s'ils ont été réparés.
                             </p>
                         </div>
-                        
+
                     </div>
                     <div class="content-row">
-                        <div class="content-cell">IMAGE</div>
+                        <div class="content-cell"><img src="/Portfolio/MEDIA/IMAGES/BUT2/JETONS/ihm_page_compteurs.png" alt="Page Compteurs de l'IHM"></div>
                         <div class="content-cell">
                             <p>
-                                Une page de bilans, qui permet la vue des compteurs de pièces. 7 compteurs sont proposés, 3 pour la couleur de la pièce entre rouge, noire et métallique, 
-                                3 pour les épaisseurs entre petit, moyen et grand, ainsi qu'un compteur de pièce total. Cette page propose aussi un reset des compteurs si nécessaire.
+                                Une page de bilans permet de voir les compteurs de pièces. 7 compteurs sont proposés : 3 pour la couleur de la pièce (rouge, noire et métallique),
+                                3 pour l'épaisseur (petite, moyenne et grande), ainsi qu'un compteur de pièces total. Cette page propose aussi une remise à zéro des compteurs si nécessaire.
                             </p>
                         </div>
-                        
+
                     </div>
                 </div>
             </section>
@@ -197,50 +210,54 @@
                     <div class="content-row">
                         <div class="content-cell">
                             <p>
-                                Le jumeau numérique fut la grande nouveauté et le point clé de ce projet. Bien que nous ayont déjà utilisé VUP dans d'autre projet,
-                                ici les éxigence était bien plus élever. Seul les modèles 3D de la maquette nous était fournit. Mais tout ce qui concernais leur placement,
-                                la gestion des capteurs et des actionneurs, la création des mouvement, ainsi que la communication et la gestion par l'automate était à notre charge.
+                                Le jumeau numérique a été la grande nouveauté et le point clé de ce projet. Bien que nous ayons déjà utilisé VUP dans d'autres projets,
+                                les exigences étaient ici bien plus élevées. Seuls les modèles 3D de la maquette nous étaient fournis. Tout ce qui concernait leur placement,
+                                la gestion des capteurs et des actionneurs, la création des mouvements, ainsi que la communication et la gestion par l'automate était à notre charge.
                             </p>
                         </div>
-                        <div class="content-cell">IMAGE</div>
+                        <div class="content-cell"><img src="/Portfolio/MEDIA/IMAGES/BUT2/JETONS/logo_vup.png" alt="Logo de Virtual Universe Pro"></div>
                     </div>
                     <div class="content-row">
                         <div class="content-cell">
                             <p>
-                                La première étape était donc d'importer, de renommer puis de placer tout les objets afin de créer la forme du jumeau numérique.
-                                Le jumeau représentait et copiait la maquette physique du sujet. On y retrouvre le même bras équipé d'une ventouse,
-                                l'ascenseur, et les différents décors et pièce de sécurité.
+                                La première étape était d'importer, de renommer puis de placer tous les objets afin de créer la forme du jumeau numérique.
+                                Le jumeau représente et copie la maquette physique du sujet. On y retrouve le même bras équipé d'une ventouse,
+                                l'ascenseur, ainsi que les différents décors et pièces de sécurité.
                             </p>
                         </div>
-                        <div class="content-cell">IMAGE</div>
+                        <!-- image non fournie : capture de la scène VUP complète -->
+                        <div class="content-cell"><img src="/Portfolio/MEDIA/IMAGES/BUT2/JETONS/vup_scene_complete.png" alt="Jumeau numérique : vue d'ensemble de la scène"></div>
                     </div>
                     <div class="content-row">
                         <div class="content-cell">
                             <p>
-                                La seconde étape consistai a créer les movements des actionneurs. cela comprenait une rotation du bras ainsi que de la ventouse ascossier
-                                pour la garder coller au bras, et une translation vertical de l'ascenser, afin de le faire monter et descendre.
+                                La seconde étape consistait à créer les mouvements des actionneurs. Cela comprenait une rotation du bras, ainsi que celle de la ventouse associée
+                                pour la garder collée au bras, et une translation verticale de l'ascenseur, afin de le faire monter et descendre.
                             </p>
                         </div>
-                        <div class="content-cell">IMAGE</div>
+                        <!-- image non fournie : capture des mouvements (bras / ascenseur) -->
+                        <div class="content-cell"><img src="/Portfolio/MEDIA/IMAGES/BUT2/JETONS/vup_mouvements.png" alt="Jumeau numérique : mouvements du bras et de l'ascenseur"></div>
                     </div>
                     <div class="content-row">
                         <div class="content-cell">
                             <p>
-                                La trisème étape était de créer les capteurs, le fin de course du bras, de l'ascenseur, et des vérins, mais aussi le vide effectuer par la ventouse, les
-                                capteurs d'épaisseur de la pièce et de couleurs. Tout les capteurs en dehors de la couleur consistait a faire un test de collision entre l'objet et 
-                                et une pièce quelconque invisible.
+                                La troisième étape était de créer les capteurs : les fins de course du bras, de l'ascenseur et des vérins, mais aussi le vide effectué par la ventouse, les
+                                capteurs d'épaisseur de la pièce et de couleur. Tous les capteurs, hormis celui de couleur, consistent à tester la collision entre l'objet
+                                et une pièce invisible.
                             </p>
                         </div>
-                        <div class="content-cell">IMAGE</div>
+                        <!-- image non fournie : capture des capteurs -->
+                        <div class="content-cell"><img src="/Portfolio/MEDIA/IMAGES/BUT2/JETONS/vup_capteurs.png" alt="Jumeau numérique : capteurs"></div>
                     </div>
                     <div class="content-row">
                         <div class="content-cell">
                             <p>
-                                Enfin le dernier objectif était de lié les mouvement avec les demandes de mouvement de l'API, et les capteurs numérique avec les entrées.
-                                Une section de programme est dédié au choix entre l'utilsiation des capteurs et actinneur phsique ou numérique.
+                                Enfin, le dernier objectif était de lier les mouvements aux demandes de mouvement de l'automate, et les capteurs numériques aux entrées.
+                                La communication entre l'automate simulé et VUP passe par le logiciel NetToPLCsim. Une section du programme est dédiée au choix entre l'utilisation des capteurs
+                                et actionneurs physiques ou numériques, sélectionnable depuis l'IHM.
                             </p>
                         </div>
-                        <div class="content-cell">IMAGE</div>
+                        <div class="content-cell"><img src="/Portfolio/MEDIA/IMAGES/BUT2/JETONS/vup_boutons_marche_arret_mode_manu.png" alt="Pupitre de commande dans VUP : Marche, Arrêt et Mode Manu"></div>
                     </div>
                 </div>
             </section>
@@ -256,17 +273,17 @@
 
                 <div class="content-grid">
                     <div class="content-row">
-                        <div class="content-cell">IMAGE</div>
+                        <div class="content-cell"><img src="/Portfolio/MEDIA/IMAGES/BUT2/JETONS/dossier_technique_couverture.png" alt="Couverture du dossier technique"></div>
                         <div class="content-cell"><p>
-                            À l'instar des autres projets, un dossier technique nous était demandé. Celui-ci devait permettre la présentation simpliste et globale du projet.
-                            Il devait rester sobre pour juste effleurer la surface du système, mais permettre malgré tout une compréhension universelle.
+                            À l'instar des autres projets, un dossier technique nous était demandé. Il devait permettre une présentation simple et globale du projet.
+                            Il devait rester sobre pour effleurer la surface du système, tout en permettant une compréhension universelle.
                         </p></div>
                     </div>
                     <div class="content-row">
-                        <div class="content-cell">IMAGE</div>
+                        <div class="content-cell"><img src="/Portfolio/MEDIA/IMAGES/BUT2/JETONS/notice_utilisation_couverture.png" alt="Première page de la notice d'utilisation"></div>
                         <div class="content-cell"><p>
-                            A contrario, la notice d'utilsation est bien plus courte, mais aussi plus technique et spécialisé. Elle doit permettre une mise en marche
-                            du système par une technicien qualifier. Elle aborde de manière précise les modes de fonctionnement, et présentre de manière détaillé la fonctionnement.
+                            A contrario, la notice d'utilisation est bien plus courte, mais aussi plus technique et spécialisée. Elle doit permettre la mise en marche
+                            du système par un technicien qualifié. Elle aborde de manière précise les modes de fonctionnement et présente en détail leur fonctionnement.
                         </p></div>
                     </div>
                 </div>
@@ -283,9 +300,9 @@
 
                 <div class="content-panel">
                     <div class="content-row">
-                        <div class="content-cell"><p>Les parties programmation d'API et création d'IHM, bien que basique, m'ont permis d'approfondir mes connaissances et compétences.
-                            Là où le jumeau numérique était une vrai nouveauté, une découverte total d'un logiciel. De ce fait tout n'as pas pus être finalisé, telle que les 
-                            capteurs de couleurs qui n'ont pas était commencer par manque de temps et de connaissance.
+                        <div class="content-cell"><p>Les parties programmation d'automate et création d'IHM, bien que basiques, m'ont permis d'approfondir mes connaissances et mes compétences.
+                            Le jumeau numérique, lui, était une vraie nouveauté : la découverte totale d'un logiciel. De ce fait, tout n'a pas pu être finalisé. Les
+                            capteurs de couleur n'ont pas été commencés, par manque de temps et de connaissances, et la communication Modbus TCP entre les deux postes n'a pas pu être réalisée.
                         </p></div>
                     </div>
                 </div>
@@ -299,10 +316,10 @@
                             <h3>Concevoir</h3>
                             <ul>
                                 <li>Conception de la logique de transport des jetons</li>
-                                <li>Création des Grafcets de fonctionnement</li>
+                                <li>Création des grafcets de fonctionnement</li>
                                 <li>Organisation des sous-fonctions de l'automate</li>
-                                <li>Programmation des fonctions sur automate S7-1200 en ST</li>
-                                <li>Mise en relations fonctions, création d'un cycle</li>
+                                <li>Programmation des fonctions sur automate Siemens en ST</li>
+                                <li>Mise en relation des fonctions, création d'un cycle</li>
                             </ul>
                         </div>
                         <div class="content-cell">
@@ -340,11 +357,11 @@
         <div id="footer-placeholder"></div>
 
         <script>
-            fetch('/Portfolio/header.html')
+            fetch('//Portfolio/header.html')
                 .then(res => res.text())
                 .then(data => document.getElementById('header-placeholder').outerHTML = data);
 
-            fetch('/Portfolio/footer.html')
+            fetch('//Portfolio/footer.html')
                 .then(res => res.text())
                 .then(data => document.getElementById('footer-placeholder').outerHTML = data);
         </script>
