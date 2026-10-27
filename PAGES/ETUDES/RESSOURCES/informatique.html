@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+    <head>
+        <title>Informatique</title>
+        <link rel="stylesheet" href="/Portfolio/style.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Projets d'informatique : programmation en C, microcontrôleurs PIC et simulation d'une ligne de production.">
+    </head>
+
+    <body>
+
+        <div id="header-placeholder"></div>
+
+        <header>
+            Informatique
+        </header>
+
+        <article>
+            <h1>
+                Programmation, systèmes embarqués et simulation
+            </h1>
+            <p>Des premiers exercices en C aux projets de microcontrôleurs et à la modélisation d'une ligne de production.</p>
+        </article>
+
+        <main>
+            <section class="informatique-section">
+                <h2>Programmation en C</h2>
+                <p>Les travaux d'Info 3 m'ont permis de consolider les bases du langage C à travers de petits programmes exécutés sur un microcontrôleur PIC. Les exercices abordent l'affichage et la lecture sur la liaison série, les variables et compteurs, les boucles <code>for</code> et <code>while</code>, ainsi que les conditions.</p>
+                <p>Ces bases sont ensuite appliquées aux entrées-sorties de la carte : lecture d'un potentiomètre par le convertisseur analogique-numérique, commande de voyants, et utilisation de la PWM pour faire varier une sortie.</p>
+            </section>
+
+            <section class="informatique-section">
+                <h2>Microcontrôleur PIC : entrées, sorties et PWM</h2>
+                <p>Le projet utilise un microcontrôleur PIC configuré pour relier les broches aux périphériques du programme : sorties PWM pour les commandes, entrée analogique pour le potentiomètre et liaison série pour l'émission et la réception de données.</p>
+                <div class="informatique-grid">
+                    <figure class="informatique-card">
+                        <img src="/Portfolio/MEDIA/IMAGES/RESSOURCES/INFORMATIQUE/configuration-broches-pic.png" alt="Configuration des broches du microcontrôleur PIC : sorties PWM, potentiomètre analogique, liaison série et voyants" loading="lazy">
+                        <figcaption>Configuration des broches et des périphériques du microcontrôleur.</figcaption>
+                    </figure>
+                    <div class="informatique-card">
+                        <h3>Fonctions mises en œuvre</h3>
+                        <ul>
+                            <li>Lire la position du potentiomètre avec le convertisseur analogique-numérique.</li>
+                            <li>Utiliser la PWM pour régler la commande d'une LED ou d'un moteur.</li>
+                            <li>Commander les voyants pour signaler l'état et le sens de fonctionnement.</li>
+                            <li>Afficher des informations et échanger des données sur la liaison série.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="informatique-section">
+                <h2>Projet : simulation d'une ligne de production</h2>
+                <p>Ce projet consiste à modéliser le fonctionnement d'une ligne de production dans un programme algorithmique. À chaque pas de simulation, le programme met à jour la température du procédé, calcule la puissance de chauffe et la vitesse du convoyeur, puis vérifie si un produit a atteint le point de détection.</p>
+                <p>Les températures, la puissance et la vitesse sont enregistrées pour établir un bilan. Lorsqu'un produit est détecté, le programme ajoute une entrée de traçabilité avec son numéro et les valeurs du procédé. Le projet rassemble ainsi la décomposition en fonctions, la simulation dans le temps, la gestion de tableaux et la production de fichiers de suivi et de rapport.</p>
+                <div class="informatique-downloads">
+                    <a href="/Portfolio/MEDIA/RESSOURCES/INFORMATIQUE/simulation-ligne-production.pdf" download>Compte rendu du projet — PDF</a>
+                    <a href="/Portfolio/MEDIA/RESSOURCES/INFORMATIQUE/schema-algorithme-ligne-production.drawio" download>Schéma de l'algorithme — Draw.io</a>
+                    <a href="/Portfolio/MEDIA/RESSOURCES/INFORMATIQUE/algorithme-ligne-production.zip" download>Fichiers de l'algorithme — ZIP</a>
+                </div>
+            </section>
+
+            <section class="informatique-section">
+                <h2>Projet embarqué et exemples de code</h2>
+                <p>Le projet PIC regroupe plusieurs programmes d'essai et de commande : clignotement de voyants, lecture du potentiomètre, réglage d'une temporisation et génération de PWM pour piloter un moteur. Les exemples sont fournis dans l'archive du projet.</p>
+                <div class="informatique-downloads">
+                    <a href="/Portfolio/MEDIA/RESSOURCES/INFORMATIQUE/projet-microcontroleur-pic.zip" download>Projet microcontrôleur PIC — ZIP</a>
+                </div>
+            </section>
+        </main>
+
+        <div id="footer-placeholder"></div>
+
+        <script>
+            fetch('/Portfolio/header.html')
+                .then(res => res.text())
+                .then(data => document.getElementById('header-placeholder').outerHTML = data);
+
+            fetch('/Portfolio/footer.html')
+                .then(res => res.text())
+                .then(data => document.getElementById('footer-placeholder').outerHTML = data);
+        </script>
+
+    </body>
+
+</html>
