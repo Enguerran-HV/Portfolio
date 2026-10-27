@@ -6,6 +6,65 @@
         <link rel="stylesheet" href="/Portfolio/style.css">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Fiches et travaux pratiques de physique sur les capteurs, l'instrumentation et la sonde Pt100.">
+        <style>
+            .physics-grid {
+                display: grid;
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 24px;
+                align-items: stretch;
+            }
+
+            .physics-card {
+                display: block;
+                padding: 20px;
+                border: 1px solid #b8c5d8;
+                border-radius: 12px;
+                background: #f7f9fc;
+            }
+
+            .physics-card p,
+            .physics-card li,
+            .physics-card figcaption {
+                font-family: var(--font-family-general);
+                line-height: 1.6;
+            }
+
+            .physics-card figure {
+                margin: 16px 0 0;
+            }
+
+            .physics-card img {
+                display: block;
+                width: 100%;
+                height: auto;
+                border-radius: 6px;
+            }
+
+            .physics-card figcaption {
+                margin-top: 8px;
+                font-size: 0.9rem;
+            }
+
+            .physics-downloads {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            @media (max-width: 700px) {
+                main {
+                    margin: 16px;
+                    padding: 20px;
+                }
+            }
+
+            @media (max-width: 900px) {
+                .physics-grid {
+                    grid-template-columns: 1fr;
+                }
+            }
+        </style>
     </head>
 
     <body>
@@ -19,12 +78,64 @@
         <!-- PRÉSENTATION DE LA PAGE -->
         <article>
             <h1>
-                <p>PRES</p>
+                Ressources de physique
             </h1>
+            <p>Capteurs, instrumentation et mesures : cours et travaux pratiques autour de la sonde de température Pt100.</p>
         </article>
 
         <main>
-            <!-- contenu spécifique à cette page -->
+            <section>
+                <h2>La sonde Pt100 et son conditionnement</h2>
+                <p>Une Pt100 est une sonde résistive en platine : sa résistance vaut 100 Ω à 0 °C et augmente avec la température (environ 0,4 Ω par degré). Le conditionneur transforme cette faible variation en un signal exploitable, ici sur une plage de -50 °C à 300 °C.</p>
+                <p>Le travail pratique étudie deux sorties normalisées : une tension de 0 à 10 V et un courant de 4 à 20 mA. Pour relier le signal à une Raspberry Pi Pico, il faut aussi l'adapter à l'entrée analogique, limitée à 3,3 V.</p>
+            </section>
+
+            <section class="physics-grid" aria-label="Notions abordées">
+                <section class="physics-card">
+                    <h2>Sortie tension : 0–10 V</h2>
+                    <p>Le conditionneur associe -50 °C à 0 V et 300 °C à 10 V. Un pont diviseur de 22 kΩ et 10 kΩ ramène la sortie maximale à 3,125 V, sous la limite de 3,3 V de la Pico.</p>
+                    <figure>
+                        <img src="/Portfolio/MEDIA/IMAGES/RESSOURCES/PHYSIQUE/chaine-acquisition-0-10v.png" alt="Schéma de la chaîne d'acquisition Pt100 avec une sortie de 0 à 10 volts" loading="lazy">
+                        <figcaption>Chaîne d'acquisition en sortie tension, aux températures extrêmes.</figcaption>
+                    </figure>
+                </section>
+
+                <section class="physics-card">
+                    <h2>Sortie courant : 4–20 mA</h2>
+                    <p>Le signal varie de 4 mA à -50 °C à 20 mA à 300 °C. Une résistance de 150 Ω convertit ce courant en une tension de 0,6 à 3 V, mesurable par la Pico. La transmission en courant est adaptée aux liaisons longues.</p>
+                    <figure>
+                        <img src="/Portfolio/MEDIA/IMAGES/RESSOURCES/PHYSIQUE/chaine-acquisition-4-20ma.png" alt="Schéma de la chaîne d'acquisition Pt100 avec une sortie de 4 à 20 milliampères" loading="lazy">
+                        <figcaption>Chaîne d'acquisition en sortie courant, aux températures extrêmes.</figcaption>
+                    </figure>
+                </section>
+
+                <section class="physics-card">
+                    <h2>Conditionneur Pt100</h2>
+                    <p>Le capteur est alimenté et raccordé au conditionneur PXT-10.924, qui fournit au choix une sortie tension ou courant.</p>
+                    <figure>
+                        <img src="/Portfolio/MEDIA/IMAGES/RESSOURCES/PHYSIQUE/schema-conditionneur-pt100.jpg" alt="Schéma de câblage de la sonde Pt100 et du conditionneur PXT-10.924" loading="lazy">
+                        <figcaption>Schéma de câblage utilisé pour le réglage du conditionneur.</figcaption>
+                    </figure>
+                </section>
+
+                <section class="physics-card">
+                    <h2>Protéger l'entrée analogique</h2>
+                    <p>Avant de connecter la carte, le signal doit rester dans sa plage d'entrée de 0 à 3,3 V. Le TP présente aussi le filtre et les protections de l'entrée analogique.</p>
+                    <figure>
+                        <img src="/Portfolio/MEDIA/IMAGES/RESSOURCES/PHYSIQUE/protection-entree-raspberry-pi-pico.jpg" alt="Circuit de protection et filtre de l'entrée analogique de la carte Raspberry Pi Pico" loading="lazy">
+                        <figcaption>Précâblage de l'entrée analogique de la Raspberry Pi Pico.</figcaption>
+                    </figure>
+                </section>
+            </section>
+
+            <section>
+                <h2>Documents à consulter</h2>
+                <div class="physics-downloads">
+                    <a href="/Portfolio/MEDIA/RESSOURCES/PHYSIQUE/fiche-revision-capteurs-instrumentation.pdf" download>Fiche de révision — capteurs et instrumentation (PDF)</a>
+                    <a href="/Portfolio/MEDIA/RESSOURCES/PHYSIQUE/compte-rendu-tp-pt100.docx" download>Compte rendu du TP Pt100 (DOCX)</a>
+                    <a href="/Portfolio/MEDIA/RESSOURCES/PHYSIQUE/compte-rendu-tp-pt100.odt" download>Compte rendu du TP Pt100 (ODT)</a>
+                </div>
+            </section>
         </main>
 
         <div id="footer-placeholder"></div>
