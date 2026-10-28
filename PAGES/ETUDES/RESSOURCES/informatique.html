@@ -6,7 +6,7 @@
         <link rel="stylesheet" href="/Portfolio/style.css">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Projets d'informatique : programmation en C, microcontrôleurs PIC et simulation d'une ligne de production.">
+        <meta name="description" content="Notions de programmation, systèmes embarqués, automatisme, simulation et interaction numérique.">
     </head>
 
     <body>
@@ -19,60 +19,48 @@
 
         <article>
             <h1>
-                Programmation, systèmes embarqués et simulation
+                Programmation, automatisme et systèmes numériques
             </h1>
-            <p>Des premiers exercices en C aux projets de microcontrôleurs et à la modélisation d'une ligne de production.</p>
+            <p>Des algorithmes aux systèmes embarqués et industriels : quelques principes utiles pour concevoir et comprendre un programme.</p>
         </article>
 
         <main>
-            <section class="informatique-section">
-                <h2>Programmation en C</h2>
-                <p>Les travaux d'Info 3 m'ont permis de consolider les bases du langage C à travers de petits programmes exécutés sur un microcontrôleur PIC. Les exercices abordent l'affichage et la lecture sur la liaison série, les variables et compteurs, les boucles <code>for</code> et <code>while</code>, ainsi que les conditions.</p>
-                <p>Ces bases sont ensuite appliquées aux entrées-sorties de la carte : lecture d'un potentiomètre par le convertisseur analogique-numérique, commande de voyants, et utilisation de la PWM pour faire varier une sortie.</p>
+            <section class="knowledge-section">
+                <h2>Construire un algorithme</h2>
+                <p>Un programme résout un problème en transformant des entrées en résultats. La décomposition en fonctions permet de séparer les responsabilités, de réutiliser les traitements et de faciliter les tests. Les variables mémorisent l'état, les conditions choisissent une action et les boucles répètent un traitement.</p>
+                <p>Une simulation discrète découpe l'évolution d'un système en pas de temps. À chaque étape, le programme met à jour les variables du procédé, teste les événements attendus et conserve les données utiles. Des tableaux peuvent stocker les valeurs mesurées ou calculées ; une trace permet ensuite de vérifier les résultats.</p>
+                <p>Le binaire représente l'information avec deux états, 0 et 1. Savoir convertir une valeur binaire en décimal aide à interpréter les entrées numériques, les codes et les données échangées par un programme.</p>
             </section>
 
-            <section class="informatique-section">
-                <h2>Microcontrôleur PIC : entrées, sorties et PWM</h2>
-                <p>Le projet utilise un microcontrôleur PIC configuré pour relier les broches aux périphériques du programme : sorties PWM pour les commandes, entrée analogique pour le potentiomètre et liaison série pour l'émission et la réception de données.</p>
-                <div class="informatique-grid">
-                    <figure class="informatique-card">
-                        <img src="/Portfolio/MEDIA/IMAGES/RESSOURCES/INFORMATIQUE/configuration-broches-pic.png" alt="Configuration des broches du microcontrôleur PIC : sorties PWM, potentiomètre analogique, liaison série et voyants" loading="lazy">
-                        <figcaption>Configuration des broches et des périphériques du microcontrôleur.</figcaption>
-                    </figure>
-                    <div class="informatique-card">
-                        <h3>Fonctions mises en œuvre</h3>
-                        <ul>
-                            <li>Lire la position du potentiomètre avec le convertisseur analogique-numérique.</li>
-                            <li>Utiliser la PWM pour régler la commande d'une LED ou d'un moteur.</li>
-                            <li>Commander les voyants pour signaler l'état et le sens de fonctionnement.</li>
-                            <li>Afficher des informations et échanger des données sur la liaison série.</li>
-                        </ul>
-                    </div>
-                </div>
+            <section class="knowledge-section">
+                <h2>Programmer un système embarqué</h2>
+                <p>Un microcontrôleur exécute un programme et échange avec le monde physique par ses entrées-sorties. Le convertisseur analogique-numérique (CAN) transforme une tension en valeur numérique ; les sorties logiques commandent des états et la PWM produit un signal périodique dont le rapport cyclique est réglable.</p>
+                <p>Une liaison série permet d'envoyer et de recevoir des données entre équipements. Il faut définir les paramètres de communication et le format des messages, puis gérer les cas d'absence ou d'erreur de réception.</p>
+                <figure class="informatique-card">
+                    <img src="/Portfolio/MEDIA/IMAGES/RESSOURCES/INFORMATIQUE/configuration-broches-pic.png" alt="Exemple de configuration des broches et périphériques d'un microcontrôleur PIC" loading="lazy">
+                    <figcaption>Exemple de répartition des broches entre entrées analogiques, sorties et communication série.</figcaption>
+                </figure>
             </section>
 
-            <section class="informatique-section">
-                <h2>Projet : simulation d'une ligne de production</h2>
-                <p>Ce projet consiste à modéliser le fonctionnement d'une ligne de production dans un programme algorithmique. À chaque pas de simulation, le programme met à jour la température du procédé, calcule la puissance de chauffe et la vitesse du convoyeur, puis vérifie si un produit a atteint le point de détection.</p>
-                <p>Les températures, la puissance et la vitesse sont enregistrées pour établir un bilan. Lorsqu'un produit est détecté, le programme ajoute une entrée de traçabilité avec son numéro et les valeurs du procédé. Le projet rassemble ainsi la décomposition en fonctions, la simulation dans le temps, la gestion de tableaux et la production de fichiers de suivi et de rapport.</p>
-                <h3>Compte rendu du projet</h3>
-                <div class="pdf-viewer-container">
-                    <iframe class="pdf-viewer" src="/Portfolio/MEDIA/RESSOURCES/INFORMATIQUE/simulation-ligne-production.pdf" title="Compte rendu du projet de simulation d'une ligne de production" loading="lazy">
-                        <p>Votre navigateur ne peut pas afficher le PDF. <a href="/Portfolio/MEDIA/RESSOURCES/INFORMATIQUE/simulation-ligne-production.pdf">Ouvrir le compte rendu du projet</a>.</p>
-                    </iframe>
-                </div>
+            <section class="knowledge-section">
+                <h2>Automates et séquences de fonctionnement</h2>
+                <p>Un automate programmable lit des capteurs, exécute une logique et commande des actionneurs. Une séquence peut être décrite par un GRAFCET : les étapes représentent les états du procédé et les transitions précisent les conditions de passage d'une étape à l'autre.</p>
+                <p>Les modes de marche, les arrêts, les défauts et les reprises doivent être pensés explicitement. Une interface opérateur (IHM) présente les états et permet les commandes autorisées ; elle ne remplace ni la logique de commande ni les fonctions de sécurité.</p>
+            </section>
+
+            <section class="knowledge-section">
+                <h2>Programmation interactive et robotique</h2>
+                <p>Dans une application interactive, les événements déclenchent des traitements : une action utilisateur peut modifier l'état du programme ou activer une interaction avec un objet. Les moteurs de jeu comme Unity s'appuient sur des composants, des collisions et des corps physiques pour simuler les contacts et les mouvements.</p>
+                <p>En robotique, un programme décrit des déplacements entre des positions définies dans des repères. La précision dépend notamment du repère utilisé, de la définition de l'outil et du respect de la zone de travail.</p>
+            </section>
+
+            <section class="knowledge-section">
+                <h2>Exemples pour approfondir</h2>
+                <p>Les fichiers suivants illustrent des algorithmes de simulation et des fonctions embarquées décrites dans cette page.</p>
                 <div class="informatique-downloads">
-                    <a href="/Portfolio/MEDIA/RESSOURCES/INFORMATIQUE/simulation-ligne-production.pdf" download>Télécharger le compte rendu — PDF</a>
-                    <a href="/Portfolio/MEDIA/RESSOURCES/INFORMATIQUE/schema-algorithme-ligne-production.drawio" download>Schéma de l'algorithme — Draw.io</a>
-                    <a href="/Portfolio/MEDIA/RESSOURCES/INFORMATIQUE/algorithme-ligne-production.zip" download>Fichiers de l'algorithme — ZIP</a>
-                </div>
-            </section>
-
-            <section class="informatique-section">
-                <h2>Projet embarqué et exemples de code</h2>
-                <p>Le projet PIC regroupe plusieurs programmes d'essai et de commande : clignotement de voyants, lecture du potentiomètre, réglage d'une temporisation et génération de PWM pour piloter un moteur. Les exemples sont fournis dans l'archive du projet.</p>
-                <div class="informatique-downloads">
-                    <a href="/Portfolio/MEDIA/RESSOURCES/INFORMATIQUE/projet-microcontroleur-pic.zip" download>Projet microcontrôleur PIC — ZIP</a>
+                    <a href="/Portfolio/MEDIA/RESSOURCES/INFORMATIQUE/schema-algorithme-ligne-production.drawio" download>Schéma d'algorithme — Draw.io</a>
+                    <a href="/Portfolio/MEDIA/RESSOURCES/INFORMATIQUE/algorithme-ligne-production.zip" download>Exemples d'algorithmes — ZIP</a>
+                    <a href="/Portfolio/MEDIA/RESSOURCES/INFORMATIQUE/projet-microcontroleur-pic.zip" download>Exemples de code embarqué — ZIP</a>
                 </div>
             </section>
         </main>

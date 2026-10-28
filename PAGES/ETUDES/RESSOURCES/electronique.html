@@ -12,19 +12,52 @@
 
         <div id="header-placeholder"></div>
 
-        <!-- TITRE DE PAGE -->
         <header>
             Électronique
         </header>
-        <!-- PRÉSENTATION DE LA PAGE -->
         <article>
             <h1>
-                <p>PRES</p>
+                Conditionnement, traitement et commande des signaux
             </h1>
+            <p>Des composants analogiques aux interfaces numériques, l'électronique adapte les signaux des capteurs et commande les actionneurs.</p>
         </article>
 
         <main>
-            <!-- contenu spécifique à cette page -->
+            <section class="knowledge-section">
+                <h2>Amplifier et comparer un signal</h2>
+                <p>Un amplificateur opérationnel permet de traiter une tension analogique. Selon le montage, il peut amplifier une différence de potentiel, réaliser une comparaison à un seuil ou participer à un filtre. Un comparateur permet par exemple de transformer le dépassement d'un seuil de courant en un état logique exploitable par une commande.</p>
+                <p>La sortie d'un amplificateur opérationnel est limitée par son alimentation : elle ne peut pas varier sans limite. Il faut donc vérifier les tensions d'entrée, les niveaux de saturation et la compatibilité avec l'étage qui suit.</p>
+            </section>
+
+            <section class="knowledge-section">
+                <h2>Adapter un signal de capteur</h2>
+                <div class="knowledge-grid">
+                    <div class="knowledge-card">
+                        <h3>Diviseur de tension</h3>
+                        <p>Deux résistances en série permettent d'obtenir une fraction d'une tension d'entrée. Pour un diviseur non chargé, <strong>U<sub>sortie</sub> = U<sub>entrée</sub> × R<sub>bas</sub> / (R<sub>haut</sub> + R<sub>bas</sub>)</strong>. Le rapport doit maintenir le signal dans la plage admissible par l'entrée de mesure.</p>
+                    </div>
+                    <div class="knowledge-card">
+                        <h3>Mesure de courant</h3>
+                        <p>Une résistance de mesure, appelée shunt, convertit le courant en tension selon la loi d'Ohm : <strong>U = R × I</strong>. Le choix de sa valeur est un compromis entre le niveau mesurable, la chute de tension et la puissance dissipée.</p>
+                    </div>
+                    <div class="knowledge-card">
+                        <h3>Filtrage</h3>
+                        <p>Les variations rapides ou parasites peuvent être atténués par un filtre analogique. Un filtre RC utilise une résistance et un condensateur ; sa fréquence de coupure idéale du premier ordre vaut <strong>f<sub>c</sub> = 1 / (2πRC)</strong>.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="knowledge-section">
+                <h2>Commander une charge avec un signal PWM</h2>
+                <p>La modulation de largeur d'impulsion (PWM) alterne un état haut et un état bas à fréquence fixe. Le rapport cyclique correspond à la part du temps passée à l'état haut. Il permet de régler la puissance moyenne transmise à une charge, par exemple pour faire varier la luminosité d'une LED ou la vitesse d'un moteur compatible.</p>
+                <p>Une sortie de microcontrôleur ne doit pas alimenter directement une charge de puissance. Un étage de commande, par exemple un transistor MOSFET correctement dimensionné, assure l'interface entre le signal logique et la charge. Il faut tenir compte du courant, de la dissipation thermique et des surtensions éventuelles.</p>
+            </section>
+
+            <section class="knowledge-section">
+                <h2>Chaîne de mesure et acquisition</h2>
+                <p>Une chaîne d'acquisition comprend le capteur, son conditionnement, une éventuelle protection et le convertisseur analogique-numérique. Le conditionnement adapte l'amplitude et la plage du signal ; le convertisseur transforme ensuite cette tension en une valeur numérique. La référence et la résolution du convertisseur déterminent la finesse de la mesure.</p>
+                <p>Les montages de détection de surintensité, les variateurs de luminosité et les conditionneurs de température mettent en œuvre ces mêmes principes : mesurer un signal, l'adapter, puis l'exploiter sans dépasser les limites des composants.</p>
+            </section>
         </main>
 
         <div id="footer-placeholder"></div>

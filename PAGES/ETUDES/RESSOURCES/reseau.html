@@ -12,19 +12,46 @@
 
         <div id="header-placeholder"></div>
 
-        <!-- TITRE DE PAGE -->
         <header>
             Réseaux
         </header>
-        <!-- PRÉSENTATION DE LA PAGE -->
         <article>
             <h1>
-                <p>PRES</p>
+                Réseaux informatiques et communications industrielles
             </h1>
+            <p>Adressage, échanges de données et communication entre équipements connectés d'un système automatisé.</p>
         </article>
 
         <main>
-            <!-- contenu spécifique à cette page -->
+            <section class="knowledge-section">
+                <h2>Les bases d'un réseau local</h2>
+                <p>Un réseau local (LAN) relie des équipements dans une zone limitée. Chaque interface réseau possède une adresse IP qui permet de l'identifier au sein du réseau. Le masque de sous-réseau distingue la partie réseau de la partie hôte et permet de déterminer si deux adresses appartiennent au même sous-réseau.</p>
+                <p>Une passerelle relie le réseau local à d'autres réseaux. Lorsqu'on configure des équipements, les adresses, le masque et la passerelle doivent être cohérents et éviter les conflits d'adresses.</p>
+            </section>
+
+            <section class="knowledge-section">
+                <h2>Comment les équipements échangent</h2>
+                <div class="knowledge-grid">
+                    <div class="knowledge-card">
+                        <h3>Client et serveur</h3>
+                        <p>Dans une communication client-serveur, un équipement demande une information ou un service et un autre y répond. Le rôle dépend de l'application : un automate peut publier des états ou recevoir des consignes d'un système de supervision.</p>
+                    </div>
+                    <div class="knowledge-card">
+                        <h3>TCP et UDP</h3>
+                        <p>TCP établit une connexion et vérifie la livraison ordonnée des données. UDP envoie des datagrammes sans établir cette connexion, avec moins de mécanismes de contrôle. Le choix dépend des exigences de l'application et du protocole utilisé.</p>
+                    </div>
+                    <div class="knowledge-card">
+                        <h3>Communication industrielle</h3>
+                        <p>Les automates, interfaces opérateur et robots peuvent échanger des états, des commandes et des résultats sur un réseau industriel. Une intégration fiable nécessite une configuration commune, des données clairement définies et la prise en compte des délais et des défauts de communication.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="knowledge-section">
+                <h2>Organiser une communication entre systèmes</h2>
+                <p>Avant de connecter un automate à un robot ou plusieurs cellules entre elles, il faut identifier les informations échangées, leur sens, leur format et les conditions de mise à jour. Des signaux d'acquittement et d'état permettent de détecter qu'un équipement est prêt, occupé ou en défaut.</p>
+                <p>Le réseau ne remplace pas les fonctions de sécurité. Les arrêts d'urgence et les fonctions de sécurité doivent être conçus et câblés selon les exigences du système, indépendamment des échanges de données ordinaires.</p>
+            </section>
         </main>
 
         <div id="footer-placeholder"></div>

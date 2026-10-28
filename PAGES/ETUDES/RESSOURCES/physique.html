@@ -6,7 +6,7 @@
         <link rel="stylesheet" href="/Portfolio/style.css">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Fiches et travaux pratiques de physique sur les capteurs, l'instrumentation et la sonde Pt100.">
+        <meta name="description" content="Notions de capteurs, instrumentation, mesure de température et acquisition des signaux.">
         <style>
             .physics-grid {
                 display: grid;
@@ -80,20 +80,20 @@
             <h1>
                 Ressources de physique
             </h1>
-            <p>Capteurs, instrumentation et mesures : cours et travaux pratiques autour de la sonde de température Pt100.</p>
+            <p>Capteurs, instrumentation et mesures : comprendre comment transformer une grandeur physique en signal exploitable.</p>
         </article>
 
         <main>
             <section>
                 <h2>La sonde Pt100 et son conditionnement</h2>
-                <p>Une Pt100 est une sonde résistive en platine : sa résistance vaut 100 Ω à 0 °C et augmente avec la température (environ 0,4 Ω par degré). Le conditionneur transforme cette faible variation en un signal exploitable, ici sur une plage de -50 °C à 300 °C.</p>
-                <p>Le travail pratique étudie deux sorties normalisées : une tension de 0 à 10 V et un courant de 4 à 20 mA. Pour relier le signal à une Raspberry Pi Pico, il faut aussi l'adapter à l'entrée analogique, limitée à 3,3 V.</p>
+                <p>Une Pt100 est une sonde résistive en platine dont la résistance nominale vaut 100 Ω à 0 °C. Elle augmente avec la température, d'environ 0,385 Ω par degré autour de 0 °C. Une Pt1000 fonctionne sur le même principe, avec une résistance nominale de 1 000 Ω à 0 °C et une variation environ dix fois plus grande.</p>
+                <p>Un conditionneur peut convertir la variation de résistance en une tension ou un courant normalisé. Pour transmettre un signal vers un convertisseur analogique-numérique, il faut l'adapter à la plage d'entrée de celui-ci : une entrée de Raspberry Pi Pico, par exemple, ne doit pas recevoir une tension supérieure à sa limite de 3,3 V.</p>
             </section>
 
             <section class="physics-grid" aria-label="Notions abordées">
                 <section class="physics-card">
                     <h2>Sortie tension : 0–10 V</h2>
-                    <p>Le conditionneur associe -50 °C à 0 V et 300 °C à 10 V. Un pont diviseur de 22 kΩ et 10 kΩ ramène la sortie maximale à 3,125 V, sous la limite de 3,3 V de la Pico.</p>
+                    <p>Dans cette configuration, le conditionneur associe -50 °C à 0 V et 300 °C à 10 V. Un pont diviseur de 22 kΩ et 10 kΩ ramène la sortie maximale à 3,125 V, sous la limite de 3,3 V de la Pico.</p>
                     <figure>
                         <img src="/Portfolio/MEDIA/IMAGES/RESSOURCES/PHYSIQUE/chaine-acquisition-0-10v.png" alt="Schéma de la chaîne d'acquisition Pt100 avec une sortie de 0 à 10 volts" loading="lazy">
                         <figcaption>Chaîne d'acquisition en sortie tension, aux températures extrêmes.</figcaption>
@@ -102,7 +102,7 @@
 
                 <section class="physics-card">
                     <h2>Sortie courant : 4–20 mA</h2>
-                    <p>Le signal varie de 4 mA à -50 °C à 20 mA à 300 °C. Une résistance de 150 Ω convertit ce courant en une tension de 0,6 à 3 V, mesurable par la Pico. La transmission en courant est adaptée aux liaisons longues.</p>
+                    <p>Le signal varie de 4 mA à -50 °C à 20 mA à 300 °C. Une résistance de 150 Ω convertit ce courant en une tension de 0,6 à 3 V, mesurable par la Pico. La transmission en courant est souvent choisie pour sa robustesse face aux perturbations sur les liaisons longues.</p>
                     <figure>
                         <img src="/Portfolio/MEDIA/IMAGES/RESSOURCES/PHYSIQUE/chaine-acquisition-4-20ma.png" alt="Schéma de la chaîne d'acquisition Pt100 avec une sortie de 4 à 20 milliampères" loading="lazy">
                         <figcaption>Chaîne d'acquisition en sortie courant, aux températures extrêmes.</figcaption>
@@ -114,13 +114,13 @@
                     <p>Le capteur est alimenté et raccordé au conditionneur PXT-10.924, qui fournit au choix une sortie tension ou courant.</p>
                     <figure>
                         <img src="/Portfolio/MEDIA/IMAGES/RESSOURCES/PHYSIQUE/schema-conditionneur-pt100.jpg" alt="Schéma de câblage de la sonde Pt100 et du conditionneur PXT-10.924" loading="lazy">
-                        <figcaption>Schéma de câblage utilisé pour le réglage du conditionneur.</figcaption>
+                        <figcaption>Principe de raccordement d'une sonde Pt100 et de son conditionneur.</figcaption>
                     </figure>
                 </section>
 
                 <section class="physics-card">
                     <h2>Protéger l'entrée analogique</h2>
-                    <p>Avant de connecter la carte, le signal doit rester dans sa plage d'entrée de 0 à 3,3 V. Le TP présente aussi le filtre et les protections de l'entrée analogique.</p>
+                    <p>Avant de connecter une carte, le signal doit rester dans sa plage d'entrée de 0 à 3,3 V. Un filtre réduit certaines variations parasites et des protections adaptées limitent les risques liés aux transitoires ou aux erreurs de raccordement.</p>
                     <figure>
                         <img src="/Portfolio/MEDIA/IMAGES/RESSOURCES/PHYSIQUE/protection-entree-raspberry-pi-pico.jpg" alt="Circuit de protection et filtre de l'entrée analogique de la carte Raspberry Pi Pico" loading="lazy">
                         <figcaption>Précâblage de l'entrée analogique de la Raspberry Pi Pico.</figcaption>
@@ -129,7 +129,7 @@
             </section>
 
             <section>
-                <h2>Documents à consulter</h2>
+                <h2>Documents complémentaires</h2>
                 <h3>Fiche de révision — capteurs et instrumentation</h3>
                 <div class="pdf-viewer-container">
                     <iframe class="pdf-viewer" src="/Portfolio/MEDIA/RESSOURCES/PHYSIQUE/fiche-revision-capteurs-instrumentation.pdf" title="Fiche de révision sur les capteurs et l'instrumentation" loading="lazy">
@@ -138,8 +138,8 @@
                 </div>
                 <div class="physics-downloads">
                     <a href="/Portfolio/MEDIA/RESSOURCES/PHYSIQUE/fiche-revision-capteurs-instrumentation.pdf" download>Télécharger la fiche de révision (PDF)</a>
-                    <a href="/Portfolio/MEDIA/RESSOURCES/PHYSIQUE/compte-rendu-tp-pt100.docx" download>Compte rendu du TP Pt100 (DOCX)</a>
-                    <a href="/Portfolio/MEDIA/RESSOURCES/PHYSIQUE/compte-rendu-tp-pt100.odt" download>Compte rendu du TP Pt100 (ODT)</a>
+                    <a href="/Portfolio/MEDIA/RESSOURCES/PHYSIQUE/compte-rendu-tp-pt100.docx" download>Exemple de mise en œuvre Pt100 (DOCX)</a>
+                    <a href="/Portfolio/MEDIA/RESSOURCES/PHYSIQUE/compte-rendu-tp-pt100.odt" download>Exemple de mise en œuvre Pt100 (ODT)</a>
                 </div>
             </section>
         </main>

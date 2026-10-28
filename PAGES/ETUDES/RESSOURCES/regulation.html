@@ -6,7 +6,7 @@
         <link rel="stylesheet" href="/Portfolio/style.css">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Ressources sur la modélisation et l'identification de systèmes régulés avec Scilab, Xcos et un procédé hydraulique à deux cuves.">
+        <meta name="description" content="Notions de régulation, réponse temporelle, identification de systèmes et modèles simples.">
     </head>
 
     <body>
@@ -18,15 +18,15 @@
         </header>
 
         <article>
-            <h1>Modélisation et identification de systèmes</h1>
-            <p>Étude de réponses temporelles, de modèles de différents ordres et de l'influence du bruit de mesure.</p>
+            <h1>Asservissement, modélisation et identification</h1>
+            <p>Comprendre la boucle de commande, décrire la dynamique d'un procédé et confronter un modèle aux mesures.</p>
         </article>
 
         <main>
             <section class="regulation-section">
-                <h2>Comprendre le système étudié</h2>
-                <p>Un système de régulation compare une consigne à la réponse d'un procédé. Pour prévoir son comportement, on peut représenter le procédé par une fonction de transfert, puis comparer la sortie simulée aux mesures obtenues.</p>
-                <p>Les schémas et courbes ci-dessous illustrent des modèles utilisés lors de travaux pratiques de simulation et d'identification sous Scilab/Xcos.</p>
+                <h2>La boucle de régulation</h2>
+                <p>Une boucle de régulation mesure la sortie d'un procédé, la compare à une consigne et utilise l'écart pour calculer une commande. Le capteur, le régulateur, l'actionneur et le procédé forment ensemble la boucle de retour.</p>
+                <p>Une représentation par fonction de transfert aide à prévoir la réponse du procédé. La simulation permet ensuite d'étudier cette réponse et de la comparer à des mesures, notamment lorsque celles-ci sont bruitées.</p>
                 <figure class="regulation-system-figure">
                     <img src="/Portfolio/MEDIA/IMAGES/RESSOURCES/REGULATION/schema-systeme.png" alt="Schéma Xcos du système simulé avec une consigne, des blocs de transfert et l'ajout d'un signal aléatoire" loading="lazy">
                     <figcaption>Schéma de simulation : le signal aléatoire permet d'observer l'effet du bruit sur la sortie.</figcaption>
@@ -34,7 +34,7 @@
             </section>
 
             <section class="regulation-section">
-                <h2>Réponses de modèles de différents ordres</h2>
+                <h2>Réponses temporelles et modèles</h2>
                 <p>La réponse temporelle traduit l'évolution de la sortie après une sollicitation. La comparaison entre des modèles de premier, deuxième et troisième ordre permet d'étudier l'influence de leur dynamique sur la forme de la courbe.</p>
                 <div class="regulation-grid">
                     <figure class="regulation-card">
@@ -56,44 +56,51 @@
                 </div>
             </section>
 
+            <section class="knowledge-section">
+                <h2>Réguler une température ou un éclairage</h2>
+                <p>Pour maintenir une température, un capteur mesure la grandeur à contrôler et le régulateur ajuste une action de chauffe ou de refroidissement. La consigne fixe la valeur souhaitée ; l'écart entre consigne et mesure détermine la correction à appliquer.</p>
+                <p>Une commande tout-ou-rien active ou coupe l'actionneur selon un seuil. Ajouter une hystérésis, c'est-à-dire deux seuils distincts de déclenchement et d'arrêt, évite des commutations trop fréquentes lorsque la mesure oscille autour de la consigne. Pour une commande plus progressive, un correcteur proportionnel-intégral-dérivé (PID) combine l'écart instantané, son accumulation et sa vitesse de variation. Son réglage doit tenir compte de l'inertie du procédé.</p>
+                <p>Un éclairage peut lui aussi être commandé en fonction d'une mesure ou d'un état de fonctionnement. Les modes automatique et manuel doivent être clairement distingués afin de comprendre qui pilote l'actionneur.</p>
+            </section>
+
             <section class="regulation-section">
-                <h2>Travail pratique : identifier un modèle</h2>
-                <p>Le travail pratique consiste à exploiter le signal d'entrée et la sortie mesurée pour construire un modèle. Les paramètres du modèle sont ajustés afin de réduire l'écart entre la sortie calculée et la sortie observée. La présence de bruit rend cette comparaison moins directe.</p>
+                <h2>Identifier un modèle à partir de mesures</h2>
+                <p>L'identification exploite un signal d'entrée et la sortie mesurée pour construire un modèle du procédé. Les paramètres du modèle sont ajustés afin de réduire l'écart entre la sortie calculée et la sortie observée. La présence de bruit rend cette comparaison moins directe.</p>
                 <div class="regulation-grid">
                     <figure class="regulation-card">
-                        <img src="/Portfolio/MEDIA/IMAGES/RESSOURCES/REGULATION/tp-systeme-identification.png" alt="Schéma Xcos du montage de travail pratique avec génération aléatoire, somme, multiplexeur et enregistrement des signaux" loading="lazy">
+                        <img src="/Portfolio/MEDIA/IMAGES/RESSOURCES/REGULATION/tp-systeme-identification.png" alt="Schéma Xcos de simulation avec génération de signal, somme et enregistrement des entrées et sorties" loading="lazy">
                         <figcaption>Montage Xcos utilisé pour générer et enregistrer les signaux d'entrée et de sortie.</figcaption>
                     </figure>
                     <figure class="regulation-card">
-                        <img src="/Portfolio/MEDIA/IMAGES/RESSOURCES/REGULATION/tp-reponse-mesuree.png" alt="Courbe expérimentale bruitée et consigne de référence au cours du travail pratique" loading="lazy">
+                        <img src="/Portfolio/MEDIA/IMAGES/RESSOURCES/REGULATION/tp-reponse-mesuree.png" alt="Réponse mesurée bruitée comparée à une consigne de référence" loading="lazy">
                         <figcaption>Réponse mesurée : le signal fluctue autour de sa tendance à cause du bruit.</figcaption>
                     </figure>
                 </div>
             </section>
 
             <section class="regulation-section">
-                <h2>Comparer les ajustements successifs</h2>
-                <p>Ces résultats montrent plusieurs comparaisons entre la mesure bruitée et un modèle simulé. Ils permettent de visualiser comment l'ajustement des paramètres et le choix du modèle influencent la correspondance avec le comportement observé.</p>
+                <h2>Comparer mesure et simulation</h2>
+                <p>La comparaison entre la mesure bruitée et un modèle simulé montre comment l'ajustement des paramètres et le choix du modèle influencent la correspondance avec le comportement observé.</p>
                 <div class="regulation-grid regulation-comparisons">
                     <figure class="regulation-card">
                         <img src="/Portfolio/MEDIA/IMAGES/RESSOURCES/REGULATION/comparaison-2-1.png" alt="Première comparaison d'une réponse mesurée bruitée et d'un modèle simulé" loading="lazy">
-                        <figcaption>Comparaison de l'essai 2-1.</figcaption>
+                        <figcaption>Premier ajustement entre la mesure et le modèle.</figcaption>
                     </figure>
                     <figure class="regulation-card">
                         <img src="/Portfolio/MEDIA/IMAGES/RESSOURCES/REGULATION/comparaison-2-1-2.png" alt="Comparaison d'une réponse mesurée bruitée et d'un modèle simulé avec des paramètres ajustés" loading="lazy">
-                        <figcaption>Comparaison de l'essai 2-1-2.</figcaption>
+                        <figcaption>Comparaison après ajustement des paramètres.</figcaption>
                     </figure>
                     <figure class="regulation-card">
                         <img src="/Portfolio/MEDIA/IMAGES/RESSOURCES/REGULATION/comparaison-2-2-1.png" alt="Courbes de la mesure bruitée, de la consigne et du modèle simulé" loading="lazy">
-                        <figcaption>Comparaison de l'essai 2-2-1.</figcaption>
+                        <figcaption>Consigne, mesure et réponse calculée.</figcaption>
                     </figure>
                     <figure class="regulation-card">
                         <img src="/Portfolio/MEDIA/IMAGES/RESSOURCES/REGULATION/comparaison-2-3-1.png" alt="Réponse mesurée bruitée et modèle simulé lors d'un essai d'identification" loading="lazy">
-                        <figcaption>Comparaison de l'essai 2-3-1.</figcaption>
+                        <figcaption>Réponse mesurée bruitée et modèle simulé.</figcaption>
                     </figure>
                     <figure class="regulation-card">
                         <img src="/Portfolio/MEDIA/IMAGES/RESSOURCES/REGULATION/comparaison-2-3-2.png" alt="Comparaison d'une réponse bruitée et de la réponse du modèle lors de l'essai 2-3-2" loading="lazy">
-                        <figcaption>Comparaison de l'essai 2-3-2.</figcaption>
+                        <figcaption>Écart entre la réponse mesurée et le modèle.</figcaption>
                     </figure>
                     <figure class="regulation-card">
                         <img src="/Portfolio/MEDIA/IMAGES/RESSOURCES/REGULATION/comparaison-finale.png" alt="Courbes finales de comparaison entre la réponse mesurée bruitée, la consigne et le modèle" loading="lazy">
@@ -103,24 +110,24 @@
             </section>
 
             <section class="regulation-section">
-                <h2>Travail pratique : identifier les fonctions de transfert d'une double cuve</h2>
-                <p>Ce TP d'automatique étudie un procédé hydraulique composé de deux cuves en cascade : la pompe alimente la première cuve, puis l'eau s'écoule vers la seconde. Des capteurs mesurent les niveaux et le débit de la pompe est commandé en boucle ouverte pendant l'identification.</p>
-                <p>Le procédé est non linéaire : à l'équilibre, les niveaux ne sont pas proportionnels au débit. Pour le modéliser, on se place autour d'un point de fonctionnement et on applique de petites variations de débit. Cette approximation locale permet d'étudier chaque cuve avec un modèle du premier ordre.</p>
+                <h2>Exemple : modéliser deux cuves en cascade</h2>
+                <p>Un procédé hydraulique composé de deux cuves en cascade illustre l'identification d'un système : une pompe alimente la première cuve, puis l'eau s'écoule vers la seconde. Des capteurs mesurent les niveaux et le débit de la pompe constitue l'entrée du procédé.</p>
+                <p>Le procédé est non linéaire : à l'équilibre, les niveaux ne sont pas proportionnels au débit. Pour le modéliser simplement, on se place autour d'un point de fonctionnement et on applique de petites variations de débit. Cette approximation locale permet d'étudier chaque cuve avec un modèle du premier ordre.</p>
                 <p>Les deux étages sont identifiés à partir des variations enregistrées : le premier relie le débit au niveau de la cuve 1, le second relie le niveau de la cuve 1 à celui de la cuve 2. Un programme Scilab ajuste le gain et la constante de temps de chaque modèle en minimisant l'erreur quadratique moyenne entre les niveaux mesurés et simulés.</p>
                 <div class="regulation-models" aria-label="Modèles du système à deux cuves">
                     <p><strong>Débit vers cuve 1 :</strong> G₁(p) = K₁ / (1 + T₁p), avec K₁ ≈ 1,507 et T₁ ≈ 96,35.</p>
                     <p><strong>Cuve 1 vers cuve 2 :</strong> G₂(p) = K₂ / (1 + T₂p), avec K₂ ≈ 0,680 et T₂ ≈ 69,00.</p>
                 </div>
-                <p>Ces valeurs sont un exemple issu de l'identification fournie ; les paramètres trouvés peuvent varier avec les mesures et les conditions initiales. Le TP invite ensuite à tester un asservissement du niveau de la première cuve et à observer l'effet du réglage du correcteur.</p>
-                <h3>Énoncé du TP5</h3>
+                <p>Ces valeurs illustrent un résultat d'identification ; les paramètres obtenus varient selon les mesures et les conditions initiales. Une fois le modèle établi, on peut simuler l'asservissement du niveau et observer l'effet du réglage du correcteur.</p>
+                <h3>Données et scripts d'exemple</h3>
                 <div class="pdf-viewer-container">
-                    <iframe class="pdf-viewer" src="/Portfolio/MEDIA/RESSOURCES/REGULATION/tp5-identification-double-cuve.pdf" title="Énoncé du TP5 sur l'identification des fonctions de transfert d'une double cuve" loading="lazy">
-                        <p>Votre navigateur ne peut pas afficher le PDF. <a href="/Portfolio/MEDIA/RESSOURCES/REGULATION/tp5-identification-double-cuve.pdf">Ouvrir l'énoncé du TP5</a>.</p>
+                    <iframe class="pdf-viewer" src="/Portfolio/MEDIA/RESSOURCES/REGULATION/tp5-identification-double-cuve.pdf" title="Document de référence sur l'identification des fonctions de transfert d'une double cuve" loading="lazy">
+                        <p>Votre navigateur ne peut pas afficher le PDF. <a href="/Portfolio/MEDIA/RESSOURCES/REGULATION/tp5-identification-double-cuve.pdf">Ouvrir le document de référence</a>.</p>
                     </iframe>
                 </div>
                 <div class="regulation-downloads">
-                    <a href="/Portfolio/MEDIA/RESSOURCES/REGULATION/tp5-identification-double-cuve.pdf" download>Télécharger l'énoncé du TP5 — PDF</a>
-                    <a href="/Portfolio/MEDIA/RESSOURCES/REGULATION/tp5-identification-double-cuve.odt" download>Énoncé du TP5 — ODT</a>
+                    <a href="/Portfolio/MEDIA/RESSOURCES/REGULATION/tp5-identification-double-cuve.pdf" download>Document de référence — PDF</a>
+                    <a href="/Portfolio/MEDIA/RESSOURCES/REGULATION/tp5-identification-double-cuve.odt" download>Document de référence — ODT</a>
                     <a href="/Portfolio/MEDIA/RESSOURCES/REGULATION/identification-cuves.sce" download>Programme d'identification Scilab</a>
                     <a href="/Portfolio/MEDIA/RESSOURCES/REGULATION/critere-niveau-cuve-1.sce" download>Critère d'identification — cuve 1</a>
                     <a href="/Portfolio/MEDIA/RESSOURCES/REGULATION/critere-niveau-cuve-2.sce" download>Critère d'identification — cuve 2</a>

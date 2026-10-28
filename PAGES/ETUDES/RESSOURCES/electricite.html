@@ -12,19 +12,51 @@
 
         <div id="header-placeholder"></div>
 
-        <!-- TITRE DE PAGE -->
         <header>
             Électricité
         </header>
-        <!-- PRÉSENTATION DE LA PAGE -->
         <article>
             <h1>
-                <p>PRES</p>
+                Installations, énergie et commande des actionneurs
             </h1>
+            <p>Les notions essentielles pour comprendre les circuits de puissance, leurs protections et les organes qui les commandent.</p>
         </article>
 
         <main>
-            <!-- contenu spécifique à cette page -->
+            <section class="knowledge-section">
+                <h2>Puissance électrique et énergie</h2>
+                <p>La tension électrique <strong>U</strong> s'exprime en volts, l'intensité <strong>I</strong> en ampères et la puissance <strong>P</strong> en watts. En courant continu, la puissance électrique se calcule par <strong>P = U × I</strong>. L'énergie consommée dépend aussi de la durée : <strong>E = P × t</strong>, généralement exprimée en wattheures ou kilowattheures.</p>
+                <p>Dans un système de conversion d'énergie, il faut distinguer l'alimentation, la charge et les pertes. Un moteur, une résistance chauffante ou un chargeur n'ont pas les mêmes caractéristiques électriques et nécessitent un dimensionnement adapté.</p>
+            </section>
+
+            <section class="knowledge-section">
+                <h2>Circuits de puissance et circuits de commande</h2>
+                <div class="knowledge-grid">
+                    <div class="knowledge-card">
+                        <h3>Puissance</h3>
+                        <p>Le circuit de puissance transporte l'énergie vers le récepteur : moteur, lampe ou élément chauffant. Le choix des conducteurs et des composants dépend notamment du courant, de la tension, du régime de fonctionnement et de l'environnement.</p>
+                    </div>
+                    <div class="knowledge-card">
+                        <h3>Commande</h3>
+                        <p>Le circuit de commande transmet les ordres et les informations d'état. Il peut être réalisé avec des boutons, des capteurs, des relais ou un automate. La séparation entre commande et puissance facilite l'organisation et la maintenance d'une installation.</p>
+                    </div>
+                    <div class="knowledge-card">
+                        <h3>Relais et contacteurs</h3>
+                        <p>Une bobine crée un champ magnétique qui actionne des contacts. Les contacts de commande servent à transmettre un état logique ; les contacts de puissance permettent de commuter une charge adaptée au calibre de l'appareil.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="knowledge-section">
+                <h2>Protéger et vérifier une installation</h2>
+                <p>Les protections sont choisies en fonction des défauts à maîtriser : les dispositifs contre les surintensités protègent les conducteurs et les équipements, tandis que la protection différentielle contribue à la protection des personnes en cas de courant de fuite. La mise à la terre et la coupure de l'alimentation font partie des principes de sécurité d'une installation.</p>
+                <p>Avant une mise en service, on vérifie la cohérence du schéma, le repérage des conducteurs et des appareils, la continuité des liaisons et l'absence de court-circuit. Les mesures et interventions sur une installation doivent respecter les règles de sécurité et être réalisées par une personne habilitée lorsque cela est requis.</p>
+            </section>
+
+            <section class="knowledge-section">
+                <h2>Applications aux systèmes automatisés</h2>
+                <p>Les installations automatisées combinent souvent des capteurs, une unité de commande et des actionneurs. Les feux de signalisation, les équipements de transport, les systèmes de chauffage et les dispositifs de recharge illustrent cette chaîne : une information est acquise, une logique décide de l'action, puis un organe électrique agit sur le procédé. Pour une borne, le courant demandé et la puissance disponible déterminent le dimensionnement des composants et des protections.</p>
+            </section>
         </main>
 
         <div id="footer-placeholder"></div>

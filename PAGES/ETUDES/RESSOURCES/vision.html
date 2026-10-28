@@ -12,19 +12,46 @@
 
         <div id="header-placeholder"></div>
 
-        <!-- TITRE DE PAGE -->
         <header>
             Vision
         </header>
-        <!-- PRÉSENTATION DE LA PAGE -->
         <article>
             <h1>
-                <p>PRES</p>
+                Vision industrielle et traitement d'images
             </h1>
+            <p>Une caméra transforme une scène en données que l'on peut traiter pour détecter, reconnaître ou localiser des objets.</p>
         </article>
 
         <main>
-            <!-- contenu spécifique à cette page -->
+            <section class="knowledge-section">
+                <h2>De l'image à une information exploitable</h2>
+                <p>Une caméra acquiert une image composée de pixels. En niveaux de gris, chaque pixel représente une intensité lumineuse ; en couleur, plusieurs composantes décrivent sa couleur. La qualité de l'image dépend notamment de l'éclairage, de la mise au point, du contraste et du positionnement de la caméra.</p>
+                <p>Un traitement de vision suit généralement plusieurs étapes : acquisition, prétraitement, segmentation de la zone utile, extraction de caractéristiques, puis décision. Chaque étape doit être adaptée à l'objet et à l'environnement observés.</p>
+            </section>
+
+            <section class="knowledge-section">
+                <h2>Détecter et reconnaître</h2>
+                <div class="knowledge-grid">
+                    <div class="knowledge-card">
+                        <h3>Seuil et segmentation</h3>
+                        <p>Un seuil sépare les pixels selon leur intensité ou leur couleur. Cette méthode permet d'isoler une zone lorsque l'objet se distingue suffisamment du fond. Les variations d'éclairage peuvent fausser le résultat et nécessiter une calibration ou un prétraitement.</p>
+                    </div>
+                    <div class="knowledge-card">
+                        <h3>Caractéristiques d'une forme</h3>
+                        <p>Une fois l'objet isolé, on peut exploiter sa position, sa taille, son orientation ou sa forme. Ces informations servent à vérifier une présence, reconnaître une caractéristique ou guider une action automatisée.</p>
+                    </div>
+                    <div class="knowledge-card">
+                        <h3>Suivi d'un objet</h3>
+                        <p>Le suivi consiste à retrouver la même cible dans des images successives. Il faut associer les détections dans le temps et tenir compte des déplacements, des occultations et des erreurs de mesure.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="knowledge-section">
+                <h2>Relier vision, robotique et automatisme</h2>
+                <p>Pour qu'un robot agisse à partir d'une image, la position détectée doit être exprimée dans un repère connu et transformée dans le repère utilisé par le robot. La calibration de la caméra et la définition des repères outil et utilisateur sont donc essentielles.</p>
+                <p>Dans une cellule automatisée, le résultat de l'analyse peut être transmis à l'automate ou au robot comme une mesure, un état de conformité ou une position. La commande doit prévoir les cas où aucune cible n'est détectée ou lorsque la mesure n'est pas fiable.</p>
+            </section>
         </main>
 
         <div id="footer-placeholder"></div>

@@ -616,6 +616,65 @@ font-family:var(--font-family-general);
 }
 
 /* Ressources de regulation */
+.knowledge-section{
+    width:95%;
+    margin:0 auto 40px;
+    font-family:var(--font-family-general);
+}
+
+.knowledge-section > p{
+    line-height:1.6;
+}
+
+.knowledge-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+    gap:20px;
+    align-items:stretch;
+}
+
+.knowledge-card{
+    display:block;
+    min-width:0;
+    padding:18px;
+    border:1px solid rgba(0,0,0,0.15);
+    border-radius:12px;
+    background-color:#f7f9fc;
+}
+
+.knowledge-card p,
+.knowledge-card li{
+    line-height:1.6;
+}
+
+.knowledge-card h3{
+    margin-top:4px;
+}
+
+.knowledge-card img{
+    display:block;
+    width:min(100%, 700px);
+    height:auto;
+    margin:0 auto;
+}
+
+.knowledge-card figcaption{
+    margin-top:10px;
+    font-size:0.95rem;
+    line-height:1.5;
+    text-align:center;
+}
+
+@media (max-width: 700px){
+    .knowledge-section{
+        width:100%;
+    }
+
+    .knowledge-card{
+        padding:14px;
+    }
+}
+
 .regulation-section{
     width:95%;
     margin:0 auto 48px;
